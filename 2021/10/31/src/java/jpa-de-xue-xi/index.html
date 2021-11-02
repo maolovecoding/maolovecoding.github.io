@@ -1,0 +1,1698 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Jpa的学习, 听雨少年的博客">
+    <meta name="description" content="Java,Spring,SpringBoot,Vue.js,Node.js,JUC,数据结构和算法,TypeScript,JavaScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Jpa的学习 | 听雨少年的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="听雨少年的博客" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">听雨少年的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">听雨少年的博客</div>
+        <div class="logo-desc">
+            
+            Java,Spring,SpringBoot,Vue.js,Node.js,JUC,数据结构和算法,TypeScript,JavaScript
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/maolovecoding/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/maolovecoding/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Jpa的学习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring-Data/">
+                                <span class="chip bg-color">Spring Data</span>
+                            </a>
+                        
+                            <a href="/tags/JPA/">
+                                <span class="chip bg-color">JPA</span>
+                            </a>
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/SpringBoot/">
+                                <span class="chip bg-color">SpringBoot</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                            <a href="/categories/Java/Spring-Data/" class="post-category">
+                                Spring Data
+                            </a>
+                        
+                            <a href="/categories/Java/Spring-Data/JPA/" class="post-category">
+                                JPA
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-10-31
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="JPA-框架"><a href="#JPA-框架" class="headerlink" title="JPA 框架"></a>JPA 框架</h1><h2 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h2><h3 id="实体类注解"><a href="#实体类注解" class="headerlink" title="实体类注解"></a>实体类注解</h3><h4 id="实体注解-Entity"><a href="#实体注解-Entity" class="headerlink" title="实体注解 @Entity"></a>实体注解 @Entity</h4><p>使用 <code>@Entity</code>注解标识在一个模型类（也可以说是实体类 bean）上，表明当前类是一个数据库模型类了。</p>
+<h4 id="主键-Id"><a href="#主键-Id" class="headerlink" title="主键 @Id"></a>主键 @Id</h4><p>每个模型类都需要一个主键字段，使用<code>@Id</code>注解标识该注解字段。</p>
+<h4 id="Column-限制长度"><a href="#Column-限制长度" class="headerlink" title="@Column 限制长度"></a>@Column 限制长度</h4><p>该注解标记的属性，可以限制在数据库中生成表字段的长度。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>length <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="Table-标识表名"><a href="#Table-标识表名" class="headerlink" title="@Table 标识表名"></a>@Table 标识表名</h4><p>如果我们想要让生成的表的表名不是我们的类型，我们可以使用该注解进行指定表名。需要指定表中字段的名称我们也可以通过@Id，@Column 注解等的 name 属性进行指定。让我们模型类的属性名和生成的字段名不一致。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>mao<span class="token punctuation">.</span>sleeve<span class="token punctuation">.</span>model_bak</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Column</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Entity</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Id</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Table</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @ClassName: Banner
+ * @Description: banner模型类
+ * @Author 毛毛
+ * @CreateDate 2021/10/29/周五 15:01
+ * @Version: v1.0
+ */</span>
+<span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Banner</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 主键
+     */</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * @Column(length = 16) 限制长度不超过16
+     */</span>
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>length <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 描述
+     */</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> description<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Transient-忽略属性"><a href="#Transient-忽略属性" class="headerlink" title="@Transient 忽略属性"></a>@Transient 忽略属性</h4><p>使用该注解标记的属性，在创建表的时候，会忽略该属性，不和表的字段进行对应。也就是说模型类中有该属性，但是生成的表中不会有该字段。</p>
+<h4 id="JSON-序列化-JsonIgnore-忽略该属性"><a href="#JSON-序列化-JsonIgnore-忽略该属性" class="headerlink" title="JSON 序列化 @JsonIgnore 忽略该属性"></a>JSON 序列化 @JsonIgnore 忽略该属性</h4><p>在进行 json 序列化返回给前端数据的时候，如果某些属性我们不想返回给前端，那么在序列化的时候，我们需要使用该注解@JsonIgnore 标记在不被序列化的属性上。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Getter</span>
+<span class="token annotation punctuation">@Setter</span>
+<span class="token annotation punctuation">@MappedSuperclass</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">BaseEntity</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 三个基础字段 且这三个字段 不应该返回给前端 也就是不应该序列化
+     *
+     */</span>
+    <span class="token annotation punctuation">@JsonIgnore</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> createTime<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@JsonIgnore</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> updateTime<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@JsonIgnore</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> deleteTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="OneToMany-一对多"><a href="#OneToMany-一对多" class="headerlink" title="@OneToMany 一对多"></a>@OneToMany 一对多</h4><p><strong>使用该注解标记的属性，也叫做导航属性。</strong>通过当前所在的模型类可以找到这个关联的多方的数据。</p>
+<p>该注解用来生成一对多的关系。一个 banner 对应多个 bannerItem。表示两个表之间的关系是一对多。当前所在模型是一，标记的 BannerItem 类型是多方。</p>
+<p><strong>默认情况下，使用了该注解以后，会生成三个表。其中的 banner 和 banner_item 表是模型类对应的表模型，还有一张表名称是当前所在模型类对应的名称加上我们的一对多的该属性的名称结合，生成的新表 banner_banner_items。默认情况下，这个表有两个属性，是其他两张表的主键构成的。</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner_item"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BannerItem</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 关键字 跳转到spu的时候，需要携带spu的id 跳转到专题的时候，需要携带的是专题的标识
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> keyword<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * TODO 点击这个广告，应该跳转到spu商品页面，还是专题页面，主题页面等
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Short</span> type<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> banner_id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@OneToMany</span>
+<span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BannerItem</span><span class="token punctuation">&gt;</span></span> bannerItems<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果想要消除第三张表的产生：我们需要在 BannerItem 实体类中，建立和 banner 表的联系。</p>
+<p>之所以生成第三张表，是因为我们 jpa 不知道 banner 和 BannerItem 之间的联系和关系。所以我们需要在 BannerItem 中添加一个外键属性，表明当前的 BannerItem 是属于那个 Banner 的。</p>
+<p>这样就不会有第三张表的出现了。</p>
+<h4 id="JoinColumn-指定关联的外键"><a href="#JoinColumn-指定关联的外键" class="headerlink" title="@JoinColumn 指定关联的外键"></a>@JoinColumn 指定关联的外键</h4><p>该注解指定当前一对多的关系中，当前表的主键去作为多方的表的外键。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@OneToMany</span>
+<span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"bannerId"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BannerItem</span><span class="token punctuation">&gt;</span></span> bannerItems<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner_item"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BannerItem</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 关键字 跳转到spu的时候，需要携带spu的id 跳转到专题的时候，需要携带的是专题的标识
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> keyword<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * TODO 点击这个广告，应该跳转到spu商品页面，还是专题页面，主题页面等
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Short</span> type<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 外键 属于那个banner
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> bannerId<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>当我们使用该注解以后，就会生成数据库中两张表之间的物理外键。这种情况下，我们应该当被关联表先创建出来。所以我们可以在模型类上加上注解@Proxy</strong></p>
+<h4 id="Proxy"><a href="#Proxy" class="headerlink" title="@Proxy"></a>@Proxy</h4><p>实现模型类创建出表的时候，是懒创建还是直接创建。<strong>注意：这个注解是 hibernate 提供的。</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Table</span>
+<span class="token annotation punctuation">@Proxy</span><span class="token punctuation">(</span>lazy <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="GeneratedValue-生成策略"><a href="#GeneratedValue-生成策略" class="headerlink" title="@GeneratedValue 生成策略"></a>@GeneratedValue 生成策略</h4><p>如果我们想要让主键自增，主键唯一等，可以使用该注解标注在主键上。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Id</span>
+<span class="token comment">// strategy 策略</span>
+<span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>strategy = GenerationType.AUTO</code>这个不是主键自增，而是将表交给 JPA 管理，会生成新的表来管理数据。</p>
+<p><code>strategy = GenerationType.IDENTITY</code>表示主键自增。</p>
+<h4 id="MappedSuperclass-映射的基类"><a href="#MappedSuperclass-映射的基类" class="headerlink" title="@MappedSuperclass 映射的基类"></a>@MappedSuperclass 映射的基类</h4><p>当我们在一个类上标注了该注解以后，表明当前类是一个可以被模型类继承的基类。会拥有当前类的属性，且可以映射到数据库表中。</p>
+<p>使用该注解标记一个基类，是为了把某些公共的属性抽取出来，但不想让当前类成为一个模型类。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Getter</span>
+<span class="token annotation punctuation">@Setter</span>
+<span class="token annotation punctuation">@MappedSuperclass</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">BaseEntity</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 三个基础字段 且这三个字段 不应该返回给前端 也就是不应该序列化
+     */</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> createTime<span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> updateTime<span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Date</span> deleteTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="JPA-操作读写数据"><a href="#JPA-操作读写数据" class="headerlink" title="JPA 操作读写数据"></a>JPA 操作读写数据</h3><p>定义接口（仓储模式）继承 JpaRepository 接口，实现数据库的读写操作</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>mao<span class="token punctuation">.</span>sleeve<span class="token punctuation">.</span>repository<span class="token punctuation">.</span>banner</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>mao<span class="token punctuation">.</span>sleeve<span class="token punctuation">.</span>model_bak<span class="token punctuation">.</span></span><span class="token class-name">Banner</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>data<span class="token punctuation">.</span>jpa<span class="token punctuation">.</span>repository<span class="token punctuation">.</span></span><span class="token class-name">JpaRepository</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @ClassName: BannerRepository
+ * @Description: Repository 仓储模式 使用jpa操作数据库，读写
+ * JpaRepository&lt;Banner,Long&gt;
+ * 泛型一： 是我们操作的表对应的模型的类型
+ * 泛型二： 是操作表的主键的类型
+ * @Author 毛毛
+ * @CreateDate 2021/10/29/周五 23:54
+ * @Version: v1.0
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">BannerRepository</span> <span class="token keyword">extends</span> <span class="token class-name">JpaRepository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Banner</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 根据id查询相应的banner
+     *
+     * @param id
+     * @return
+     */</span>
+    <span class="token class-name">Banner</span> <span class="token function">findOneById</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 根据name查询相应的banner
+     *
+     * @param name
+     * @return
+     */</span>
+    <span class="token class-name">Banner</span> <span class="token function">findOneByName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h4><p>默认情况下，JPA 查询某张表中的数据的时候，如果有某个属性是关联其他表的字段，JPA 并不会直接把关联的数据一起查询出，只有在我们用到了关联数据的时候才会进行查询，这就是 JPA 的懒加载。</p>
+<p>如果我们想实现一次性加载完所有数据，其实也很简单。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>fetch <span class="token operator">=</span> <span class="token class-name">FetchType</span><span class="token punctuation">.</span>EAGER<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="双向一对多配置"><a href="#双向一对多配置" class="headerlink" title="双向一对多配置"></a>双向一对多配置</h4><p><strong>双向一对一（@OneToOne），类似双向一对多，mappedBy 设置在关系被维护端，外键由关系维护端维护；</strong></p>
+<p>我们可以在模型类 banner 中配置当前 banner 所存在的所有子项 bannerItems，那么肯定也可以在 bannerItem 模型类中配置当前子项所属的 banner。在 banner 中是一对多个 item，那么在 item 中就是多个 item 对应一个 banner。</p>
+<p><strong>维护双向一对多的关系中，</strong>我们也叫做关系维护端和关系被维护端。</p>
+<p>关系维护端：我们把多方的那一端叫做维护端。</p>
+<p>关系被维护端：一方</p>
+<p><strong>在双向一对多的模型中，我们使用的@JoinColumn 注解是打在多端维护关系的属性上面的。</strong></p>
+<p>在一方的那个维护的属性上，是不需要使用该属性了。</p>
+<p>然后还需要在一方（这里的 banner）模型类中的维护多方关系的导航属性上使用的注解**<code>@OneToMany</code>**里面设置一个属性 mappedBy 的属性值为多方模型中维护关系的导航属性的属性名。</p>
+<p><strong>Many 端，为关系维护端，负责外键的更新（删除时候注意先删除 Many 端再删除 One 端）；</strong><br><strong>One 端，为关系被维护端，不能更新外键；</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Proxy</span><span class="token punctuation">(</span>lazy <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Getter</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Banner</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 主键
+     */</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * @Column(length = 16) 限制长度不超过16
+     */</span>
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>length <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 描述
+     *
+     * @Transient: 该注解实现 标注的属性不在表中体现
+     */</span>
+    <span class="token annotation punctuation">@Transient</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> description<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 广告板块首图
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 一个banner拥有多个item，一对多
+     * mappedBy = "banner" 该属性的值就是多端维护关系的属性的属性名，也就是导航属性名
+     */</span>
+    <span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>mappedBy <span class="token operator">=</span> <span class="token string">"banner"</span><span class="token punctuation">)</span>
+    <span class="token comment">//@JoinColumn(name = "banner_id")</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BannerItem</span><span class="token punctuation">&gt;</span></span> bannerItems<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner_item"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BannerItem</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 关键字 跳转到spu的时候，需要携带spu的id 跳转到专题的时候，需要携带的是专题的标识
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> keyword<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * TODO 点击这个广告，应该跳转到spu商品页面，还是专题页面，主题页面等
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Short</span> type<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 外键 属于那个banner jpa自动生成，不能显示的写出来了
+     */</span>
+    <span class="token comment">// private Long bannerId;</span>
+    <span class="token comment">/**
+     * 当前banner子项属于的banner
+     */</span>
+    <span class="token annotation punctuation">@ManyToOne</span>
+    <span class="token comment">// @JoinColumn(name = "banner_id") jpa会维护该外键字段</span>
+    <span class="token keyword">private</span> <span class="token class-name">Banner</span> banner<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>或者：</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner_item"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BannerItem</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> img<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 关键字 跳转到spu的时候，需要携带spu的id 跳转到专题的时候，需要携带的是专题的标识
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> keyword<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * TODO 点击这个广告，应该跳转到spu商品页面，还是专题页面，主题页面等
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Short</span> type<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 外键 属于那个banner
+     * TODO JPA会自动帮我们创建，不需要显示手写，也不能定义
+     * 如果想要显示的定义该属性，需要在下面的导航属性上的@joinColumn注解上配置一些属性
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> bannerId<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 当前banner子项属于的banner
+     */</span>
+    <span class="token annotation punctuation">@ManyToOne</span>
+    <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"banner_id"</span><span class="token punctuation">,</span> insertable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>updatable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Banner</span> banner<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="多对多-ManyToMany"><a href="#多对多-ManyToMany" class="headerlink" title="多对多@ManyToMany"></a>多对多@ManyToMany</h3><h4 id="单向多对多"><a href="#单向多对多" class="headerlink" title="单向多对多"></a>单向多对多</h4><p>表之间多对多的关系，其实是双向的。一般都需要三种表，需要中间表来维护两张表之间的关系的。</p>
+<p>但是很多时候，我们在模型类中只需要体现出单向的多对多即可，有时候不需要另一方也使用导航属性来关联。</p>
+<h4 id="多对多生成第三张表的表名"><a href="#多对多生成第三张表的表名" class="headerlink" title="多对多生成第三张表的表名"></a>多对多生成第三张表的表名</h4><p>默认情况下，我们生成的一对多或者是多对多的第三张中间表的名称是当前模型类对应的表名和关联的导航属性的名称的结合。如果我们想指定生成的中间表的表名，可以使用 **@JoinTable ** 注解来显示的指定。还可以通过该注解的<code>joinColumns</code>属性来指定中间表中关联的两个外键的名称</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"theme"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Theme</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ManyToMany</span>
+    <span class="token annotation punctuation">@JoinTable</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"theme_spu"</span><span class="token punctuation">,</span>
+            joinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"theme_id"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            inverseJoinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"spu_id"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Spu</span><span class="token punctuation">&gt;</span></span> spuList<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>双向多对多（@ManyToMany），注意关系维护端的定义；所有关系定义都是在关系维护端来定义的；<br><strong>@JoinTable(name=”关联表名称”, inverseJoinColumns=@JoinColumn(name=”被维护端外键”),</strong></p>
+<p><strong>joinColumns=@JoinColumn(name=”维护端外键”))</strong></p>
+<p>注意，在关系维护端对被维护端的集合进行增加、删除操作时候，需要重载 hashCode 与 equals 方法，通过 ID 来判</p>
+<p>断是否相同，而不是内存引用地址；<br>对关系被维护端进行级联删除时候，需要先解除关系，然后删除；</p>
+<h4 id="JPA-级联更新去孤子-了解"><a href="#JPA-级联更新去孤子-了解" class="headerlink" title="JPA 级联更新去孤子(了解)"></a>JPA 级联更新去孤子(了解)</h4><blockquote>
+<p>在是使用 JPA(hibernate)配置实体关系中，经常会遇到通过父实体对象级联批量更新子对象的需求，而且每次更新必须采用合并方式，即原来的所有子删除，只保留本次保存的所有子实体对象。</p>
+<p>例子：</p>
+<p>A 为父对象，持有一个 B 的集合，A 与 B 的关系为 oneToMany.</p>
+<p>第一次保存：设置 A 下的 B 集合成员为：1,2,3, 保存 A 后，B 对象对应的数据表为:1,2,3</p>
+<p>第二次保存：设置 A 下的 B 集合成员为：2,3,4, 保存 A 后，B 对象对应的数据表为:2,3,4 (自动删除无效数据 1)</p>
+<p>这个就是自动去孤子功能。</p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+       <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">B</span><span class="token punctuation">&gt;</span></span> bs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">B</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>cascade <span class="token operator">=</span> <span class="token class-name">CascadeType</span><span class="token punctuation">.</span>ALL<span class="token punctuation">,</span> fetch <span class="token operator">=</span> <span class="token class-name">FetchType</span><span class="token punctuation">.</span>LAZY<span class="token punctuation">,</span> mappedBy <span class="token operator">=</span> <span class="token string">"flowNode"</span><span class="token punctuation">,</span> orphanRemoval <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@OrderBy</span><span class="token punctuation">(</span>clause <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">B</span><span class="token punctuation">&gt;</span></span> <span class="token function">getBs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> bs<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h2><h3 id="物理外键和逻辑外键"><a href="#物理外键和逻辑外键" class="headerlink" title="物理外键和逻辑外键"></a>物理外键和逻辑外键</h3><p>我们使用 JPA 框架的时候，通过模型类创建数据库表，相关联的字段都会生成物理外键。实际上我们应该不使用或者少使用物理外键在数据库表中。应该是在模型类中体现这些逻辑外键，在数据库中不建立物理外键。</p>
+<p>使用 hibernate 的一个被废弃的注解可以实现不生成物理外键</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+* 关系被维护端
+* 忽略物理外键
+*/</span>
+<span class="token annotation punctuation">@ManyToMany</span><span class="token punctuation">(</span>mappedBy <span class="token operator">=</span> <span class="token string">"spuList"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@org.hibernate.annotations.ForeignKey</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"null"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Theme</span><span class="token punctuation">&gt;</span></span> themeList<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>也可以使用@JoinColumn 注解中新增的属性 foreign 属性来禁止生成物理外键</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"spu"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Spu</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span><span class="token punctuation">(</span>strategy <span class="token operator">=</span> <span class="token class-name">GenerationType</span><span class="token punctuation">.</span>IDENTITY<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 主标题
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 副标题
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> subTitle<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 关系被维护端
+     * 忽略物理外键
+     */</span>
+    <span class="token annotation punctuation">@ManyToMany</span><span class="token punctuation">(</span>mappedBy <span class="token operator">=</span> <span class="token string">"spuList"</span><span class="token punctuation">)</span>
+    <span class="token comment">//@org.hibernate.annotations.ForeignKey(name = "null")</span>
+    <span class="token comment">// 上面是被废弃的方式，下面的方式是新增的，也是用来禁止生成物理外键的，设置模式是无限制</span>
+    <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>foreignKey <span class="token operator">=</span> <span class="token annotation punctuation">@ForeignKey</span><span class="token punctuation">(</span><span class="token class-name">ConstraintMode</span><span class="token punctuation">.</span>NO_CONSTRAINT<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Theme</span><span class="token punctuation">&gt;</span></span> themeList<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">毛毛</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://maolovecoding.github.io/2021/10/31/src/java/jpa-de-xue-xi/">https://maolovecoding.github.io/2021/10/31/src/java/jpa-de-xue-xi/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">毛毛</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Spring-Data/">
+                                    <span class="chip bg-color">Spring Data</span>
+                                </a>
+                            
+                                <a href="/tags/JPA/">
+                                    <span class="chip bg-color">JPA</span>
+                                </a>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/SpringBoot/">
+                                    <span class="chip bg-color">SpringBoot</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/11/02/src/vue/vue3-chu-ti-yan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue3-初体验">
+                        
+                        <span class="card-title">vue3-初体验</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue3/">
+                        <span class="chip bg-color">vue3</span>
+                    </a>
+                    
+                    <a href="/tags/ts/">
+                        <span class="chip bg-color">ts</span>
+                    </a>
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                    <a href="/tags/compositionAPI/">
+                        <span class="chip bg-color">compositionAPI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/31/src/java/jpa-de-xue-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Jpa的学习">
+                        
+                        <span class="card-title">Jpa的学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            <a href="/categories/Java/Spring-Data/" class="post-category">
+                                    Spring Data
+                                </a>
+                            
+                            <a href="/categories/Java/Spring-Data/JPA/" class="post-category">
+                                    JPA
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring-Data/">
+                        <span class="chip bg-color">Spring Data</span>
+                    </a>
+                    
+                    <a href="/tags/JPA/">
+                        <span class="chip bg-color">JPA</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('80')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 听雨少年的博客<br />'
+            + '文章作者: 毛毛<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4, H5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4, H5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+  
+  <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+  
+  <div class="container row center-align"
+    style="margin-bottom: 0px !important;">
+    <div class="col s12 m8 l8 copy-right">
+      Copyright&nbsp;&copy;
+      
+      <span id="year">2019-2021</span>
+      
+      <span id="year">2019</span>
+      <a href="/about" target="_blank">毛毛</a>
+      |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+      |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+      <br>
+      
+      
+      
+      
+      
+      
+      <span id="busuanzi_container_site_pv">
+        |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      
+      <span id="busuanzi_container_site_uv">
+        |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+          class="white-color"></span>&nbsp;人
+      </span>
+      
+      <br>
+      
+      <br>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+  <!-- https://github.com/maolovecoding -->
+    <a href="https://github.com/maolovecoding/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto: 1339065735@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1339065735" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1339065735" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+<!-- 
+ -->
+
+<!--  -->
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

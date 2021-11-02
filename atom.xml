@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>听雨少年的博客</title>
   
+  <subtitle>听雨少年</subtitle>
+  <link href="https://maolovecoding.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
-  <updated>1985-10-26T08:15:00.000Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://maolovecoding.github.io/"/>
+  <updated>2021-11-02T13:55:57.697Z</updated>
+  <id>https://maolovecoding.github.io/</id>
   
   <author>
     <name>毛毛</name>
@@ -17,23 +17,235 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/10/31/hello-world/"/>
-    <id>http://example.com/2021/10/31/hello-world/</id>
-    <published>2021-10-31T03:04:21.656Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
+    <title>vuex--状态管理篇</title>
+    <link href="https://maolovecoding.github.io/2021/11/06/src/vue/vuex/"/>
+    <id>https://maolovecoding.github.io/2021/11/06/src/vue/vuex/</id>
+    <published>2021-11-06T14:21:56.000Z</published>
+    <updated>2021-11-02T13:55:57.697Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Vuex-的状态管理&quot;&gt;&lt;a href=&quot;#Vuex-的状态管理&quot; class=&quot;headerlink&quot; title=&quot;Vuex 的状态管理&quot;&gt;&lt;/a&gt;Vuex 的状态管理&lt;/h1&gt;&lt;h2 id=&quot;什么是状态管理&quot;&gt;&lt;a href=&quot;#什么是状态管理&quot;</summary>
         
       
     
     
     
+    <category term="vue" scheme="https://maolovecoding.github.io/categories/vue/"/>
+    
+    <category term="vuex" scheme="https://maolovecoding.github.io/categories/vue/vuex/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="vuex" scheme="https://maolovecoding.github.io/tags/vuex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack5</title>
+    <link href="https://maolovecoding.github.io/2021/11/05/src/vue/webpack/"/>
+    <id>https://maolovecoding.github.io/2021/11/05/src/vue/webpack/</id>
+    <published>2021-11-05T13:21:11.000Z</published>
+    <updated>2021-11-02T13:54:15.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;webpack-学习之旅&quot;&gt;&lt;a href=&quot;#webpack-学习之旅&quot; class=&quot;headerlink&quot; title=&quot;webpack 学习之旅&quot;&gt;&lt;/a&gt;webpack 学习之旅&lt;/h1&gt;&lt;h2 id=&quot;webpack-基础打包&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/categories/webpack/"/>
+    
+    <category term="vue" scheme="https://maolovecoding.github.io/categories/webpack/vue/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="loader" scheme="https://maolovecoding.github.io/tags/loader/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-CLI 和 Vite &amp; 尤大大新宠</title>
+    <link href="https://maolovecoding.github.io/2021/11/05/src/vue/vuecli-vite/"/>
+    <id>https://maolovecoding.github.io/2021/11/05/src/vue/vuecli-vite/</id>
+    <published>2021-11-05T00:21:56.000Z</published>
+    <updated>2021-11-02T13:57:35.029Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue-CLI-和-Vite&quot;&gt;&lt;a href=&quot;#Vue-CLI-和-Vite&quot; class=&quot;headerlink&quot; title=&quot;Vue-CLI 和 Vite&quot;&gt;&lt;/a&gt;Vue-CLI 和 Vite&lt;/h1&gt;&lt;h2 id=&quot;Vue-CLI&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://maolovecoding.github.io/categories/vue/"/>
+    
+    <category term="vite" scheme="https://maolovecoding.github.io/categories/vue/vite/"/>
+    
+    <category term="vue-cli" scheme="https://maolovecoding.github.io/categories/vue/vite/vue-cli/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="vueCli" scheme="https://maolovecoding.github.io/tags/vueCli/"/>
+    
+    <category term="vite" scheme="https://maolovecoding.github.io/tags/vite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3-组件化</title>
+    <link href="https://maolovecoding.github.io/2021/11/04/src/vue/vue3-zu-jian-hua/"/>
+    <id>https://maolovecoding.github.io/2021/11/04/src/vue/vue3-zu-jian-hua/</id>
+    <published>2021-11-04T13:21:56.000Z</published>
+    <updated>2021-11-02T13:51:56.745Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue3-组件化-一-父子组件通信&quot;&gt;&lt;a href=&quot;#Vue3-组件化-一-父子组件通信&quot; class=&quot;headerlink&quot; title=&quot;Vue3 组件化(一)-父子组件通信&quot;&gt;&lt;/a&gt;Vue3 组件化(一)-父子组件通信&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://maolovecoding.github.io/categories/vue/"/>
+    
+    <category term="组件化" scheme="https://maolovecoding.github.io/categories/vue/%E7%BB%84%E4%BB%B6%E5%8C%96/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="组件化" scheme="https://maolovecoding.github.io/tags/%E7%BB%84%E4%BB%B6%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router</title>
+    <link href="https://maolovecoding.github.io/2021/11/03/src/vue/vue-router/"/>
+    <id>https://maolovecoding.github.io/2021/11/03/src/vue/vue-router/</id>
+    <published>2021-11-03T03:21:56.000Z</published>
+    <updated>2021-11-02T13:45:57.621Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue-router&quot;&gt;&lt;a href=&quot;#Vue-router&quot; class=&quot;headerlink&quot; title=&quot;Vue-router&quot;&gt;&lt;/a&gt;Vue-router&lt;/h1&gt;&lt;h2 id=&quot;什么是路由&quot;&gt;&lt;a href=&quot;#什么是路由&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue-router" scheme="https://maolovecoding.github.io/categories/vue-router/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="vue-router" scheme="https://maolovecoding.github.io/tags/vue-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3-初体验</title>
+    <link href="https://maolovecoding.github.io/2021/11/02/src/vue/vue3-chu-ti-yan/"/>
+    <id>https://maolovecoding.github.io/2021/11/02/src/vue/vue3-chu-ti-yan/</id>
+    <published>2021-11-02T13:21:56.000Z</published>
+    <updated>2021-11-02T13:51:27.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue3-Composition-API-一&quot;&gt;&lt;a href=&quot;#Vue3-Composition-API-一&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://maolovecoding.github.io/categories/vue/"/>
+    
+    
+    <category term="vue3" scheme="https://maolovecoding.github.io/tags/vue3/"/>
+    
+    <category term="ts" scheme="https://maolovecoding.github.io/tags/ts/"/>
+    
+    <category term="webpack" scheme="https://maolovecoding.github.io/tags/webpack/"/>
+    
+    <category term="compositionAPI" scheme="https://maolovecoding.github.io/tags/compositionAPI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jpa的学习</title>
+    <link href="https://maolovecoding.github.io/2021/10/31/src/java/jpa-de-xue-xi/"/>
+    <id>https://maolovecoding.github.io/2021/10/31/src/java/jpa-de-xue-xi/</id>
+    <published>2021-10-31T14:16:54.000Z</published>
+    <updated>2021-11-02T13:55:01.284Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JPA-框架&quot;&gt;&lt;a href=&quot;#JPA-框架&quot; class=&quot;headerlink&quot; title=&quot;JPA 框架&quot;&gt;&lt;/a&gt;JPA 框架&lt;/h1&gt;&lt;h2 id=&quot;常用注解&quot;&gt;&lt;a href=&quot;#常用注解&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://maolovecoding.github.io/categories/Java/"/>
+    
+    <category term="Spring Data" scheme="https://maolovecoding.github.io/categories/Java/Spring-Data/"/>
+    
+    <category term="JPA" scheme="https://maolovecoding.github.io/categories/Java/Spring-Data/JPA/"/>
+    
+    
+    <category term="Spring Data" scheme="https://maolovecoding.github.io/tags/Spring-Data/"/>
+    
+    <category term="JPA" scheme="https://maolovecoding.github.io/tags/JPA/"/>
+    
+    <category term="java" scheme="https://maolovecoding.github.io/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="https://maolovecoding.github.io/tags/SpringBoot/"/>
     
   </entry>
   

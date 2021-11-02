@@ -1,0 +1,2027 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="vue3-初体验, 听雨少年的博客">
+    <meta name="description" content="Java,Spring,SpringBoot,Vue.js,Node.js,JUC,数据结构和算法,TypeScript,JavaScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>vue3-初体验 | 听雨少年的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="听雨少年的博客" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">听雨少年的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">听雨少年的博客</div>
+        <div class="logo-desc">
+            
+            Java,Spring,SpringBoot,Vue.js,Node.js,JUC,数据结构和算法,TypeScript,JavaScript
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/maolovecoding/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/maolovecoding/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">vue3-初体验</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue3/">
+                                <span class="chip bg-color">vue3</span>
+                            </a>
+                        
+                            <a href="/tags/ts/">
+                                <span class="chip bg-color">ts</span>
+                            </a>
+                        
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                            <a href="/tags/compositionAPI/">
+                                <span class="chip bg-color">compositionAPI</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/vue/" class="post-category">
+                                vue
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-02
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Vue3-Composition-API-一"><a href="#Vue3-Composition-API-一" class="headerlink" title="Vue3-Composition-API(一)"></a>Vue3-Composition-API(一)</h1><h2 id="前置补充"><a href="#前置补充" class="headerlink" title="前置补充"></a>前置补充</h2><h3 id="认识-Mixin"><a href="#认识-Mixin" class="headerlink" title="认识 Mixin"></a>认识 Mixin</h3><p>目前我们是使用组件化的方式在开发整个 Vue 的应用程序，但是组件和组件之间有时候会<strong>存在相同的代码逻辑</strong>，我 们希望对<strong>相同的代码逻辑进行抽取。</strong></p>
+<p>在 Vue2 和 Vue3 中都支持的一种方式就是<strong>使用 Mixin 来完成：</strong></p>
+<ol>
+<li>Mixin 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能；</li>
+<li>一个 Mixin 对象可以包含任何组件选项；</li>
+<li>当组件使用 Mixin 对象时，所有 Mixin 对象的选项将被 混合 进入该组件本身的选项中；</li>
+</ol>
+<h3 id="Mixin-的基本使用"><a href="#Mixin-的基本使用" class="headerlink" title="Mixin 的基本使用"></a>Mixin 的基本使用</h3><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817103436943.png" alt="image-20210817103436943"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817103455764.png" alt="image-20210817103455764"></p>
+<h3 id="Mixin-的合并规则"><a href="#Mixin-的合并规则" class="headerlink" title="Mixin 的合并规则"></a>Mixin 的合并规则</h3><p><strong>如果 Mixin 对象中的选项和组件对象中的选项发生了冲突，那么 Vue 会如何操作呢？</strong></p>
+<p>这里<strong>分成不同的情况</strong>来进行处理；</p>
+<p><strong>情况一：如果是 data 函数的返回值对象</strong></p>
+<ul>
+<li>返回值对象默认情况下会进行合并；</li>
+<li>如果 data 返回值对象的属性发生了冲突，那么会保留组件自身的数据；</li>
+</ul>
+<p><strong>情况二：如何生命周期钩子函数</strong></p>
+<ul>
+<li>生命周期的钩子函数会被合并到数组中，都会被调用；</li>
+</ul>
+<p><strong>情况三：值为对象的选项，例如 methods、components 和 directives，将被合并为同一个对象。</strong></p>
+<ul>
+<li>比如都有 methods 选项，并且<strong>都定义了方法，那么它们都会生效</strong>；</li>
+<li>但是如果<strong>对象的 key 相同</strong>，那么<strong>会取组件对象的键值对</strong>；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817125624404.png" alt="image-20210817125624404"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817125637070.png" alt="image-20210817125637070"></p>
+<h3 id="全局混入-Mixin"><a href="#全局混入-Mixin" class="headerlink" title="全局混入 Mixin"></a>全局混入 Mixin</h3><p><strong>如果组件中的某些选项，是所有的组件都需要拥有的，那么这个时候我们可以使用全局的 mixin：</strong></p>
+<ul>
+<li>全局的 Mixin 可以使用 应用 app 的方法 mixin 来完成注册；</li>
+<li>一旦注册，那么全局混入的选项将会影响每一个组件；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817130238279.png" alt="image-20210817130238279"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817130247318.png" alt="image-20210817130247318"></p>
+<h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><p><strong>另外一个类似于 Mixin 的方式是通过 extends 属性：</strong></p>
+<p>允许声明扩展另外一个组件，类似于 Mixins；</p>
+<p><strong>在开发中 extends 用的非常少，在 Vue2 中比较推荐大家使用 Mixin，而在 Vue3 中推荐使用 Composition API。</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817132414819.png" alt="image-20210817132414819"></p>
+<h2 id="Options-API-的弊端"><a href="#Options-API-的弊端" class="headerlink" title="Options API 的弊端"></a>Options API 的弊端</h2><p>在 Vue2 中，我们编写组件的方式是 Options API：</p>
+<ol>
+<li>Options API 的一大特点就是在对应的属性中编写对应的功能模块；</li>
+<li>比如 data 定义数据、methods 中定义方法、computed 中定义计算属性、watch 中监听属性改变，也包括生命 周期钩子；</li>
+</ol>
+<p>但是这种代码有一个很大的弊端：</p>
+<ol>
+<li>当我们实现某一个功能时，这个功能对应的代码逻辑会被拆分到各个属性中；</li>
+<li>当我们组件变得更大、更复杂时，逻辑关注点的列表就会增长，那么同一个功能的逻辑就会被拆分的很分散；</li>
+<li>尤其对于那些一开始没有编写这些组件的人来说，这个组件的代码是难以阅读和理解的（阅读组件的其他人）；</li>
+</ol>
+<p><strong>如果我们能将同一个逻辑关注 点相关的代码收集在一起会更 好。</strong></p>
+<p><strong>这就是 Composition API 想 要做的事情，以及可以帮助我 们完成的事情。</strong></p>
+<p><strong>也有人把 Vue Composition API 简称为 VCA。</strong></p>
+<h2 id="认识-Composition-API"><a href="#认识-Composition-API" class="headerlink" title="认识 Composition API"></a>认识 Composition API</h2><p>那么既然知道 Composition API 想要帮助我们做什么事情，接下来看一下到底是怎么做呢？</p>
+<ol>
+<li>为了开始使用 Composition API，我们需要有一个可以实际使用它（编写代码）的地方；</li>
+<li>在 Vue 组件中，这个位置<strong>就是 setup 函数；</strong></li>
+</ol>
+<p><strong>setup 其实就是组件的另外一个选项：</strong></p>
+<ol>
+<li>只不过这个选项强大到我们可以用它来替代之前所编写的大部分其他选项；</li>
+<li>比如 methods、computed、watch、data、生命周期等等；</li>
+</ol>
+<p><strong>接下来我们一起学习这个函数的使用</strong></p>
+<ul>
+<li>函数的参数</li>
+<li>函数的返回值</li>
+</ul>
+<h3 id="setup-函数的参数"><a href="#setup-函数的参数" class="headerlink" title="setup 函数的参数"></a>setup 函数的参数</h3><p>我们先来研究一个 setup 函数的参数，它主要有两个参数：</p>
+<ul>
+<li>第一个参数：props</li>
+<li>第二个参数：context</li>
+</ul>
+<p>props 非常好理解，它其实就是父组件传递过来的属性会被<strong>放到 props 对象</strong>中，我们在 setup 中如果需要使用，那么就可 以<strong>直接通过 props 参数</strong>获取：</p>
+<ol>
+<li>对于定义 props 的类型，我们还是和之前的规则是一样的，在 props 选项中定义； p</li>
+<li>并且在 template 中依然是可以正常去使用 props 中的属性，比如 message；</li>
+<li>如果我们在 setup 函数中想要使用 props，那么不可以通过 this 去获取（后面我会讲到为什么）；</li>
+<li>因为 props 有直接作为参数传递到 setup 函数中，所以我们可以直接通过参数来使用即可；</li>
+</ol>
+<p><strong>另外一个参数是 context，我们也称之为是一个 SetupContext，它里面包含三个属性：</strong></p>
+<ul>
+<li>attrs：所有的非 prop 的 attribute；</li>
+<li>slots：父组件传递过来的插槽（这个在以渲染函数返回时会有作用，后面会讲到）；</li>
+<li>emit：当我们组件内部需要发出事件时会用到 emit（因为我们不能访问 this，所以不可以通过 this.$emit 发出事件）；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817141859483.png" alt="image-20210817141859483"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817141907813.png" alt="image-20210817141907813"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817141917796.png" alt="image-20210817141917796"></p>
+<h3 id="setup-函数的返回值"><a href="#setup-函数的返回值" class="headerlink" title="setup 函数的返回值"></a>setup 函数的返回值</h3><p>setup 既然是一个函数，那么它也可以有返回值，它的返回值用来做什么呢？</p>
+<ul>
+<li>setup 的返回值可以在模板 template 中被使用；</li>
+<li>也就是说我们可以通过 setup 的返回值来替代 data 选项；</li>
+</ul>
+<p>甚至是我们可以返回一个执行函数来代替在 methods 中定义的方法：</p>
+<p><strong>但是，如果我们将 counter 在 increment 或者 decrement 进行操作时，是否可以实现界面的响应式呢？</strong></p>
+<ul>
+<li>答案是不可以；</li>
+<li>这是因为对于一个定义的变量来说，默认情况下，Vue 并不会跟踪它的变化，来引起界面的响应式操作；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817161645538.png" alt="image-20210817161645538"></p>
+<h3 id="setup-不可以使用-this"><a href="#setup-不可以使用-this" class="headerlink" title="setup 不可以使用 this"></a>setup 不可以使用 this</h3><p><strong>官方关于 this 有这样一段描述</strong></p>
+<ul>
+<li>表达的含义是 this 并没有指向当前组件实例；</li>
+<li>并且在 setup 被调用之前，data、computed、methods 等都没有被解析；</li>
+<li>所以无法在 setup 中获取 this；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817163136789.png" alt="image-20210817163136789"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817163156525.png" alt="image-20210817163156525"></p>
+<h3 id="Reactive-API"><a href="#Reactive-API" class="headerlink" title="Reactive API"></a>Reactive API</h3><p>如果想为在 setup 中定义的数据提供响应式的特性，那么我们可以<strong>使用 reactive 的函数</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817164854036.png" alt="image-20210817164854036"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817164925535.png" alt="image-20210817164925535"></p>
+<p><strong>那么这是什么原因呢？为什么就可以变成响应式的呢？</strong></p>
+<ul>
+<li>这是因为当我们使用 reactive 函数处理我们的数据之后，数据再次被使用时就会进行依赖收集；</li>
+<li>当数据发生改变时，所有收集到的依赖都是进行对应的响应式操作（比如更新界面）；</li>
+<li>事实上，我们编写的 data 选项，也是在内部交给了 reactive 函数将其编程响应式对象的；</li>
+</ul>
+<h3 id="Ref-API-尤大大推荐使用"><a href="#Ref-API-尤大大推荐使用" class="headerlink" title="Ref API(尤大大推荐使用)"></a>Ref API(尤大大推荐使用)</h3><p><strong>reactive API 对</strong>传入的<strong>类型是有限制</strong>的，它要求我们必须传入的是<strong>一个对象或者数组</strong>类型：</p>
+<p><strong>如果我们传入一个基本数据类型（String、Number、Boolean）会报一个警告；</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817170808693.png" alt="image-20210817170808693"></p>
+<p>这个时候 Vue3 给我们提供了另外一个<strong>API：ref API</strong></p>
+<ul>
+<li>ref 会返回一个可变的响应式对象，该对象作为一个 响应式的引用 维护着它内部的值，这就是 ref 名称的来源；</li>
+<li>它内部的值是在 ref 的 value 属性中被维护的；</li>
+</ul>
+<p><strong>这里有两个注意事项：</strong></p>
+<ul>
+<li>在模板中引入 ref 的值时，Vue 会自动帮助我们进行解包操作，所以我们并不需要在模板中通过 ref.value 的方式 来使用；</li>
+<li>但是在 setup 函数内部，它依然是一个 ref 引用， 所以对其进行操作时，我们依然需要使用 ref.value 的方式；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817171151124.png" alt="image-20210817171151124"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817171207810.png" alt="image-20210817171207810"></p>
+<h4 id="Ref-自动解包"><a href="#Ref-自动解包" class="headerlink" title="Ref 自动解包"></a>Ref 自动解包</h4><p>模板中的解包是浅层的解包，如果我们的代码是下面的方式，<strong>现在也可以自动解包了</strong>：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817172326881.png" alt="image-20210817172326881"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817172343208.png" alt="image-20210817172343208"></p>
+<p>如果我们将 ref 放到一个 reactive 的属性当中，那么在模板中使用时，它会自动解包：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817172826882.png" alt="image-20210817172826882"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817172837494.png" alt="image-20210817172837494"></p>
+<h3 id="认识-readonly"><a href="#认识-readonly" class="headerlink" title="认识 readonly"></a>认识 readonly</h3><p>我们<strong>通过 reactive 或者 ref 可以</strong>获取到一个<strong>响应式的对象</strong>，但是某些情况下，我们传入给其他地方（组件）的这个 响应式对象希望在另外一个地方（<strong>组件）被使用</strong>，但是<strong>不能被修改</strong>，这个时候如何防止这种情况的出现呢？</p>
+<ul>
+<li>Vue3 为我们提供了 readonly 的方法；</li>
+<li>readonly 会返回原生对象的只读代理（也就是它依然是一个 Proxy，这是一个 proxy 的 set 方法被劫持，并且不 能对其进行修改）；</li>
+</ul>
+<p><strong>在开发中常见的 readonly 方法会传入三个类型的参数：</strong></p>
+<ul>
+<li>类型一：普通对象；</li>
+<li>类型二：reactive 返回的对象；</li>
+<li>类型三：ref 的对象；</li>
+</ul>
+<h4 id="readonly-的使用"><a href="#readonly-的使用" class="headerlink" title="readonly 的使用"></a>readonly 的使用</h4><p><strong>在 readonly 的使用过程中，有如下规则：</strong></p>
+<ul>
+<li>readonly 返回的对象都是不允许修改的；</li>
+<li>但是经过 readonly 处理的<strong>原来的对象</strong>是允许被修改的；<ul>
+<li>比如 const info = readonly(obj)，info 对象是不允许被修改的；</li>
+<li>当 obj 被修改时，readonly 返回的 info 对象也会被修改；</li>
+<li>但是我们不能去修改 readonly 返回的对象 info；</li>
+</ul>
+</li>
+<li>其实本质上就是 readonly 返回的对象的 setter 方法被<strong>劫持了而已；</strong></li>
+</ul>
+<h4 id="readonly-的应用"><a href="#readonly-的应用" class="headerlink" title="readonly 的应用"></a>readonly 的应用</h4><p><strong>那么这个 readonly 有什么用呢？</strong></p>
+<p>在我们传递给其他组件数据时，往往希望其他组件使用我们传递的内容，但是不允许它们修改时，就可以使用 readonly 了</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817180815814.png" alt="image-20210817180815814"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817180921569.png" alt="image-20210817180921569"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210817180954082.png" alt="image-20210817180954082"></p>
+<h1 id="Vue3-Composition-API-二"><a href="#Vue3-Composition-API-二" class="headerlink" title="Vue3-Composition-API(二)"></a>Vue3-Composition-API(二)</h1><h2 id="Reactive-API-1"><a href="#Reactive-API-1" class="headerlink" title="Reactive-API"></a>Reactive-API</h2><h3 id="Reactive-判断的-API"><a href="#Reactive-判断的-API" class="headerlink" title="Reactive 判断的 API"></a>Reactive 判断的 API</h3><ul>
+<li><p><strong>isProxy</strong></p>
+<p>检查对象是否是由 reactive 或 readonly 创建的 proxy。</p>
+</li>
+<li><p><strong>isReactive</strong></p>
+<ol>
+<li>检查对象是否是由 reactive 创建的响应式代理：</li>
+<li>如果该代理是 readonly 建的，但包裹了由 reactive 创建的另一个代理，它也会返回 true；</li>
+</ol>
+</li>
+<li><p><strong>isReadonly</strong></p>
+<ol>
+<li>检查对象是否是由 readonly 创建的只读代理。</li>
+</ol>
+</li>
+<li><p><strong>toRaw</strong></p>
+<ol>
+<li>返回 reactive 或 readonly 代理的原始对象（不建议保留对原始对象的持久引用。请谨慎使用）。</li>
+</ol>
+</li>
+<li><p><strong>shallowReactive</strong></p>
+<ol>
+<li>创建一个响应式代理，它跟踪其自身 property 的响应性，但不执行嵌套对象的深层响应式转换 (深层还是原生对象)。</li>
+</ol>
+</li>
+<li><p><strong>shallowReadonly</strong></p>
+<ol>
+<li>创建一个 proxy，使其自身的 property 为只读，但不执行嵌套对象的深度只读转换（深层还是可读、可写的）。</li>
+</ol>
+</li>
+</ul>
+<h2 id="toRefs"><a href="#toRefs" class="headerlink" title="toRefs"></a>toRefs</h2><p>如果我们<strong>使用 ES6 的解构语法</strong>，<strong>对 reactive 返回的对象进行解构获取值</strong>，那么之后无论是修改结构后的变量，还是修改 reactive 返回的 state 对象，<strong>数据都不再是响应式的：</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819110318174.png" alt="image-20210819110318174"></p>
+<p>那么有没有办法让我们解构出来的属性是<strong>响应式</strong>的呢？</p>
+<ol>
+<li><p>Vue 为我们提供了一个 toRefs 的函数，可以将 reactive 返回的对象中的属性都转成 ref；</p>
+</li>
+<li><p>那么我们再次进行解构出来的 name 和 age 本身都是 ref 的；</p>
+</li>
+</ol>
+<p>这种做法相当于已经在<strong>state.name 和 ref.value 之间建立了 链接，</strong>任何一个修改都会引起另外一个变化；</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819111534916.png" alt="image-20210819111534916"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819111537988.png" alt="image-20210819111537988"></p>
+<h2 id="toRef"><a href="#toRef" class="headerlink" title="toRef"></a>toRef</h2><p>如果我们只希望转换一个 reactive 对象中的属性为 ref, 那么可以使<strong>用 toRef 的方法：</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819112216206.png" alt="image-20210819112216206"></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// toRef函数，对其中一个属性进行解构为ref响应式对象</span>
+<span class="token comment">/*
+  toRef(对象，'对象需要转为ref的属性')
+*/</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> info2<span class="token punctuation">;</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token function">toRef</span><span class="token punctuation">(</span>info2<span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="ref-其他的-API"><a href="#ref-其他的-API" class="headerlink" title="ref 其他的 API"></a>ref 其他的 API</h2><p><strong>unref</strong></p>
+<p>如果我们想要获取一个<strong>ref 引用中的 value</strong>，那么也可以<strong>通过 unref 方法：</strong></p>
+<ul>
+<li><p>如果参数是一个 ref，则返回内部值，否则返回参数本身；</p>
+</li>
+<li><p>这是 <strong>val = isRef(val) ? val.value : val</strong> 的语法糖函数；</p>
+</li>
+</ul>
+<p><strong>isRef</strong></p>
+<p>判断值是否是一个 ref 对象。</p>
+<p><strong>shallowRef</strong></p>
+<p>创建一个浅层的 ref 对象；</p>
+<p><strong>triggerRef</strong></p>
+<p><strong>手动触发和 shallowRef 相关联的副作用：(比如页面的响应式刷新，就是刷新响应式数据以后的副作用</strong>)</p>
+<h2 id="customRef"><a href="#customRef" class="headerlink" title="customRef"></a>customRef</h2><p>创建一个<strong>自定义的 ref</strong>，并<strong>对其依赖项跟踪和更新触发</strong>进行显示控制：</p>
+<p>它需要一个工厂函数，该函数接受 <strong>track 和 trigger</strong> 函数作为参数；并且应该返回一个<strong>带有 get 和 set 的对象；</strong></p>
+<p><strong>这里我们使用一个的案例：</strong></p>
+<p>对双向绑定的属性进行 debounce**(节流)**的操作；</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819152343898.png" alt="image-20210819152343898"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819152356575.png" alt="image-20210819152356575"></p>
+<h2 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h2><p>在前面我们讲解过计算属性 computed：当我们的某些属性是依赖其他状态时，我们可以使用计算属性来处理</p>
+<ol>
+<li>在前面的 Options API 中，我们是使用 computed 选项来完成的；</li>
+<li>在 Composition API 中，我们可以在 setup 函数中使用 computed 方法来编写一个计算属性；</li>
+</ol>
+<p>如何使用 computed 呢？</p>
+<ol>
+<li>方式一：接收一个 getter 函数，并为 getter 函数返回的值，返回一个不变的 ref 对象；</li>
+<li>方式二：接收一个具有 get 和 set 的对象，返回一个可变的（可读写）ref 对象；</li>
+</ol>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819154035057.png" alt="image-20210819154035057"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819154045046.png" alt="image-20210819154045046"></p>
+<h2 id="侦听数据的变化"><a href="#侦听数据的变化" class="headerlink" title="侦听数据的变化"></a>侦听数据的变化</h2><p>在前面的 Options API 中，我们可以通过 watch 选项来侦听 data 或者 props 的数据变化，当数据变化时执行某一些 操作。</p>
+<p>在 Composition API 中，我们可以使用 watchEffect 和 watch 来完成响应式数据的侦听；</p>
+<ol>
+<li>watchEffect 用于自动收集响应式数据的依赖；</li>
+<li>watch 需要手动指定侦听的数据源；</li>
+</ol>
+<h3 id="watchEffect"><a href="#watchEffect" class="headerlink" title="watchEffect"></a>watchEffect</h3><p>当侦听到某些响应式数据变化时，我们希望执行某些操作，这个时候可以使用 watchEffect。</p>
+<p>我们来看一个案例：</p>
+<ul>
+<li>首先，watchEffect 传入的函数会被立即执行一次，并且在执行的过程中会收集依赖；</li>
+<li>其次，只有收集的依赖发生变化时，watchEffect 传入的函数才会再次执行；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819155923525.png" alt="image-20210819155923525"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819160013737.png" alt="image-20210819160013737"></p>
+<h3 id="watchEffect-的停止侦听"><a href="#watchEffect-的停止侦听" class="headerlink" title="watchEffect 的停止侦听"></a>watchEffect 的停止侦听</h3><p>如果在发生某些情况下，我们希望<strong>停止侦听</strong>，这个时候我们可以获取 watchEffect 的<strong>返回值函数</strong>，调用该函数即可。</p>
+<p>比如在上面的案例中，我们 age 达到 25 的时候就停止侦听：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819161134008.png" alt="image-20210819161134008"></p>
+<h3 id="watchEffect-清除副作用"><a href="#watchEffect-清除副作用" class="headerlink" title="watchEffect 清除副作用"></a>watchEffect 清除副作用</h3><p>什么是清除副作用呢？</p>
+<ul>
+<li>比如在开发中我们需要在侦听函数中执行网络请求，但是在网络请求还没有达到的时候，我们停止了侦听器， 或者侦听器侦听函数被再次执行了。</li>
+<li>那么上一次的网络请求应该被取消掉，这个时候我们就可以清除上一次的副作用；</li>
+</ul>
+<p>在我们给 watchEffect 传入的函数被回调时，其实可以获取到一个参数：<strong>onInvalidate</strong></p>
+<ul>
+<li>当<strong>副作用即将重新执行 或者 侦听器被停止</strong> 时会执行该函数传入的回调函数；</li>
+<li>我们可以在传入的回调函数中，<strong>执行一些清除工作；</strong></li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819162743948.png" alt="image-20210819162743948"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819162857567.png" alt="image-20210819162857567"></p>
+<h3 id="setup-中使用-ref"><a href="#setup-中使用-ref" class="headerlink" title="setup 中使用 ref"></a>setup 中使用 ref</h3><p>在<strong>讲解 watchEffect 执行时机之前</strong>，我们先补充一个知识：在 setup 中如何使用 ref 或者元素或者组件？</p>
+<p>其实非常简单，我们只需要定义一个 ref 对象，绑定到元素或者组件的 ref 属性上即可；</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819203324866.png" alt="image-20210819203324866"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819203358058.png" alt="image-20210819203358058"></p>
+<h3 id="watchEffect-的执行时机"><a href="#watchEffect-的执行时机" class="headerlink" title="watchEffect 的执行时机"></a>watchEffect 的执行时机</h3><p>默认情况下，组件的更新会在副作用函数执行之前：</p>
+<p>如果我们希望在副作用函数中获取到元素，是否可行呢？</p>
+<p><strong>结果如上图</strong></p>
+<p>我们会发现打印结果打印了两次：</p>
+<ul>
+<li>这是因为 setup 函数在执行时就会立即执行传入的副作用函数，这个时候 DOM 并没有挂载，所以打印为 null；</li>
+<li>而当 DOM 挂载时，会给 title 的 ref 对象赋值新的值，副作用函数会再次执行，打印出来对应的元素；</li>
+</ul>
+<h3 id="调整-watchEffect-的执行时机"><a href="#调整-watchEffect-的执行时机" class="headerlink" title="调整 watchEffect 的执行时机"></a>调整 watchEffect 的执行时机</h3><p>如果我们希望在第一次的时候就打印出来对应的元素呢？</p>
+<ul>
+<li>这个时候我们需要改变副作用函数的执行时机；</li>
+<li>它的默认值是 pre，它会在元素 挂载 或者 更新 之前执行；</li>
+<li>所以我们会先打印出来一个空的，当依赖的 title 发生改变时，就会再次执行一次，打印出元素；</li>
+</ul>
+<p>我们可以设置副作用函数的执行时机：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819203730628.png" alt="image-20210819203730628"></p>
+<p><strong>flush 选项还接受 sync</strong>，这将<strong>强制效果始终同步触发</strong>。然而，这是低效的，应该很少需要。</p>
+<h2 id="Watch-的使用"><a href="#Watch-的使用" class="headerlink" title="Watch 的使用"></a>Watch 的使用</h2><p>watch 的 API 完全等同于组件 watch 选项的 Property：</p>
+<ul>
+<li>watch 需要侦听特定的数据源，并在回调函数中执行副作用；</li>
+<li>默认情况下它是惰性的，只有当被侦听的源发生变化时才会执行回调；</li>
+</ul>
+<p>与 watchEffect 的比较，watch 允许我们：</p>
+<ul>
+<li>懒执行副作用（第一次不会直接执行）；</li>
+<li>更具体的说明当哪些状态发生变化时，触发侦听器的执行；</li>
+<li>访问侦听状态变化前后的值；</li>
+</ul>
+<h3 id="侦听单个数据源"><a href="#侦听单个数据源" class="headerlink" title="侦听单个数据源"></a>侦听单个数据源</h3><p>watch 侦听函数的数据源有两种类型：</p>
+<p>侦听器数据源可以是<strong>返回值的 getter 函数</strong>，也可以直接是 <code>ref</code>：</p>
+<ul>
+<li><p>一个 getter 函数：但是该 getter 函数必须引用可响应式的对象（比如 reactive 或者 ref）；</p>
+</li>
+<li><p>直接写入一个可响应式的对象，reactive 或者 ref（比较常用的是 ref）；</p>
+</li>
+</ul>
+<p><strong>下面这种方式就侦听失败了，新值旧值是一样的。</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819205627220.png" alt="image-20210819205627220"></p>
+<p><strong>方式一</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819211938552.png" alt="image-20210819211938552"></p>
+<p><strong>方式二</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819212058408.png" alt="image-20210819212058408"></p>
+<h3 id="侦听多个数据源"><a href="#侦听多个数据源" class="headerlink" title="侦听多个数据源"></a>侦听多个数据源</h3><p>侦听器还可以使用数组同时侦听多个源：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819213624892.png" alt="image-20210819213624892"></p>
+<h3 id="侦听响应式对象"><a href="#侦听响应式对象" class="headerlink" title="侦听响应式对象"></a>侦听响应式对象</h3><p>如果我们希望侦听一个数组或者对象，那么可以使用一个 getter 函数，并且对可响应对象进行解构：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819215123772.png" alt="image-20210819215123772"></p>
+<h3 id="watch-的选项"><a href="#watch-的选项" class="headerlink" title="watch 的选项"></a>watch 的选项</h3><p>如果我们希望侦听一个深层的侦听，那么依然需要设置 deep 为 true：</p>
+<p>也可以传入 immediate 立即执行；</p>
+<p><strong>如果传入的是一个 reactive 对象，默认情况就是会自动进行深度侦听的，输入获取到的新值旧值都是还是同一个对象</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819215717291.png" alt="image-20210819215717291"></p>
+<p><strong>设置深度侦听</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819220928428.png" alt="image-20210819220928428"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210819221004914.png" alt="image-20210819221004914"></p>
+<h1 id="Composition-API（三）-高级语法补充"><a href="#Composition-API（三）-高级语法补充" class="headerlink" title="Composition API（三） 高级语法补充"></a>Composition API（三） 高级语法补充</h1><h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><p>我们前面说过 setup 可以用来替代 data 、 methods 、 computed 、watch 等等这些选项，也可以替代 生命周 期钩子。</p>
+<p><strong>那么 setup 中如何使用生命周期函数呢？</strong></p>
+<p>可以使用直接导入的 onX 函数注册生命周期钩子；</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821145225776.png" alt="image-20210821145225776"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821144149835.png" alt="image-20210821144149835"></p>
+<table>
+<thead>
+<tr>
+<th>选项式 API</th>
+<th>Hook inside <code>setup</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>beforeCreate</code></td>
+<td>Not needed*</td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>Not needed*</td>
+</tr>
+<tr>
+<td><code>beforeMount</code></td>
+<td><code>onBeforeMount</code></td>
+</tr>
+<tr>
+<td><code>mounted</code></td>
+<td><code>onMounted</code></td>
+</tr>
+<tr>
+<td><code>beforeUpdate</code></td>
+<td><code>onBeforeUpdate</code></td>
+</tr>
+<tr>
+<td><code>updated</code></td>
+<td><code>onUpdated</code></td>
+</tr>
+<tr>
+<td><code>beforeUnmount</code></td>
+<td><code>onBeforeUnmount</code></td>
+</tr>
+<tr>
+<td><code>unmounted</code></td>
+<td><code>onUnmounted</code></td>
+</tr>
+<tr>
+<td><code>errorCaptured</code></td>
+<td><code>onErrorCaptured</code></td>
+</tr>
+<tr>
+<td><code>renderTracked</code></td>
+<td><code>onRenderTracked</code></td>
+</tr>
+<tr>
+<td><code>renderTriggered</code></td>
+<td><code>onRenderTriggered</code></td>
+</tr>
+<tr>
+<td><code>activated</code></td>
+<td><code>onActivated</code></td>
+</tr>
+<tr>
+<td><code>deactivated</code></td>
+<td><code>onDeactivated</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>因为 <code>setup</code> 是围绕 <code>beforeCreate</code> 和 <code>created</code> 生命周期钩子运行的，所以不需要显式地定义它们。换句话说，在这些钩子中编写的任何代码都应该直接在 <code>setup</code> 函数中编写。</p>
+</blockquote>
+<p><strong>这些函数接受一个回调函数，当钩子被组件调用时将会被执行:</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// mounted</span>
+    <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Component is mounted!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><span style="color:red">我们发现，最上面的两个生命周期函数，也就是<code>beforeCreate</code>&nbsp; 和 <code>created</code>&nbsp; 两个生命周期函数没有对应的 composition-API 的生命周期函数。实际上，setup 函数的执行时机是在这两个生命周期之前的，如果有需要放在这两个生命周期里需要执行的，完全可以直接写在 setup 函数里面。</span></p>
+<p>其他的生命周期都是一一对应的关系。</p>
+<h2 id="Provide-函数"><a href="#Provide-函数" class="headerlink" title="Provide 函数"></a>Provide 函数</h2><p>事实上我们之前还学习过 Provide 和 Inject，Composition API 也可以替代之前的 Provide 和 Inject 的选项。</p>
+<p><strong>我们可以通过 provide 来提供数据</strong></p>
+<ul>
+<li>可以通过 provide 方法来定义每个 Property；</li>
+<li>provide 可以传入两个参数：<ul>
+<li>name：提供的属性名称；</li>
+<li>value：提供的属性值；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821151840084.png" alt="image-20210821151840084"></p>
+<h2 id="Inject-函数"><a href="#Inject-函数" class="headerlink" title="Inject 函数"></a>Inject 函数</h2><p>在 后代组件 中可以通过 inject 来注入需要的属性和对应的值：</p>
+<ul>
+<li><p>可以通过 inject 来注入需要的内容；</p>
+</li>
+<li><p>inject 可以传入两个参数：</p>
+<ul>
+<li>参数一：要 inject 的 property 的 name；</li>
+<li>参数二：默认值；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821152127496.png" alt="image-20210821152127496"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821152144802.png" alt="image-20210821152144802"></p>
+<h2 id="数据的响应式"><a href="#数据的响应式" class="headerlink" title="数据的响应式"></a>数据的响应式</h2><p>为了增加 provide 值和 inject 值之间的响应性，我们可以在 provide 值时使用 ref 和 reactive。<strong>如上面代码所示</strong></p>
+<h2 id="修改响应式-Property"><a href="#修改响应式-Property" class="headerlink" title="修改响应式 Property"></a>修改响应式 Property</h2><p>如果我们需要修改可响应的数据，那么最好是在数据提供的位置来修改：</p>
+<p>我们可以将修改方法进行共享，在后代组件中进行调用；</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821154947452.png" alt="image-20210821154947452"></p>
+<h2 id="script-setup-实验性特性"><a href="#script-setup-实验性特性" class="headerlink" title="script setup 实验性特性"></a>script setup 实验性特性</h2><h3 id="setup-顶层写法"><a href="#setup-顶层写法" class="headerlink" title="setup 顶层写法"></a>setup 顶层写法</h3><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821171738689.png" alt="image-20210821171738689"></p>
+<h2 id="认识-h-函数"><a href="#认识-h-函数" class="headerlink" title="认识 h 函数"></a>认识 h 函数</h2><p>Vue 推荐在绝大数情况下<strong>使用模板</strong>来创建你的 HTML，然后一些特殊的场景，你真的需要<strong>JavaScript 的完全编程的 能力</strong>，这个时候你可以使用 <strong>渲染函数</strong> ，它比<strong>模板更接近编译器</strong>；</p>
+<ul>
+<li>前面我们讲解过 VNode 和 VDOM 的改变：</li>
+<li>Vue 在生成真实的 DOM 之前，会将我们的节点转换成 VNode，而 VNode 组合在一起形成一颗树结构，就是虚 拟 DOM（VDOM）；</li>
+<li>事实上，我们之前编写的 template 中的 HTML 最终也是使用渲染函数生成对应的 VNode；</li>
+<li>那么，如果你想<strong>充分的利用 JavaScript 的编程能力</strong>，我们可以自己来<strong>编写 createVNode 函数，生成对应的 VNode</strong>；</li>
+</ul>
+<p><strong>那么我们应该怎么来做呢？使用 h()函数：</strong></p>
+<ul>
+<li>h() 函数是一个用于创建 vnode 的一个函数；</li>
+<li>其实更准备的命名是 createVNode() 函数，但是为了简便在 Vue 将之简化为 h() 函数；</li>
+</ul>
+<h3 id="h-函数-如何使用呢？"><a href="#h-函数-如何使用呢？" class="headerlink" title="h()函数 如何使用呢？"></a>h()函数 如何使用呢？</h3><p>h()函数 如何使用呢？它接受三个参数：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821211501955.png" alt="image-20210821211501955"></p>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>如果没有 props，那么通常可以将 children 作为第二个参数传入；</li>
+<li>如果会产生歧义，可以将<strong>null</strong>作为第二个参数传入，将 children 作为第三个参数传入；</li>
+</ul>
+<h3 id="h-函数的基本使用"><a href="#h-函数的基本使用" class="headerlink" title="h 函数的基本使用"></a>h 函数的基本使用</h3><p><strong>h 函数可以在两个地方使用：</strong></p>
+<ul>
+<li>render 函数选项中；</li>
+<li>setup 函数选项中（setup 本身需要是一个函数类型，函数再返回 h 函数创建的 VNode）；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821211940463.png" alt="image-20210821211940463"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821212733915.png" alt="image-20210821212733915"></p>
+<h3 id="h-函数计数器案例"><a href="#h-函数计数器案例" class="headerlink" title="h 函数计数器案例"></a>h 函数计数器案例</h3><h4 id="1-render-函数实现"><a href="#1-render-函数实现" class="headerlink" title="1. render 函数实现"></a>1. render 函数实现</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821214240353.png" alt="image-20210821214240353"></p>
+<h4 id="2-setup-函数实现"><a href="#2-setup-函数实现" class="headerlink" title="2. setup 函数实现"></a>2. setup 函数实现</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821214316584.png" alt="image-20210821214316584"></p>
+<h3 id="函数组件和插槽的使用"><a href="#函数组件和插槽的使用" class="headerlink" title="函数组件和插槽的使用"></a>函数组件和插槽的使用</h3><p><strong>了解 render 函数的使用方式即可。不说难不难，这种方式的阅读性应该大部分人是受不了的。</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821221823552.png" alt="image-20210821221823552"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821221836619.png" alt="image-20210821221836619"></p>
+<h2 id="jsx-的-babel-配置"><a href="#jsx-的-babel-配置" class="headerlink" title="jsx 的 babel 配置"></a>jsx 的 babel 配置</h2><p>如果我们希望在<strong>项目中使用 jsx</strong>，那么我们需要<strong>添加对 jsx 的支持</strong>：</p>
+<p>jsx 我们通常会<strong>通过 Babel 来进行转换</strong>（React 编写的 jsx 就是通过 babel 转换的）；</p>
+<p>对于 Vue 来说，我们只需要在 Babel 中配置对应的插件即可；</p>
+<p><strong>安装 Babel 支持 Vue 的 jsx 插件：</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i @vue/babel-plugin-jsx -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 babel.config.js 配置文件中配置插件：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@vue/cli-plugin-babel/preset"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@vue/babel-plugin-jsx"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>但是笔者这里使用最新的 vue 脚手架的时候，发现已经支持了 jsx 的写法，应该是已经预装了该插件，已经内置支持该 jsx 写法，不需要再重新安装</strong></p>
+<h3 id="jsx-的基本使用和计数器案例"><a href="#jsx-的基本使用和计数器案例" class="headerlink" title="jsx 的基本使用和计数器案例"></a>jsx 的基本使用和计数器案例</h3><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821224756607.png" alt="image-20210821224756607"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821224811395.png" alt="image-20210821224811395"></p>
+<p><strong>效果</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210821224833337.png" alt="image-20210821224833337"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">// Home.vue
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token comment">// 定义好默认的组件插槽，外面使用了插槽就调用</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>哈哈Home <span class="token number">111</span>！！！<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>$slots<span class="token punctuation">.</span>default <span class="token operator">?</span> <span class="token punctuation">(</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$slots<span class="token punctuation">.</span><span class="token function">default</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>我是插槽的默认值<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--App.vue--&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">"./Home.vue"</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">decrement</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token comment">// jsx语法</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token comment">// 使用小括号括起来，方便换行，且这个括号里面的都是返回值</span>
+        <span class="token comment">// jsx里面使用变量和函数 都是使用花括号获取</span>
+        <span class="token comment">// 使用组件 必须使用导入的组件名称，比如导入的是 Home 标签也必须大写为 Home</span>
+        <span class="token comment">// 也可以在组件内使用插槽，直接使用{}传递过去，当然传递的也必须是变量，所以就 {{default:()=&gt;{}}}</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>哈哈哈 ！！！<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>当前计数：<span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>increment<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>decrement<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+          <span class="token operator">&lt;</span>Home<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>哈哈。。。。<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Home<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="Vue3-高级语法补充"><a href="#Vue3-高级语法补充" class="headerlink" title="Vue3 高级语法补充"></a>Vue3 高级语法补充</h1><h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><h3 id="认识自定义指令"><a href="#认识自定义指令" class="headerlink" title="认识自定义指令"></a>认识自定义指令</h3><p>在 Vue 的模板语法中我们学习过各种各样的指令：v-show、v-for、v-model 等等，除了使用这些指令之外，<strong>Vue 也允许我们来自定义自己的指令。</strong></p>
+<ul>
+<li>注意：在 Vue 中，代码的复用和抽象主要还是通过组件；</li>
+<li>通常在某些情况下，你需要对 DOM 元素进行底层操作，这个时候就会用到自定义指令；</li>
+</ul>
+<p><strong>自定义指令分为两种：</strong></p>
+<ul>
+<li>自定义局部指令：组件中通过 directives 选项，只能在当前组件中使用；</li>
+<li>自定义全局指令：app 的 directive 方法，可以在任意组件中被使用；</li>
+</ul>
+<p><strong>比如我们来做一个非常简单的案例：当某个元素挂载完成后可以自定获取焦点</strong></p>
+<ul>
+<li>实现方式一：如果我们使用默认的实现方式；</li>
+<li>实现方式二：自定义一个 v-focus 的局部指令；</li>
+<li>实现方式三：自定义一个 v-focus 的全局指令；</li>
+</ul>
+<h4 id="实现方式一：默认实现"><a href="#实现方式一：默认实现" class="headerlink" title="实现方式一：默认实现"></a>实现方式一：默认实现</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822202810574.png" alt="image-20210822202810574"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822202901896.png" alt="image-20210822202901896"></p>
+<h4 id="实现方式二：局部自定义指令"><a href="#实现方式二：局部自定义指令" class="headerlink" title="实现方式二：局部自定义指令"></a>实现方式二：局部自定义指令</h4><p><strong>实现方式二：自定义一个 v-focus 的局部指令</strong></p>
+<ul>
+<li>这个<strong>自定义指令</strong>实现非常简单，我们只需要在组件选项中使用 <strong>directives</strong> 即可；</li>
+<li>它是一个对象，在对象中编写我们自定义指令的名称（注意：这里不需要加 v-）；</li>
+<li><strong>自定义指令有一个生命周期</strong>，是在组件挂载后调用的 <strong>mounted</strong>，我们可以在其中完成操作；</li>
+</ul>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822204614559.png" alt="image-20210822204614559"></p>
+<p><strong>注意：参数 bindings 可以拿到使用该指令的组件或元素上指令的参数和修饰符等信息。后面会说。</strong></p>
+<h4 id="方式三：自定义全局指令"><a href="#方式三：自定义全局指令" class="headerlink" title="方式三：自定义全局指令"></a>方式三：自定义全局指令</h4><p>自定义一个<strong>全局的 v-focus 指令</strong>可以让我们在任何地方直接使用</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822204940163.png" alt="image-20210822204940163"></p>
+<h3 id="指令的生命周期"><a href="#指令的生命周期" class="headerlink" title="指令的生命周期"></a>指令的生命周期</h3><p><strong>一个指令定义的对象，Vue 提供了如下的几个钩子函数：</strong></p>
+<ul>
+<li><strong>created：</strong>在绑定元素的 attribute 或事件监听器被应用之前调用；</li>
+<li><strong>beforeMount：</strong>当指令第一次绑定到元素并且在挂载父组件之前调用；</li>
+<li><strong>mounted：</strong>在绑定元素的父组件被挂载后调用； n</li>
+<li><strong>beforeUpdate：</strong>在更新包含组件的 VNode 之前调用；</li>
+<li><strong>updated：</strong>在包含组件的 VNode 及其子组件的 VNode 更新后调用；</li>
+<li><strong>beforeUnmount：</strong>在卸载绑定元素的父组件之前调用；</li>
+<li><strong>unmounted：</strong>当指令与元素解除绑定且父组件已卸载时，只调用一次；</li>
+</ul>
+<h3 id="指令的参数和修饰符"><a href="#指令的参数和修饰符" class="headerlink" title="指令的参数和修饰符"></a>指令的参数和修饰符</h3><p>如果我们指令需要<strong>接受一些参数或者修饰符</strong>应该如何操作呢？</p>
+<ul>
+<li>info 是参数的名称；</li>
+<li>aaa-bbb 是修饰符的名称；</li>
+<li>后面是传入的具体的值；</li>
+</ul>
+<p>在我们的生命周期中，我们可以<strong>通过 bindings 获取</strong>到对应的内容：</p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822213505316.png" alt="image-20210822213505316"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822213609137.png" alt="image-20210822213609137"></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>当前计数：{{ counter }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 事件修饰符和参数 aaa bbb 是修饰符 等于号右边参数 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-mao.aaa.bbb</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>字符串毛毛！<span class="token punctuation">'</span><span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>increment<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>+1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> watch<span class="token punctuation">,</span> onMounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 局部组件在 directives属性里面定义</span>
+    directives<span class="token operator">:</span> <span class="token punctuation">{</span>
+      mao<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 指令的生命周期</span>
+        <span class="token function">created</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> bindings<span class="token punctuation">,</span> vnode<span class="token punctuation">,</span> preVnode</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao created ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> bindings<span class="token punctuation">,</span> vnode<span class="token punctuation">,</span> preVnode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao指令的参数："</span><span class="token punctuation">,</span> bindings<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">// 通过 bindings的 modifiers 属性获取修饰符， modifiers是一个对象，修饰符是该对象的属性</span>
+          <span class="token comment">// 只要用了这个修饰符，值就是 true</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao指令的修饰符："</span><span class="token punctuation">,</span> bindings<span class="token punctuation">.</span>modifiers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao beforeMount ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao mounted ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 只要指令所在的元素或组件发生了改变，包括属性等发生改变，都会调用这两个生命周期</span>
+        <span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao beforeUpdate ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">updated</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao updated ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">beforeUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao beforeUnmount ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">unmounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"v-mao unmounted ......"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> counter<span class="token punctuation">.</span>value<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        counter<span class="token punctuation">,</span>
+        increment<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="自定义指令练习"><a href="#自定义指令练习" class="headerlink" title="自定义指令练习"></a>自定义指令练习</h3><p>自定义指令案例：时间戳的显示需求:</p>
+<ul>
+<li>在开发中，<strong>大多数情况</strong>下<strong>从服务器获取到的都是时间戳</strong>；</li>
+<li>我们需要将时间戳转换成具体<strong>格式化的时间</strong>来展示；</li>
+<li>在<strong>Vue2 中我们可以通过过滤器</strong>来完成；</li>
+<li>在 Vue3 中我们可以通过 计算属性（computed） 或者 自定义一个方法（methods） 来完成；</li>
+<li>其实我们还可以通过一个<strong>自定义的指令</strong>来完成；</li>
+</ul>
+<p>我们来实现一个可以<strong>自动对时间格式化的指令 v-format-time：</strong></p>
+<p>这里我封装了一个函数，在首页中我们只需要<strong>调用这个函数并且传入 app 即可；</strong></p>
+<h4 id="时间格式化指令"><a href="#时间格式化指令" class="headerlink" title="时间格式化指令"></a>时间格式化指令</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822220805982.png" alt="image-20210822220805982"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822220945803.png" alt="image-20210822220945803"></p>
+<h2 id="认识-Teleport-vue3"><a href="#认识-Teleport-vue3" class="headerlink" title="认识 Teleport(vue3)"></a>认识 Teleport(vue3)</h2><p>在组件化开发中，我们<strong>封装一个组件 A，在另外一个组件 B 中使用：</strong></p>
+<ul>
+<li>那么组件 A 中 template 的元素，会被挂载到组件 B 中 template 的某个位置；</li>
+<li>最终我们的应用程序会形成一颗 DOM 树结构；</li>
+</ul>
+<p>但是某些情况下，我们<strong>希望组件不是挂载在这个组件树</strong>上的，可能是<strong>移动到 Vue app 之外的</strong>其他位置：</p>
+<ul>
+<li>比如移动到 body 元素上，或者我们有其他的 div#app 之外的元素上；</li>
+<li>这个时候我们就可以通过 teleport 来完成；</li>
+</ul>
+<p><strong>Teleport 是什么呢？</strong></p>
+<ul>
+<li><p>它是一个 Vue 提供的内置组件，类似于 react 的 Portals；</p>
+</li>
+<li><p>teleport 翻译过来是心灵传输、远距离运输的意思；</p>
+</li>
+</ul>
+<p><strong>它有两个属性：</strong></p>
+<ul>
+<li><strong>to：</strong>指定将其中的内容移动到的目标元素，可以使用选择器；</li>
+<li><strong>disabled：</strong>是否禁用 teleport 的功能；</li>
+</ul>
+<h4 id="和组件结合使用"><a href="#和组件结合使用" class="headerlink" title="和组件结合使用"></a>和组件结合使用</h4><p>当然，teleport 也可以和组件结合一起来使用：</p>
+<p>我们可以在 teleport 中使用组件，并且也可以给他传入一些数据；</p>
+<h4 id="多个-teleport"><a href="#多个-teleport" class="headerlink" title="多个 teleport"></a>多个 teleport</h4><p><strong>如果我们将多个 teleport 应用到同一个目标上（to 的值相同），那么这些目标会进行合并：</strong></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822230012209.png" alt="image-20210822230012209"></p>
+<h2 id="认识-Vue-插件"><a href="#认识-Vue-插件" class="headerlink" title="认识 Vue 插件"></a>认识 Vue 插件</h2><p>通常我们向 Vue 全局添加一些功能时，会采用插件的模式，它有两种编写方式：</p>
+<ul>
+<li>对象类型：一个对象，但是必须包含一个 install 的函数，该函数会在安装插件时执行；</li>
+<li>函数类型：一个 function，这个函数会在安装插件时自动执行；</li>
+</ul>
+<p>插件可以完成的<strong>功能没有限制</strong>，比如下面的几种都是可以的：</p>
+<ul>
+<li>添加全局方法或者 property，通过把它们添加到 config.globalProperties 上实现；</li>
+<li>添加全局资源：指令/过滤器/过渡等；</li>
+<li>通过全局 mixin 来添加一些组件选项；</li>
+<li>一个库，提供自己的 API，同时提供上面提到的一个或多个功能；</li>
+</ul>
+<h3 id="插件的编写方式"><a href="#插件的编写方式" class="headerlink" title="插件的编写方式"></a>插件的编写方式</h3><h4 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822232344537.png" alt="image-20210822232344537"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822232433107.png" alt="image-20210822232433107"></p>
+<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822232508121.png" alt="image-20210822232508121"></p>
+<h4 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210822232803913.png" alt="image-20210822232803913"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">毛毛</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://maolovecoding.github.io/2021/11/02/src/vue/vue3-chu-ti-yan/">https://maolovecoding.github.io/2021/11/02/src/vue/vue3-chu-ti-yan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">毛毛</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/vue3/">
+                                    <span class="chip bg-color">vue3</span>
+                                </a>
+                            
+                                <a href="/tags/ts/">
+                                    <span class="chip bg-color">ts</span>
+                                </a>
+                            
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
+                                <a href="/tags/compositionAPI/">
+                                    <span class="chip bg-color">compositionAPI</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/11/03/src/vue/vue-router/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="vue-router">
+                        
+                        <span class="card-title">vue-router</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue-router/" class="post-category">
+                                    vue-router
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue3/">
+                        <span class="chip bg-color">vue3</span>
+                    </a>
+                    
+                    <a href="/tags/ts/">
+                        <span class="chip bg-color">ts</span>
+                    </a>
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                    <a href="/tags/vue-router/">
+                        <span class="chip bg-color">vue-router</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/31/src/java/jpa-de-xue-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Jpa的学习">
+                        
+                        <span class="card-title">Jpa的学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            <a href="/categories/Java/Spring-Data/" class="post-category">
+                                    Spring Data
+                                </a>
+                            
+                            <a href="/categories/Java/Spring-Data/JPA/" class="post-category">
+                                    JPA
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring-Data/">
+                        <span class="chip bg-color">Spring Data</span>
+                    </a>
+                    
+                    <a href="/tags/JPA/">
+                        <span class="chip bg-color">JPA</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('80')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 听雨少年的博客<br />'
+            + '文章作者: 毛毛<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4, H5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4, H5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+  
+  <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+  
+  <div class="container row center-align"
+    style="margin-bottom: 0px !important;">
+    <div class="col s12 m8 l8 copy-right">
+      Copyright&nbsp;&copy;
+      
+      <span id="year">2019-2021</span>
+      
+      <span id="year">2019</span>
+      <a href="/about" target="_blank">毛毛</a>
+      |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+      |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+      <br>
+      
+      
+      
+      
+      
+      
+      <span id="busuanzi_container_site_pv">
+        |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      
+      <span id="busuanzi_container_site_uv">
+        |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+          class="white-color"></span>&nbsp;人
+      </span>
+      
+      <br>
+      
+      <br>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+  <!-- https://github.com/maolovecoding -->
+    <a href="https://github.com/maolovecoding/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto: 1339065735@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+<!-- 
+
+ -->
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1339065735" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1339065735" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+<!-- 
+ -->
+
+<!--  -->
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
