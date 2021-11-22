@@ -511,7 +511,7 @@
 <span class="token comment">// window</span>
 <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114151249395.png" alt="image-20211114151249395"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114151249395.png" alt="image-20211114151249395"></p>
 <h4 id="函数内调用全局函数"><a href="#函数内调用全局函数" class="headerlink" title="函数内调用全局函数"></a>函数内调用全局函数</h4><p>在全局定义的函数，如果在其他函数内调用，那么 this 是绑定的是那个对象？肯定还是 window 了，毕竟函数还是直接调用嘛。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -522,7 +522,7 @@
 <span class="token comment">// window</span>
 <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114151623957.png" alt="image-20211114151623957"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114151623957.png" alt="image-20211114151623957"></p>
 <h3 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h3><p>隐式绑定就是通过对象的形式调用函数。其实也可以说是调用方法，因为这些函数都是定义在对象上的。当然方法只是函数在不同位置的叫法而已，这里不需要纠结。</p>
 <p>比如我们定义对象 obj，并在上面定义方法（函数）foo。那么通过对象 obj 调用函数 foo，绑定的 this 的值会是？？？？</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -534,7 +534,7 @@
 <span class="token comment">// ?</span>
 obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// obj</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114153207703.png" alt="image-20211114153207703"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114153207703.png" alt="image-20211114153207703"></p>
 <p>当然隐式绑定的 this 的值是对象 obj 了。那么结果显而易见，<strong>隐式绑定的优先级是大于默认绑定的。</strong></p>
 <p>而隐式绑定调用的函数的 this 的指向可以理解为，谁调用，this 就指向谁。之所以我们说是叫做隐式绑定，是因为我们没有在函数上直接绑定 this 的值是 xxx 对象。</p>
 <h3 id="显示绑定"><a href="#显示绑定" class="headerlink" title="显示绑定"></a>显示绑定</h3><p>显示绑定就是显示的告诉函数，我要绑定 this 的值是 xxx 对象。</p>
@@ -547,7 +547,7 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 123</span>
 <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">"zzz"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {name: "zzz"}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114154108450.png" alt="image-20211114154108450"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114154108450.png" alt="image-20211114154108450"></p>
 <p>结果可以证明： <strong>显示绑定的 this 的优先级是大于默认绑定规则的。</strong></p>
 <p>那么接下来我们应该比较一下显示绑定和隐式绑定的优先级。</p>
 <h4 id="对象的方法-函数-显示绑定-this"><a href="#对象的方法-函数-显示绑定-this" class="headerlink" title="对象的方法(函数)显示绑定 this"></a>对象的方法(函数)显示绑定 this</h4><p>我们定义一个对象，并对该函数的方法进行显示的绑定，看其中的 this 是指向哪里的。</p>
@@ -561,7 +561,7 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '123'</span>
 obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '123'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114155033119.png" alt="image-20211114155033119"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114155033119.png" alt="image-20211114155033119"></p>
 <p>通过取出对象 obj 的方法 foo，然后对其进行显示的 this 绑定，我们发现结果是：this 的指向是我们显示绑定的对象。</p>
 <p><strong>那么这样是否就证明了：显示绑定的优先级就一定大于隐式绑定？</strong>其实不然，我们通过<strong>对象.方法名</strong>的形式，已经是直接取出了这个定义在方法中的函数的引用，接下来进行该函数的显示绑定，严格来说已经和对象 obj 没有关系了。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -573,7 +573,7 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 <span class="token keyword">var</span> fn <span class="token operator">=</span> obj<span class="token punctuation">.</span>foo<span class="token punctuation">;</span>
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114155457586.png" alt="image-20211114155457586"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114155457586.png" alt="image-20211114155457586"></p>
 <p>可以看见，取出了对象中定义的函数，然后在进行调用，可以对比函数直接定义在全局中，然后通过默认绑定规则的调用该函数，所以最终 this 也是绑定在全局对象 window 上的。</p>
 <p><strong>那么，我们要如何证明显示绑定和隐式绑定的优先级的大小呢？</strong></p>
 <p>当然是有办法的：</p>
@@ -588,7 +588,7 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "123"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114155914501.png" alt="image-20211114155914501"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114155914501.png" alt="image-20211114155914501"></p>
 <p>根据结果，我们可以知道，<strong>显示绑定 this 的优先级肯定是大于隐式绑定的。</strong></p>
 <h3 id="new-绑定"><a href="#new-绑定" class="headerlink" title="new 绑定"></a>new 绑定</h3><p>new 绑定，其实就是通过构造函数创建对象。当我们 new 的时候，会创建一个空对象，且将空对象的引用赋值给构造函数的 this，这样 this 就会指向这个空对象，且会在构造函数的最后，<strong>如果没有返回值</strong>，自动帮我们返回这个 this。</p>
 <p>写成伪代码大概就是：</p>
@@ -607,9 +607,9 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 <span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"zs"</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114161130922.png" alt="image-20211114161130922"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114161130922.png" alt="image-20211114161130922"></p>
 <p>new 绑定，其中的 this 的指向就是我们通过 new 关键字创建出来的空对象。然后通过构造函数给这个空对象添加各种属性。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114161348641.png" alt="image-20211114161348641"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114161348641.png" alt="image-20211114161348641"></p>
 <h2 id="特殊的-this-绑定规则"><a href="#特殊的-this-绑定规则" class="headerlink" title="特殊的 this 绑定规则"></a>特殊的 this 绑定规则</h2><p>上面的绑定规则只能说是我们经常遇到的，或者说我们会使用的绑定规则。<strong>但是凡事总有例外</strong>，总有一些特例对 this 的绑定让人感到苦恼，因为浏览器在解析它们的时候进行了特殊的处理，接下来介绍一下我知道的那些特例。</p>
 <h3 id="忽略显示绑定"><a href="#忽略显示绑定" class="headerlink" title="忽略显示绑定"></a>忽略显示绑定</h3><p>我们上面看见了，显示绑定是大于隐式绑定，也是大于默认绑定规则的。这是毫无疑问的，前面已经证实过，那么接下来，我说的可能让你感到疑惑，为什么浏览器又会<strong>忽略显示绑定呢？</strong></p>
 <p>正如前面：</p>
@@ -637,9 +637,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114145850490.png" alt="image-20211114145850490"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114145850490.png" alt="image-20211114145850490"></p>
 <p><strong>结果说明了一切，</strong>浏览器并不会把 <strong>null 或者 undefined</strong>绑定到 this 上。也就是说，在进行 this 绑定的时候，会查看绑定到 this 上的值，如果值不是 null 或者 undefined 才会正常的将对象绑定到 this 上，<strong>否则，显示绑定的 this 依然会绑定为 window 对象</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114150349876.png" alt="image-20211114150349876"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114150349876.png" alt="image-20211114150349876"></p>
 <p><strong>如果既有显示绑定，又有隐式绑定的情况下，但是显示绑定的是 null 或者 undefined，结果又会如何呢？</strong></p>
 <p>我觉得即使不测试，应该也可以猜到结果。很显然嘛，<strong>显示绑定是高于隐式绑定的</strong>，那么结果肯定是以显示绑定为主啊！所以肯定还是 <strong>window 对象了</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -654,7 +654,7 @@ obj<span class="token punctuation">.</span><span class="token function">foo</spa
 obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>没啥毛病，结果就是 window 对象咯！</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114150806150.png" alt="image-20211114150806150"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114150806150.png" alt="image-20211114150806150"></p>
 <h3 id="间接函数引用"><a href="#间接函数引用" class="headerlink" title="间接函数引用"></a>间接函数引用</h3><p>当我们<strong>创建一个函数的间接引用</strong>，这种情况使用默认绑定规则。</p>
 <pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">var obj1 = {
     name: "obj1",
@@ -670,8 +670,8 @@ console.log((obj2.bar = obj1.foo));
 var fn = (obj2.bar = obj1.foo);
 fn();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114173929711.png" alt="image-20211114173929711"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20211114174003932.png" alt="image-20211114174003932"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114173929711.png" alt="image-20211114173929711"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20211114174003932.png" alt="image-20211114174003932"></p>
 <p>可以发现：</p>
 <ol>
 <li><p>赋值语句 <strong><code>(obj2.bar = obj1.foo)</code><strong>的</strong>结果是一个函数</strong>（这个函数可能有名字，也可能没名字，取决于我们在对象中定义属性的时候，赋值的函数是否有名字）。其实就是取出了 obj1 的函数 foo，<strong>外面加上括号包裹就是将函数作为单独的执行体进行执行</strong>。比如**<code>(obj1.foo)()</code>**的结果和上面的结果是不一致的，this 还是隐式绑定为 obj1。二者不同是因为前者括号里面的是赋值表达式，所以会取出函数 obj1.foo 然后通过后面的小括号进行直接调用（也叫间接函数引用），而后者还是隐式绑定；造成这种差异的方式主要还是在 js 引型解析的区别。</p>

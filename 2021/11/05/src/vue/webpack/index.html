@@ -514,10 +514,10 @@
 <li>事实上 Vue-CLI、create-react-app、Angular-CLI 都是基于 webpack 来帮助我们支持模块化、less、 TypeScript、打包优化等的；</li>
 </ol>
 <h4 id="脚手架依赖-webpack"><a href="#脚手架依赖-webpack" class="headerlink" title="脚手架依赖 webpack"></a>脚手架依赖 webpack</h4><p><strong>事实上我们上面提到的所有脚手架都是依赖于 webpack 的：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726131437248.png" alt="image-20210726131437248"></p>
-<h4 id="webpack-是什么"><a href="#webpack-是什么" class="headerlink" title="webpack 是什么"></a>webpack 是什么</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726131238052.png" alt="image-20210726131238052"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726131437248.png" alt="image-20210726131437248"></p>
+<h4 id="webpack-是什么"><a href="#webpack-是什么" class="headerlink" title="webpack 是什么"></a>webpack 是什么</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726131238052.png" alt="image-20210726131238052"></p>
 <p><strong>我们先来看一下官方的解释：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726131459921.png" alt="image-20210726131459921"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726131459921.png" alt="image-20210726131459921"></p>
 <p>webpack 是一个<strong>静态的模块化打包工具</strong>，为现代的 JavaScript 应用程序；</p>
 <p><strong>我们来对上面的解释进行拆解：</strong></p>
 <ol>
@@ -555,7 +555,7 @@
 <p>所以我们需要先安装 Node.js，并且同时会安装 npm；</p>
 <p>Node 官方网站：<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
 <p><strong>推荐安装 LTS 版本，也就是稳定版</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726131906643.png" alt="image-20210726131906643"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726131906643.png" alt="image-20210726131906643"></p>
 <h4 id="webpack-的安装"><a href="#webpack-的安装" class="headerlink" title="webpack 的安装"></a>webpack 的安装</h4><p>webpack 的安装目前分为两个：webpack、webpack-cli。</p>
 <p>前期我们多以命令行的方式使用 webpack，因此 webpack-cli 也是必须安装的。但是在实际项目中，一般不需要安装 webpack-cli。</p>
 <p><strong>那么它们是什么关系呢？</strong></p>
@@ -565,27 +565,27 @@
 <li>而 webpack-cli 中代码执行时，才是真正利用 webpack 进行编译和打包的过程；</li>
 <li>所以在安装 webpack 时，我们需要同时安装 webpack-cli（第三方的脚手架事实上是没有使用 webpack-cli 的，而是类似于自 己的 vue-service-cli 的东西）</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210725232410531.png" alt="image-20210725232410531"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210725232410531.png" alt="image-20210725232410531"></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install webpack webpack-cli -g # -g 表示全局安装
 npm install webpack webpack-cli -D # -D 表示局部安装<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210725232640075.png" alt="image-20210725232640075"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210725232640075.png" alt="image-20210725232640075"></p>
 <p>在命令行输入上面的命令，会默认安装最新的版本。如果没有报错则安装成功。</p>
 <p>我们可以在命令行输入 <code>webpack -v</code>查看我们安装的版本。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210725232812911.png" alt="image-20210725232812911"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210725232812911.png" alt="image-20210725232812911"></p>
 <h3 id="webpack-的打包方式"><a href="#webpack-的打包方式" class="headerlink" title="webpack 的打包方式"></a>webpack 的打包方式</h3><h4 id="1-默认打包"><a href="#1-默认打包" class="headerlink" title="1. 默认打包"></a>1. 默认打包</h4><p>我们可以通过 webpack 进行打包，之后运行打包之后的代码</p>
 <p>在<strong>项目根目录下</strong>直接执行 webpack 命令；</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">webpack<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>只要没报错，就执行成功了。警告暂时我们可以先忽略</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726132343482.png" alt="image-20210726132343482"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726132343482.png" alt="image-20210726132343482"></p>
 <p>我们发现：</p>
 <p><strong>生成一个 dist 文件夹，里面存放一个 main.js 的文件</strong>，就是我们打包之后的文件：</p>
 <ol>
 <li>这个文件中的代码被压缩和丑化了；</li>
 <li>另外我们发现代码中依然存在 ES6 的语法，比如箭头函数、const 等，这是因为默认情况下 webpack 并不清楚我们打包后的文 件是否需要转成 ES5 之前的语法，后续我们需要通过 babel 来进行转换和设置；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726132601754.png" alt="image-20210726132601754"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726132601754.png" alt="image-20210726132601754"></p>
 <p><strong>我们发现是可以正常进行打包的，但是有一个问题，webpack 是如何确定我们的入口的呢？</strong></p>
 <ol>
 <li>事实上，当我们运行 webpack 时，webpack 会查找当前目录下的 src/index.js 作为入口；</li>
@@ -648,7 +648,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><p>这个时候我们可以通过 –config 来指定对应的配置文件；</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wepack --config wk.config.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>但是每次这样执行命令来对源码进行编译，会非常繁琐，所以我们可以在 package.json 中增加一个新的脚本：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726134001052.png" alt="image-20210726134001052"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726134001052.png" alt="image-20210726134001052"></p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"srcipt"</span><span class="token operator">:</span><span class="token punctuation">{</span>
     <span class="token property">"build"</span><span class="token operator">:</span><span class="token string">"wepack --config wk.config.js"</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
@@ -663,7 +663,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><p>然后遍历图结构，打包一个个模块（根据文件的不同使用不同的 loader 来解析）；</p>
 </li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726134147625.png" alt="image-20210726134147625"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726134147625.png" alt="image-20210726134147625"></p>
 <h3 id="webpack-打包其他文件"><a href="#webpack-打包其他文件" class="headerlink" title="webpack 打包其他文件"></a>webpack 打包其他文件</h3><p>这里我们创建一个 <code>element.js</code> 文件，以及一个 <code>index.css</code>文件。通过 JavaScript 创建了一个元素，并且希望给它设置一些样式；</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// element.js</span>
 
@@ -684,7 +684,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>执行编译打包命令（<code>npm run build</code>）时：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726134628990.png" alt="image-20210726134628990"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726134628990.png" alt="image-20210726134628990"></p>
 <h4 id="1-css-loader-的使用"><a href="#1-css-loader-的使用" class="headerlink" title="1. css-loader 的使用"></a>1. css-loader 的使用</h4><p>上面的错误信息告诉我们需要一个<strong>loader 来加载这个 css 文件</strong>，但是 loader 是什么呢？</p>
 <ol>
 <li>loader 可以用于对模块的源代码进行转换；</li>
@@ -743,14 +743,14 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 </li>
 </ul>
 <p><strong>具体的相关配置如下展示：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726135426942.png" alt="image-20210726135426942"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726135426942.png" alt="image-20210726135426942"></p>
 <h4 id="2-style-loader"><a href="#2-style-loader" class="headerlink" title="2. style-loader"></a>2. style-loader</h4><p>我们已经可以通过 css-loader 来加载 css 文件了 。但是你会发现这个 css 在我们的代码中并没有生效（页面没有效果）。</p>
 <p><strong>这是为什么呢？</strong></p>
 <ol>
 <li>因为 css-loader 只是负责将.css 文件进行解析，并不会将解析之后的 css 插入到页面中；</li>
 <li>如果我们希望再完成插入 style 的操作，那么我们还需要另外一个 loader，就是 style-loader；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726135858149.png" alt="image-20210726135858149"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726135858149.png" alt="image-20210726135858149"></p>
 <p><strong>安装 style-loader</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i style-loader -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -759,13 +759,13 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li>在配置文件中，添加 style-loader；</li>
 <li>注意：因为 loader 的执行顺序是从右向左（或者说从下到上，或者说从后到前的），所以我们需要将 styleloader 写到 css-loader 的前面</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726135651286.png" alt="image-20210726135651286"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726135651286.png" alt="image-20210726135651286"></p>
 <p>重新执行编译 npm run build，可以发现打包后的 css 已经生效了：</p>
 <ol>
 <li>当前目前我们的 css 是通过页内样式的方式添加进来的；</li>
 <li>后续我们也会讲如何将 css 抽取到单独的文件中，并且进行压缩等操作；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726135948555.png" alt="image-20210726135948555"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726135948555.png" alt="image-20210726135948555"></p>
 <h4 id="3-如何处理-less-文件"><a href="#3-如何处理-less-文件" class="headerlink" title="3. 如何处理 less 文件"></a>3. 如何处理 less 文件</h4><p>在我们开发中，我们可能会使用 less、sass、stylus 的预处理器来编写 css 样式，效率会更高。</p>
 <p>那么，如何可以让我们的环境支持这些<strong>预处理器</strong>呢？</p>
 <p>首先我们需要确定，less、sass 等编写的 css 需要通过工具转换成普通的 css；</p>
@@ -785,15 +785,15 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <p>执行如下命令：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npx lessc ./src/less/index.less index.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726140253295.png" alt="image-20210726140253295"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726140253295.png" alt="image-20210726140253295"></p>
 <h5 id="less-loader"><a href="#less-loader" class="headerlink" title="less-loader"></a>less-loader</h5><p>但是在项目中我们会编写大量的 css，它们如何可以自动转换呢？</p>
 <p>这个时候我们就可以使用 less-loader，来自动使用 less 工具转换 less 到 css；</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install less-loader -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>配置 webpack.config.js</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726140357318.png" alt="image-20210726140357318"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726140357318.png" alt="image-20210726140357318"></p>
 <p>执行 npm run build less 就可以自动转换成 css，并且页面也会生效了</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726140554154.png" alt="image-20210726140554154"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726140554154.png" alt="image-20210726140554154"></p>
 <h4 id="4-PostCSS-工具"><a href="#4-PostCSS-工具" class="headerlink" title="4. PostCSS 工具"></a>4. PostCSS 工具</h4><h5 id="1-认识-postcss"><a href="#1-认识-postcss" class="headerlink" title="1. 认识 postcss"></a>1. 认识 postcss</h5><ol>
 <li><p>什么是 PostCSS 呢？</p>
 <ul>
@@ -819,7 +819,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li><a target="_blank" rel="noopener" href="https://autoprefixer.github.io/">https://autoprefixer.github.io/</a></li>
 <li>我们可以在上面的网站中查询一些添加 css 属性的样式</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726140956883.png" alt="image-20210726140956883"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726140956883.png" alt="image-20210726140956883"></p>
 <h5 id="3-插件-autoprefixer"><a href="#3-插件-autoprefixer" class="headerlink" title="3. 插件 autoprefixer"></a>3. 插件 autoprefixer</h5><p>因为我们需要添加前缀，所以要安装 autoprefixer：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install autoprefixer -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -827,7 +827,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npx postcss --use autoprefixer -o end.css ./src/css/style.css<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>转化之后的 css 样式如下：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726141124302.png" alt="image-20210726141124302"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726141124302.png" alt="image-20210726141124302"></p>
 <h5 id="4-postcss-loader-重点"><a href="#4-postcss-loader-重点" class="headerlink" title="4. postcss-loader(重点)"></a>4. postcss-loader(重点)</h5><p>真实开发中我们必然不会直接使用命令行工具来对 css 进行处理，而是可以借助于构建工具：</p>
 <p>在 webpack 中使用<strong>postcss</strong>就是使用<strong>postcss-loader</strong>来处理的；</p>
 <p>我们来安装 postcss-loader：</p>
@@ -835,7 +835,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 
 <p>我们修改加载 less 的 loader:</p>
 <p><strong>注意：</strong>因为 postcss 需要有对应的插件才会起效果，所以我们需要配置它的 plugin；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726141409491.png" alt="image-20210726141409491"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726141409491.png" alt="image-20210726141409491"></p>
 <h5 id="5-单独的-postcss-配置文件"><a href="#5-单独的-postcss-配置文件" class="headerlink" title="5. 单独的 postcss 配置文件"></a>5. 单独的 postcss 配置文件</h5><p>当然，我们也可以将这些配置信息放到一个单独的文件中进行管理：</p>
 <p><strong>在根目录下创建 postcss.config.js</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -843,7 +843,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
   plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"autoprefixer"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726141556045.png" alt="image-20210726141556045"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726141556045.png" alt="image-20210726141556045"></p>
 <h5 id="6-postcss-preset-env"><a href="#6-postcss-preset-env" class="headerlink" title="6. postcss-preset-env"></a>6. postcss-preset-env</h5><p>事实上，在配置 postcss-loader 时，我们配置插件并不需要使用 autoprefixer。</p>
 <p>我们可以使用另外一个插件：postcss-preset-env</p>
 <ol>
@@ -855,9 +855,9 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install postcss-preset-env -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>之后，我们直接修改掉之前的 autoprefixer 即可：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726141730953.png" alt="image-20210726141730953"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726141730953.png" alt="image-20210726141730953"></p>
 <p><strong>注意：我们在使用某些 postcss 插件时，也可以直接传入字符串</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210726141811408.png" alt="image-20210726141811408"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210726141811408.png" alt="image-20210726141811408"></p>
 <h3 id="webpack-config-js-本次配置展示"><a href="#webpack-config-js-本次配置展示" class="headerlink" title="webpack.config.js 本次配置展示"></a>webpack.config.js 本次配置展示</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 配置webpack</span>
 
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -964,7 +964,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>这个时候，打包会报错</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728191425399.png" alt="image-20210728191425399"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728191425399.png" alt="image-20210728191425399"></p>
 <p>报错了，并且提示我们可以需要一个 loader 来解决图片的问题。</p>
 <h3 id="file-loader"><a href="#file-loader" class="headerlink" title="file-loader"></a>file-loader</h3><p>要处理 jpg、png 等格式的图片，我们也需要有对应的<strong>loader：file-loader</strong></p>
 <ol>
@@ -981,10 +981,10 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
     use<span class="token operator">:</span> <span class="token string">'file-loader'</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728191711488.png" alt="image-20210728191711488"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728191711488.png" alt="image-20210728191711488"></p>
 <p>我们会发现图片也被打包了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728191748775.png" alt="image-20210728191748775"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728191838557.png" alt="image-20210728191838557"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728191748775.png" alt="image-20210728191748775"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728191838557.png" alt="image-20210728191838557"></p>
 <h4 id="文件的命名规则"><a href="#文件的命名规则" class="headerlink" title="文件的命名规则"></a>文件的命名规则</h4><p>有时候我们处理后的<strong>文件名</strong>称按照一定的规则进行显示：</p>
 <ul>
 <li>比如保留原来的文件名、扩展名，同时为了防止重复，包含一个 hash 值等；</li>
@@ -1025,13 +1025,13 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728192329730.png" alt="image-20210728192329730"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728192329730.png" alt="image-20210728192329730"></p>
 <h4 id="设置文件的存放路径"><a href="#设置文件的存放路径" class="headerlink" title="设置文件的存放路径"></a>设置文件的存放路径</h4><p>当然，我们刚才通过 img/ 已经设置了文件夹，这个也是 vue、react 脚手架中常见的设置方式：</p>
 <ol>
 <li>其实按照这种设置方式就可以了；</li>
 <li>当然我们也可以通过<strong>outputPath</strong>来设置输出的文件夹；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728192445432.png" alt="image-20210728192445432"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728192445432.png" alt="image-20210728192445432"></p>
 <h3 id="url-loader"><a href="#url-loader" class="headerlink" title="url-loader"></a>url-loader</h3><p><strong>url-loader 和 file-loader</strong>的工作方式是相似的，但是可以将较小的文件，转成 base64 的 URI。</p>
 <p><strong>安装 url-loader：</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i url-loader -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1049,16 +1049,16 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728192652383.png" alt="image-20210728192652383"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728192652383.png" alt="image-20210728192652383"></p>
 <p><strong>显示结果是一样的，并且图片可以正常显示；</strong></p>
 <p>但是在 dist 文件夹中，我们会看不到 <strong>大于 100kb</strong> 图片文件：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728192839738.png" alt="image-20210728192839738"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728192839738.png" alt="image-20210728192839738"></p>
 <ol>
 <li>这是因为我的两张图片的大小分别是 38kb 和 129kb；</li>
 <li>默认情况下 url-loader 会将所有的图片文件转成 base64 编码。但是配置了 limit 以后就可以限制小于多少 kb 的图片才会转为 base64 格式。</li>
 </ol>
 <p><strong>可以看见 bundle.js 文件里面的确有 base64 格式的字符串</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728193159584.png" alt="image-20210728193159584"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728193159584.png" alt="image-20210728193159584"></p>
 <h3 id="url-loader-的-limit"><a href="#url-loader-的-limit" class="headerlink" title="url-loader 的 limit"></a>url-loader 的 limit</h3><p>但是开发中我们往往是小的图片需要转换，但是<strong>大的图片直接使用图片即可</strong></p>
 <ol>
 <li>这是因为小的图片转换 base64 之后可以和页面一起被请求，减少不必要的请求过程；</li>
@@ -1069,7 +1069,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li>url-loader 有一个 options 属性 limit，可以用于设置转换的限制；</li>
 <li>下面的代码 38kb 的图片会进行 base64 编码，而 129kb 的不会；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728193333744.png" alt="image-20210728193333744"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728193333744.png" alt="image-20210728193333744"></p>
 <h3 id="asset-module-type"><a href="#asset-module-type" class="headerlink" title="asset module type"></a>asset module type</h3><h4 id="认识-asset-module-type"><a href="#认识-asset-module-type" class="headerlink" title="认识 asset module type"></a>认识 asset module type</h4><p><strong>我们当前使用的 webpack 版本是 webpack5：</strong></p>
 <ol>
 <li>在 webpack5 之前，加载这些资源我们需要使用一些 loader，比如<strong>raw-loader 、url-loader、file-loader；</strong></li>
@@ -1083,12 +1083,12 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li><strong>asset</strong>： 在导出一个 data URI 和发送一个单独的文件之间自动选择。之前通过使用 url-loader，并且配置资源体 积限制实现；</li>
 </ol>
 <h4 id="asset-module-type-的使用"><a href="#asset-module-type-的使用" class="headerlink" title="asset module type 的使用"></a>asset module type 的使用</h4><p>比如加载图片，我们可以使用下面的方式：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728193636774.png" alt="image-20210728193636774"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728193636774.png" alt="image-20210728193636774"></p>
 <p><strong>发现依然打包成功！</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728193748026.png" alt="image-20210728193748026"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728193748026.png" alt="image-20210728193748026"></p>
 <p><strong>但是，如何可以自定义文件的输出路径和文件名呢？</strong></p>
 <p>方式一：修改 output，添加 assetModuleFilename 属性； <strong>（了解即可）</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728193854459.png" alt="image-20210728193854459"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728193854459.png" alt="image-20210728193854459"></p>
 <p>方式二：在 Rule 中，添加一个 generator 属性，并且设置 filename；</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">{</span>
         test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(JPG|jpe?g|png)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
@@ -1107,7 +1107,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728194023352.png" alt="image-20210728194023352"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728194023352.png" alt="image-20210728194023352"></p>
 <h4 id="url-loader-的-limit-效果"><a href="#url-loader-的-limit-效果" class="headerlink" title="url-loader 的 limit 效果"></a>url-loader 的 limit 效果</h4><p>我们需要两个步骤来实现：</p>
 <ol>
 <li>将 type 必须使用 asset 属性值；</li>
@@ -1130,12 +1130,12 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728194251709.png" alt="image-20210728194251709"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728194251709.png" alt="image-20210728194251709"></p>
 <p><strong>发现打包的只有一个图片文件了。较小的那个已经转为 base64 格式了</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728194347840.png" alt="image-20210728194347840"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728194347840.png" alt="image-20210728194347840"></p>
 <h3 id="加载字体文件"><a href="#加载字体文件" class="headerlink" title="加载字体文件"></a>加载字体文件</h3><p>如果我们需要使用某些<strong>特殊的字体或者字体图标</strong>，那么我们会引入很多字体相关的文件，这些文件的处理也是一样 的</p>
 <p><strong>首先，我从阿里图标库中下载了几个字体图标：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728195048166.png" alt="image-20210728195048166"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728195048166.png" alt="image-20210728195048166"></p>
 <p><strong>然后在 font.js 里面引入</strong>，并设置一个 <code>i</code>标签用于显示字体图标</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 引入并使用字体图标</span>
 
@@ -1149,7 +1149,7 @@ i<span class="token punctuation">.</span>className <span class="token operator">
 document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>然后我们开始打包</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728195219912.png" alt="image-20210728195219912"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728195219912.png" alt="image-20210728195219912"></p>
 <p><strong>毫无疑问，必然报错，因为我们使用了 webpack 并不认识的模块。并且 webpack 也提醒我们需要使用一个 loader 来解决。</strong></p>
 <h4 id="字体的打包"><a href="#字体的打包" class="headerlink" title="字体的打包"></a>字体的打包</h4><p>这个时候打包会报错，因为<strong>无法正确的处理 eot、ttf、woff 等文件</strong>：</p>
 <p>我们可以选择使用<strong>file-loader</strong>来处理，也可以选择直接使用<strong>webpack5 的资源模块类型</strong>来处理；</p>
@@ -1165,7 +1165,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>打包之后，发现不会报错，字体图标正常显示。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728200328258.png" alt="image-20210728200328258"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728200328258.png" alt="image-20210728200328258"></p>
 <p><strong>使用 webpack5 提供的资源模块类型也可以。</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 也可以使用webpack提供的资源模块类型</span>
 <span class="token punctuation">{</span>
@@ -1183,7 +1183,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <li>Loader 是用于<strong>特定的模块类型进行转换</strong>；</li>
 <li>Plugin 可以用于<strong>执行更加广泛的任务</strong>，比如打包优化、资源管理、环境变量注入等；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728205205354.png" alt="image-20210728205205354"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728205205354.png" alt="image-20210728205205354"></p>
 <h4 id="CleanWebpackPlugin"><a href="#CleanWebpackPlugin" class="headerlink" title="CleanWebpackPlugin"></a>CleanWebpackPlugin</h4><p>前面我们演示的过程中，每次修改了一些配置，重新打包时，都需要手动删除 dist 文件夹：</p>
 <p>我们可以借助于一个插件来帮助我们完成，这个插件就是<strong>CleanWebpackPlugin；</strong></p>
 <p><strong>首先，我们先安装这个插件：</strong></p>
@@ -1197,7 +1197,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">CleanWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728205459482.png" alt="image-20210728205459482"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728205459482.png" alt="image-20210728205459482"></p>
 <p><strong>然后可以发现每次都会帮我们把上次打包的文件夹先删除，然后在进行重新打包。</strong></p>
 <h4 id="HtmlWebpackPlugin"><a href="#HtmlWebpackPlugin" class="headerlink" title="HtmlWebpackPlugin"></a>HtmlWebpackPlugin</h4><p>另外还有一个<strong>不太规范</strong>的地方：</p>
 <ol>
@@ -1208,12 +1208,12 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>对 HTML 进行打包处理我们可以使用另外一个插件：<strong>HtmlWebpackPlugin；</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i html-webpack-plugin -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728205744529.png" alt="image-20210728205744529"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728205754385.png" alt="image-20210728205754385"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728205744529.png" alt="image-20210728205744529"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728205754385.png" alt="image-20210728205754385"></p>
 <h5 id="生成-index-html-分析"><a href="#生成-index-html-分析" class="headerlink" title="生成 index.html 分析"></a>生成 index.html 分析</h5><p>我们会发现，现在自动在 build 文件夹中，生成了一个<strong>index.html</strong>的文件：</p>
 <p>该文件中也自动添加了我们打包的 bundle.js 文件；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728210054115.png" alt="image-20210728210054115"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728205905823.png" alt="image-20210728205905823"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728210054115.png" alt="image-20210728210054115"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728205905823.png" alt="image-20210728205905823"></p>
 <p><strong>这个文件是如何生成的呢？</strong></p>
 <ol>
 <li><strong>默认情况</strong>下是根据<strong>ejs 的一个模板</strong>来生成的；</li>
@@ -1252,28 +1252,28 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>但是：使用这个模板直接进行打包的时候：会发现打包失败！！（使用 html-webpack-plugin 插件的时候需要指定该模板）</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728211538093.png" alt="image-20210728211538093"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728212035161.png" alt="image-20210728212035161"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728211538093.png" alt="image-20210728211538093"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728212035161.png" alt="image-20210728212035161"></p>
 <h5 id="自定义模板数据填充"><a href="#自定义模板数据填充" class="headerlink" title="自定义模板数据填充"></a>自定义模板数据填充</h5><p>上面的代码中，会有一些类似这样的语法**&lt;% 变量 %&gt;**，这个是 EJS 模块填充数据的方式。</p>
 <p>在配置 HtmlWebpackPlugin 时，我们可以添加如下配置：</p>
 <ol>
 <li><strong>template</strong>：指定我们要使用的模块所在的路径；</li>
 <li><strong>title</strong>：在进行 htmlWebpackPlugin.options.title 读取时，就会读到该信息；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728212132479.png" alt="image-20210728212132479"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728212132479.png" alt="image-20210728212132479"></p>
 <p><strong>但是，我们会发现，即使配置了模板啊，标题啊，仍然打包还是报错。</strong></p>
 <p>不要着急，我们可以使用 webpack 内置的一个插件来进行解决。</p>
 <h4 id="DefinePlugin"><a href="#DefinePlugin" class="headerlink" title="DefinePlugin"></a>DefinePlugin</h4><h5 id="DefinePlugin-的介绍"><a href="#DefinePlugin-的介绍" class="headerlink" title="DefinePlugin 的介绍"></a>DefinePlugin 的介绍</h5><p>我们上面指定了模板以后，发现仍然还是报错。报错的原因是什么呢？</p>
 <p><strong>因为在我们的模块中还使用到一个 BASE_URL 的常量：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728212410783.png" alt="image-20210728212410783"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728212410783.png" alt="image-20210728212410783"></p>
 <p>这是因为在编译 template 模块时，有一个<strong>BASE_URL</strong>：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= BASE_URL %&gt;favicon.ico<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>但是我们并没有设置过这个常量值，所以会出现没有定义的错误；</p>
 <p>这个时候我们可以使用<strong>DefinePlugin 插件</strong>；</p>
 <h5 id="DefinePlugin-的使用"><a href="#DefinePlugin-的使用" class="headerlink" title="DefinePlugin 的使用"></a>DefinePlugin 的使用</h5><p>DefinePlugin 允许在编译时创建配置的<strong>全局常量</strong>，是一个 webpack 内置的插件（不需要单独安装）：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728213427918.png" alt="image-20210728213427918"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728213438757.png" alt="image-20210728213438757"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728213427918.png" alt="image-20210728213427918"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728213438757.png" alt="image-20210728213438757"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 导入 DefinePlugin 插件 解决常量 BASE_URL 的问题</span>
 <span class="token keyword">const</span> <span class="token punctuation">{</span> DefinePlugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -1334,7 +1334,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>可以看到效果和我们的配置的一样。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728215659702.png" alt="image-20210728215659702"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728215659702.png" alt="image-20210728215659702"></p>
 <h3 id="Mode-配置"><a href="#Mode-配置" class="headerlink" title="Mode 配置"></a>Mode 配置</h3><p><strong>前面我们一直没有讲 mode。</strong></p>
 <p>Mode 配置选项，可以告知 webpack 使用<strong>响应模式</strong>的内置优化：</p>
 <ol>
@@ -1363,10 +1363,10 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </tbody></table>
 <p><strong>如果没有设置，webpack 会给 <code>mode</code> 的默认值设置为 <code>production</code>。</strong></p>
 <p>如果 <code>mode</code> 未通过配置或 CLI 赋值，CLI 将使用可能有效的 <code>NODE_ENV</code> 值作为 <code>mode</code>。当然这是后话了。我们学习 CLI 的时候再来说。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728221004362.png" alt="image-20210728221004362"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728221004362.png" alt="image-20210728221004362"></p>
 <h4 id="Mode-配置代表更多"><a href="#Mode-配置代表更多" class="headerlink" title="Mode 配置代表更多"></a>Mode 配置代表更多</h4><p><strong>只要设置了 mode 属性，webpack 就会默认帮我们设置很多属性。不需要我们手动再去配置。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728221656536.png" alt="image-20210728221656536"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728221716634.png" alt="image-20210728221716634"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728221656536.png" alt="image-20210728221656536"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728221716634.png" alt="image-20210728221716634"></p>
 <h3 id="devtool-配置"><a href="#devtool-配置" class="headerlink" title="devtool 配置"></a>devtool 配置</h3><p><strong>这里顺手补充一波 devtool</strong>。</p>
 <p><strong>devtool</strong>也是和<strong>mode</strong>同级别的配置。默认值是 eval。<em>设置开发时的工具</em></p>
 <p>此选项控制是否生成，以及如何生成 <strong>source map</strong>。</p>
@@ -1375,8 +1375,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">// 默认会使用 eval函数对源代码进行包裹</span>
 devtool<span class="token operator">:</span> <span class="token string">"eval"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223031699.png"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223158431.png" alt="image-20210728223158431"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223031699.png"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223158431.png" alt="image-20210728223158431"></p>
 <p><strong>发现我们的打包后的代码全都被 eval 函数包裹</strong></p>
 <h5 id="source-map"><a href="#source-map" class="headerlink" title="source-map"></a>source-map</h5><p><strong>把属性设置为 source-map</strong>。出现错误就可以定位源码。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 如果想查看源码：可以设置值为 source-map</span>
@@ -1384,13 +1384,13 @@ devtool<span class="token operator">:</span> <span class="token string">"eval"</
 <span class="token comment">// 出现错误可以映射到我们书写的源代码</span>
 devtool<span class="token operator">:</span> <span class="token string">"source-map"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223248505.png" alt="image-20210728223248505"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223306610.png" alt="image-20210728223306610"></p>
-<h5 id="两种方式出现错误后的对比"><a href="#两种方式出现错误后的对比" class="headerlink" title="两种方式出现错误后的对比"></a>两种方式出现错误后的对比</h5><h6 id="eval-配置代码出现错误时"><a href="#eval-配置代码出现错误时" class="headerlink" title="eval 配置代码出现错误时"></a>eval 配置代码出现错误时</h6><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223827751.png" alt="image-20210728223827751"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223842559.png" alt="image-20210728223842559"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223248505.png" alt="image-20210728223248505"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223306610.png" alt="image-20210728223306610"></p>
+<h5 id="两种方式出现错误后的对比"><a href="#两种方式出现错误后的对比" class="headerlink" title="两种方式出现错误后的对比"></a>两种方式出现错误后的对比</h5><h6 id="eval-配置代码出现错误时"><a href="#eval-配置代码出现错误时" class="headerlink" title="eval 配置代码出现错误时"></a>eval 配置代码出现错误时</h6><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223827751.png" alt="image-20210728223827751"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223842559.png" alt="image-20210728223842559"></p>
 <p><strong>发现代码并不是我们自己写的源码。不好辨别具体是那个文件出现错误。</strong></p>
-<h6 id="source-map-配置代码出现错误时"><a href="#source-map-配置代码出现错误时" class="headerlink" title="source-map 配置代码出现错误时"></a>source-map 配置代码出现错误时</h6><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728223957836.png" alt="image-20210728223957836"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210728224005593.png" alt="image-20210728224005593"></p>
+<h6 id="source-map-配置代码出现错误时"><a href="#source-map-配置代码出现错误时" class="headerlink" title="source-map 配置代码出现错误时"></a>source-map 配置代码出现错误时</h6><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728223957836.png" alt="image-20210728223957836"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210728224005593.png" alt="image-20210728224005593"></p>
 <p><strong>出现错误，可以直接定位到具体是哪一个源文件。很 nice。</strong></p>
 <h5 id="附上-devtool-的各种配置"><a href="#附上-devtool-的各种配置" class="headerlink" title="附上 devtool 的各种配置"></a>附上 devtool 的各种配置</h5><table>
 <thead>
@@ -1865,7 +1865,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 npx babel src --out-dir dist --plugins=@babel/plugin-transform-arrow-functions<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731084446775.png" alt="image-20210731084446775"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731084446775.png" alt="image-20210731084446775"></p>
 <p><strong>源代码：</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">"毛毛"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -1880,7 +1880,7 @@ arr<span class="token punctuation">.</span><span class="token function">forEach<
   <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731084619271.png" alt="image-20210731084619271"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731084619271.png" alt="image-20210731084619271"></p>
 <p>查看转换后的结果：我们会发现 <strong>const</strong> 并没有转成 <strong>var</strong></p>
 <ul>
 <li>这是因为 plugin-transform-arrow-functions，并没有提供这样的功能；</li>
@@ -1892,8 +1892,8 @@ npx babel src --out-dir dist --plugins=@babel/plugin-transform-block-scoping
 ,@babel/plugin-transform-arrow-functions
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731084842846.png" alt="image-20210731084842846"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731084854742.png" alt="image-20210731084854742"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731084842846.png" alt="image-20210731084842846"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731084854742.png" alt="image-20210731084854742"></p>
 <h4 id="Babel-的预设-preset"><a href="#Babel-的预设-preset" class="headerlink" title="Babel 的预设 preset"></a>Babel 的预设 preset</h4><p>但是如果要转换的内容过多，一个个设置是比较麻烦的，我们可以使用预设（preset）：<strong>后面我们再具体来讲预设代表的含义；</strong></p>
 <p>安装@babel/preset-env 预设：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install @babel/preset-env -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1901,8 +1901,8 @@ npx babel src --out-dir dist --plugins=@babel/plugin-transform-block-scoping
 <p><strong>执行如下命令：</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npx babel src --out-dir dist --presets=@babel/preset-env<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731085152844.png" alt="image-20210731085152844"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731085201827.png" alt="image-20210731085201827"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731085152844.png" alt="image-20210731085152844"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731085201827.png" alt="image-20210731085201827"></p>
 <h4 id="Babel-的底层原理"><a href="#Babel-的底层原理" class="headerlink" title="Babel 的底层原理"></a>Babel 的底层原理</h4><p>babel 是如何做到将我们的一段代码（<strong>ES6、TypeScript、Reac</strong>t）转成另外一段代码（ES5）的呢？</p>
 <p>从一种源代码（原生语言）转换成另一种源代码（目标语言），这是什么的工作呢？</p>
 <p><strong>就是编译器，事实上我们可以将 babel 看成就是一个编译器</strong>；Babel 编译器的作用就是将我们的源代码，转换成浏览器可以直接识别的另外一段源代码；</p>
@@ -1912,18 +1912,18 @@ npx babel src --out-dir dist --plugins=@babel/plugin-transform-block-scoping
 <li>转换阶段（Transformation）</li>
 <li>生成阶段（Code Generation）</li>
 </ol>
-<h4 id="Babel-编译器执行原理"><a href="#Babel-编译器执行原理" class="headerlink" title="Babel 编译器执行原理"></a>Babel 编译器执行原理</h4><h5 id="Babel-的执行阶段"><a href="#Babel-的执行阶段" class="headerlink" title="Babel 的执行阶段"></a>Babel 的执行阶段</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731085400687.png" alt="image-20210731085400687"></p>
+<h4 id="Babel-编译器执行原理"><a href="#Babel-编译器执行原理" class="headerlink" title="Babel 编译器执行原理"></a>Babel 编译器执行原理</h4><h5 id="Babel-的执行阶段"><a href="#Babel-的执行阶段" class="headerlink" title="Babel 的执行阶段"></a>Babel 的执行阶段</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731085400687.png" alt="image-20210731085400687"></p>
 <p><strong>当然，这只是一个简化版的编译器工具流程，在每个阶段又会有自己具体的工作：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731085426851.png" alt="image-20210731085426851"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731085436745.png" alt="image-20210731085436745"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731085426851.png" alt="image-20210731085426851"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731085436745.png" alt="image-20210731085436745"></p>
 <h4 id="babel-loader"><a href="#babel-loader" class="headerlink" title="babel-loader"></a>babel-loader</h4><p>在实际开发中，我们通常会在构建工具中通过配置 babel 来对其进行使用的，比如在 webpack 中</p>
 <p>那么我们就需要去安装相关的依赖：如果之前已经安装了@babel/core，那么这里不需要再次安装；</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install babel-loader @babel/core -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>我们可以设置一个规则，在加载 js 文件时，使用我们的 babel：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731094048189.png" alt="image-20210731094048189"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731094048189.png" alt="image-20210731094048189"></p>
 <h5 id="指定使用的插件"><a href="#指定使用的插件" class="headerlink" title="指定使用的插件"></a>指定使用的插件</h5><p>我们必须指定使用的插件才会生效:</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731094141175.png" alt="image-20210731094141175"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731094141175.png" alt="image-20210731094141175"></p>
 <h5 id="babel-preset"><a href="#babel-preset" class="headerlink" title="babel-preset"></a>babel-preset</h5><p>如果我们一个个去安装使用插件，那么需要手动来管理大量的 babel 插件，我们可以直接给 webpack 提供一个 preset，webpack 会根据我们的预设来加载对应的插件列表，并且将其传递给 babel</p>
 <p><strong>比如常见的预设有三个：</strong></p>
 <ol>
@@ -1934,7 +1934,7 @@ npx babel src --out-dir dist --plugins=@babel/plugin-transform-block-scoping
 <p><strong>安装 preset-env：</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install @babel/preset-env<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731094336858.png" alt="image-20210731094336858"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731094336858.png" alt="image-20210731094336858"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 对js代码进行转换</span>
       <span class="token punctuation">{</span>
         test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
@@ -1998,7 +1998,7 @@ app<span class="token punctuation">.</span><span class="token function">mount</s
 <p><strong>使用 webpack 进行打包</strong></p>
 <p>发现：<strong>界面上是没有效果的：</strong></p>
 <p>并且我们查看运行的控制台，会发现如下的警告信息；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731095804576.png" alt="image-20210731095804576"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731095804576.png" alt="image-20210731095804576"></p>
 <h4 id="Vue-打包后不同版本解析"><a href="#Vue-打包后不同版本解析" class="headerlink" title="Vue 打包后不同版本解析"></a>Vue 打包后不同版本解析</h4><h5 id="vue-runtime-global-prod-js："><a href="#vue-runtime-global-prod-js：" class="headerlink" title="vue(.runtime).global(.prod).js："></a><strong>vue(.runtime).global(.prod).js：</strong></h5><ol>
 <li>通过浏览器中的 <code>&lt;srcipt src="..."&gt;</code>直接引入</li>
 <li>我们之前通过 CDN 引入和下载的 Vue 版本就是这个版本；</li>
@@ -2035,11 +2035,11 @@ app<span class="token punctuation">.</span><span class="token function">mount</s
 <p><strong>所以我们引入 vue3 应使用如下方式：</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue/dist/vue.esm-bundler"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731102206823.png" alt="image-20210731102206823"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731102206823.png" alt="image-20210731102206823"></p>
 <h4 id="全局标识的配置"><a href="#全局标识的配置" class="headerlink" title="全局标识的配置"></a>全局标识的配置</h4><p><strong>我们会发现控制台还有另外的一个警告：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731101951525.png" alt="image-20210731101951525"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731101951525.png" alt="image-20210731101951525"></p>
 <p>在 GitHub 上的文档中我们可以找到说明：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731102019738.png" alt="image-20210731102019738"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731102019738.png" alt="image-20210731102019738"></p>
 <p>这是两个特性的标识，一个是使用 Vue 的 Options，一个是 Production 模式下是否支持 devtools 工具；</p>
 <p>虽然他们都有默认值，但是强烈建议我们手动对他们进行配置；</p>
 <p><strong>可以使用 DefinePlugin 插件配置这两个常量</strong></p>
@@ -2081,12 +2081,12 @@ h3 {
 app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="App-vue-的打包过程"><a href="#App-vue-的打包过程" class="headerlink" title="App.vue 的打包过程"></a>App.vue 的打包过程</h5><p>我们对代码打包会报错：提示我们需要合适的 Loader 来处理文件。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731110600146.png" alt="image-20210731110600146"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731110600146.png" alt="image-20210731110600146"></p>
 <p><strong>这个时候我们需要使用 vue-loader：</strong></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install vue-loader@next -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>在 webpack 的模板规则中进行配置：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210731110659522.png" alt="image-20210731110659522"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210731110659522.png" alt="image-20210731110659522"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 配置 .vue文件的加载打包规则</span>
       <span class="token punctuation">{</span>
         test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.vue$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
@@ -2122,8 +2122,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </ol>
 <h5 id="如何开启-watch-呢？两种方式："><a href="#如何开启-watch-呢？两种方式：" class="headerlink" title="如何开启 watch 呢？两种方式："></a><strong>如何开启 watch 呢？两种方式：</strong></h5><p>方式一：在导出的配置中，添加 watch: true；</p>
 <p>方式二：在启动 webpack 的命令中，添加 <strong>–watch 的标识</strong>；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802172245108.png" alt="image-20210802172245108"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802172200638.png" alt="image-20210802172200638"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802172245108.png" alt="image-20210802172245108"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802172200638.png" alt="image-20210802172200638"></p>
 <p><strong>方式二</strong>是在 package.json 的 scripts 中添加一个 watch 的脚本。</p>
 <h4 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a>webpack-dev-server</h4><p>上面的方式可以监听到文件的变化，但是事实上它本身是没有自动刷新浏览器的功能的：</p>
 <ol>
@@ -2146,9 +2146,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   target<span class="token operator">:</span> <span class="token string">"web"</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802172713684.png" alt="image-20210802172713684"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802172725403.png" alt="image-20210802172725403"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802172828915.png" alt="image-20210802172828915"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802172713684.png" alt="image-20210802172713684"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802172725403.png" alt="image-20210802172725403"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802172828915.png" alt="image-20210802172828915"></p>
 <h4 id="认识模块热替换"><a href="#认识模块热替换" class="headerlink" title="认识模块热替换"></a>认识模块热替换</h4><p><strong>什么是 HMR 呢？</strong></p>
 <ol>
 <li>HMR 的全称是 Hot Module Replacement，翻译为模块热替换；</li>
@@ -2166,12 +2166,12 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>在不开启 HMR 的情况下，当我们修改了源代码之后，整个页面会自动刷新，使用的是 live reloading；</li>
 </ol>
 <h5 id="开启-HMR"><a href="#开启-HMR" class="headerlink" title="开启 HMR"></a>开启 HMR</h5><p><strong>修改 webpack 的配置：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802173037587.png" alt="image-20210802173037587"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802173037587.png" alt="image-20210802173037587"></p>
 <p><strong>浏览器可以看到如下效果：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802173057967.png" alt="image-20210802173057967"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802173057967.png" alt="image-20210802173057967"></p>
 <p>但是你会发现，当我们修改了某一个模块的代码时，依然是刷新的整个页面：</p>
 <p>这是因为我们需要去<strong>指定哪些模块</strong>发生更新时，<strong>进行 HMR</strong>；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802173232460.png" alt="image-20210802173232460"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802173232460.png" alt="image-20210802173232460"></p>
 <h4 id="框架的-HMR"><a href="#框架的-HMR" class="headerlink" title="框架的 HMR"></a>框架的 HMR</h4><p><strong>有一个问题：在开发其他项目时，我们是否需要经常手动去写入 module.hot.accpet 相关的 API 呢？</strong></p>
 <ol>
 <li>比如开发 Vue、React 项目，我们修改了组件，希望进行热更新，这个时候应该如何去操作呢？</li>
@@ -2191,7 +2191,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>通过长连接，可以直接将这两个文件主动发送给客户端（浏览器）；</li>
 <li>浏览器拿到两个新的文件后，通过 HMR runtime 机制，加载这两个文件，并且针对修改的模块进行更新；</li>
 </ol>
-<h5 id="HMR-的原理图"><a href="#HMR-的原理图" class="headerlink" title="HMR 的原理图"></a>HMR 的原理图</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802173450624.png" alt="image-20210802173450624"></p>
+<h5 id="HMR-的原理图"><a href="#HMR-的原理图" class="headerlink" title="HMR 的原理图"></a>HMR 的原理图</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802173450624.png" alt="image-20210802173450624"></p>
 <h5 id="hotOnly、host-配置"><a href="#hotOnly、host-配置" class="headerlink" title="hotOnly、host 配置"></a>hotOnly、host 配置</h5><h6 id="host-设置主机地址："><a href="#host-设置主机地址：" class="headerlink" title="host 设置主机地址："></a><strong>host 设置主机地址：</strong></h6><p>默认值是 localhost；如果希望其他地方也可以访问，可以设置为 0.0.0.0；</p>
 <h6 id="localhost-和-0-0-0-0-的区别："><a href="#localhost-和-0-0-0-0-的区别：" class="headerlink" title="localhost 和 0.0.0.0 的区别："></a><strong>localhost 和 0.0.0.0 的区别</strong>：</h6><ol>
 <li>localhost：本质上是一个域名，通常情况下会被解析成 127.0.0.1;</li>
@@ -2203,7 +2203,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </li>
 <li>0.0.0.0：监听 IPV4 上所有的地址，再根据端口找到不同的应用程序；比如我们监听 0.0.0.0 时，在同一个网段下的主机中，通过 ip 地址是可以访问的;</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802174005433.png" alt="image-20210802174005433"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802174005433.png" alt="image-20210802174005433"></p>
 <h5 id="port、open、compress"><a href="#port、open、compress" class="headerlink" title="port、open、compress"></a>port、open、compress</h5><h6 id="prot"><a href="#prot" class="headerlink" title="prot"></a>prot</h6><p><strong>port 设置监听的端口，默认情况下是 8080</strong></p>
 <h6 id="open"><a href="#open" class="headerlink" title="open"></a>open</h6><p><strong>open 是否打开浏览器：</strong></p>
 <ol>
@@ -2212,8 +2212,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </ol>
 <h6 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h6><p><strong>compress 是否为静态文件开启 gzip compression：</strong></p>
 <p>默认值是 false，可以设置为 true；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802174040312.png" alt="image-20210802174040312"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802174054174.png" alt="image-20210802174054174"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802174040312.png" alt="image-20210802174040312"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802174054174.png" alt="image-20210802174054174"></p>
 <h4 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h4><p><strong>proxy 是我们开发中非常常用的一个配置选项，它的目的设置代理来解决跨域访问的问题：</strong></p>
 <p>比如我们的一个 api 请求是 <a href="http://localhost:8888，但是本地启动服务器的域名是">http://localhost:8888，但是本地启动服务器的域名是</a> <a href="http://localhost:8000，这">http://localhost:8000，这</a> 个时候发送网络请求就会出现跨域的问题；</p>
 <p>那么我们可以将请求先发送到一个代理服务器，代理服务器和 API 服务器没有跨域的问题，就可以解决我们的跨 域问题了；</p>
@@ -2222,7 +2222,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p><strong>pathRewrite</strong>：默认情况下，我们的 /api-hy 也会被写入到 URL 中，如果希望删除，可以使用 pathRewrite；</p>
 <p><strong>secure</strong>：默认情况下不接收转发到 https 的服务器上，如果希望支持，可以设置为 false；</p>
 <p><strong>changeOrigin</strong>：它表示是否更新代理后请求的 headers 中 host 地址</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802174327012.png" alt="image-20210802174327012"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802174327012.png" alt="image-20210802174327012"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// 配置 proxy 代理 解决跨域问题</span>
@@ -2293,7 +2293,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>特别是当我们项目的目录结构比较深的时候，或者一个文件的路径可能需要 ../../../这种路径片段；</li>
 <li>我们可以给某些常见的路径起一个别名；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802174852517.png" alt="image-20210802174852517"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802174852517.png" alt="image-20210802174852517"></p>
 <h3 id="如何区分开发环境"><a href="#如何区分开发环境" class="headerlink" title="如何区分开发环境"></a>如何区分开发环境</h3><p><strong>目前我们所有的 webpack 配置信息都是放到一个配置文件中的：webpack.config.js</strong></p>
 <ol>
 <li>当配置越来越多时，这个文件会变得越来越不容易维护；</li>
@@ -2305,7 +2305,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><strong>方案一</strong>：编写两个不同的配置文件，开发和生成时，分别加载不同的配置文件即可；</li>
 <li><strong>方式二</strong>：使用相同的一个入口配置文件，通过设置参数来区分它们；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802175011294.png" alt="image-20210802175011294"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802175011294.png" alt="image-20210802175011294"></p>
 <h4 id="入口文件解析"><a href="#入口文件解析" class="headerlink" title="入口文件解析"></a>入口文件解析</h4><p>我们之前编写入口文件的规则是这样的：./src/index.js，但是如果我们的配置文件所在的位置变成了 config 目录， 我们是否应该变成 ../src/index.js 呢</p>
 <ol>
 <li>如果我们这样编写，会发现是报错的，依然要写成 ./src/index.js；</li>
@@ -2314,15 +2314,15 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>context 的作用是用于解析入口（entry point）和加载器（loader）：</p>
 <p>官方说法：默认是当前路径（但是经过我测试，默认应该是 webpack 的启动目录）</p>
 <p>另外推荐在配置中传入一个值；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802175152242.png" alt="image-20210802175152242"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802175158275.png" alt="image-20210802175158275"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802175152242.png" alt="image-20210802175152242"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802175158275.png" alt="image-20210802175158275"></p>
 <h4 id="区分开发和生成环境配置"><a href="#区分开发和生成环境配置" class="headerlink" title="区分开发和生成环境配置"></a>区分开发和生成环境配置</h4><p><strong>这里我们创建三个文件：</strong></p>
 <ol>
 <li>webpack.common.js</li>
 <li>webpack.prod.js</li>
 <li>webpack.dev.js</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210802175252457.png" alt="image-20210802175252457"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210802175252457.png" alt="image-20210802175252457"></p>
 <p><strong>将公共代码和生产环境的配置以及开发时的配置分开，然后使用 webpack-merge 插件进行配置文件的合并。</strong></p>
 <p><strong>webpack.common.js</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 公共的环境</span>

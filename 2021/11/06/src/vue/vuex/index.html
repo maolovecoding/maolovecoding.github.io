@@ -507,7 +507,7 @@
 <li>在模块 template 中我们可以使用这些数据，模块最终会被 渲染成 DOM，我们称之为 View；</li>
 <li>在模块中我们会产生一些行为事件，处理这些行为事件时， 有可能会修改 state，这些行为事件我们称之为 actions；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903172421127.png" alt="image-20210903172421127"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903172421127.png" alt="image-20210903172421127"></p>
 <h2 id="复杂的状态管理"><a href="#复杂的状态管理" class="headerlink" title="复杂的状态管理"></a>复杂的状态管理</h2><p>JavaScript 开发的应用程序，已经变得越来越复杂了：</p>
 <ul>
 <li>JavaScript 需要管理的状态越来越多，越来越复杂；</li>
@@ -541,7 +541,7 @@
 <li><p>这就是 Vuex 背后的基本思想，它借鉴了 Flux、Redux、Elm（纯函数语言，redux 有借鉴它的思想）：</p>
 </li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903172709234.png" alt="image-20210903172709234"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903172709234.png" alt="image-20210903172709234"></p>
 <h3 id="Vuex-的安装"><a href="#Vuex-的安装" class="headerlink" title="Vuex 的安装"></a>Vuex 的安装</h3><p>依然我们要使用 vuex，首先第一步需要安装 vuex：</p>
 <p>我们这里使用的是 vuex4.x，安装的时候需要添加 next 指定版本；</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i vuex@next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -635,7 +635,7 @@ export default {
 
 &lt;style scoped&gt;&lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903173548842.png" alt="image-20210903173548842"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903173548842.png" alt="image-20210903173548842"></p>
 <h4 id="单一状态树"><a href="#单一状态树" class="headerlink" title="单一状态树"></a>单一状态树</h4><p><strong>Vuex 使用单一状态树：</strong></p>
 <ul>
 <li>用一个对象就包含了全部的应用层级状态；</li>
@@ -651,7 +651,7 @@ export default {
 </ul>
 <h4 id="组件获取状态"><a href="#组件获取状态" class="headerlink" title="组件获取状态"></a>组件获取状态</h4><p>在前面我们已经学习过如何在组件中获取状态了。</p>
 <p>当然，如果觉得那种方式有点繁琐（表达式过长），我们可以使用计算属性：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903202015859.png" alt="image-20210903202015859"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903202015859.png" alt="image-20210903202015859"></p>
 <p>也是可以正常显示的。</p>
 <p><strong>但是：</strong>如果我们有很多个状态都需要获取的话，可以使用 mapState 的辅助函数（是 vuex 插件提供给我们的）：</p>
 <ul>
@@ -659,9 +659,9 @@ export default {
 <li>mapState 的方式二：数组类型；</li>
 <li>也可以使用展开运算符和来原有的 computed 混合在一起；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903202136671.png" alt="image-20210903202136671"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903203542060.png" alt="image-20210903203542060"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903203604530.png" alt="image-20210903203604530"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903202136671.png" alt="image-20210903202136671"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903203542060.png" alt="image-20210903203542060"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903203604530.png" alt="image-20210903203604530"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
   &lt;div&gt;
     &lt;h2&gt;Home: {{ $store.state.counter }}&lt;/h2&gt;
@@ -706,13 +706,13 @@ export default {
 <h4 id="在-setup-中使用-mapState"><a href="#在-setup-中使用-mapState" class="headerlink" title="在 setup 中使用 mapState"></a>在 setup 中使用 mapState</h4><p>在 setup 中如果我们单个获取装是非常简单的：</p>
 <ul>
 <li><p>通过 useStore 拿到 store 后去获取某个状态即可；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903205459653.png" alt="image-20210903205459653"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903205459653.png" alt="image-20210903205459653"></p>
 </li>
 <li><p>但是如果我们需要使用 mapState 的功能呢？</p>
 </li>
 </ul>
 <p><strong>默认情况下，Vuex 并没有提供非常方便的使用 mapState 的方式，这里我们进行了一个函数的封装：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903213230243.png" alt="image-20210903213230243"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903213230243.png" alt="image-20210903213230243"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// 在 computed里面如何拿到 $store对象 ?</span>
     <span class="token comment">// vuex提供了一个hook，使用useStore就可以拿到全局的store对象</span>
@@ -774,30 +774,30 @@ export default {
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>这样就舒服多了</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210903221635835.png" alt="image-20210903221635835"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210903221635835.png" alt="image-20210903221635835"></p>
 <h3 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h3><h4 id="getters-的基本使用"><a href="#getters-的基本使用" class="headerlink" title="getters 的基本使用"></a>getters 的基本使用</h4><p>某些属性我们可能需要经过变化后来使用，这个时候可以使用 getters：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904082048773.png" alt="image-20210904082048773"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904082048773.png" alt="image-20210904082048773"></p>
 <h4 id="getters-第二个参数"><a href="#getters-第二个参数" class="headerlink" title="getters 第二个参数"></a>getters 第二个参数</h4><p>getters 可以接收第二个参数：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904082200680.png" alt="image-20210904082200680"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904082259062.png" alt="image-20210904082259062"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904082200680.png" alt="image-20210904082200680"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904082259062.png" alt="image-20210904082259062"></p>
 <h4 id="getters-的返回函数"><a href="#getters-的返回函数" class="headerlink" title="getters 的返回函数"></a>getters 的返回函数</h4><p>getters 中的函数本身，可以返回一个函数，那么在使用的地方相当于可以调用这个函数：</p>
 <p>调用函数的同时也可以传递参数。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904082506302.png" alt="image-20210904082506302"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904082506302.png" alt="image-20210904082506302"></p>
 <h4 id="mapGetters-的辅助函数"><a href="#mapGetters-的辅助函数" class="headerlink" title="mapGetters 的辅助函数"></a>mapGetters 的辅助函数</h4><p>这里我们也可以使用 mapGetters 的辅助函数。</p>
 <p><code>mapGetters</code> 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904083326466.png" alt="image-20210904083326466"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904083326466.png" alt="image-20210904083326466"></p>
 <p>在 setup 中使用</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904084849673.png" alt="image-20210904084849673"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904084849673.png" alt="image-20210904084849673"></p>
 <h3 id="Mutation"><a href="#Mutation" class="headerlink" title="Mutation"></a>Mutation</h3><h4 id="Mutation-基本使用"><a href="#Mutation-基本使用" class="headerlink" title="Mutation 基本使用"></a>Mutation 基本使用</h4><p>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation：Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的**事件类型 (type)**和一个**回调函数 (handler)**。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904085430225.png" alt="image-20210904085430225"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904085849392.png" alt="image-20210904085849392"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904085430225.png" alt="image-20210904085430225"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904085849392.png" alt="image-20210904085849392"></p>
 <h4 id="Mutation-携带数据"><a href="#Mutation-携带数据" class="headerlink" title="Mutation 携带数据"></a>Mutation 携带数据</h4><p>很多时候我们在提交 mutation 的时候，会携带一些数据，这个时候我们可以使用参数：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904090441870.png" alt="image-20210904090441870"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904090441870.png" alt="image-20210904090441870"></p>
 <p><strong>payload 为对象类型</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904090801951.png" alt="image-20210904090801951"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904090801951.png" alt="image-20210904090801951"></p>
 <p><strong>对象风格的提交方式</strong></p>
 <p>和上面的 payload 对象类型的方式提交是等价的。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904091003783.png" alt="image-20210904091003783"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904091003783.png" alt="image-20210904091003783"></p>
 <h4 id="Mutation-常量类型"><a href="#Mutation-常量类型" class="headerlink" title="Mutation 常量类型"></a>Mutation 常量类型</h4><p><strong>定义常量：mutation-type.js</strong></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 将mutations的那些定义的函数名，也就是一个个的mutation的名称定义为常量</span>
 <span class="token comment">// 方便外界调用，不会出错</span>
@@ -851,10 +851,10 @@ export default {
 
 &lt;style scoped&gt;&lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904095152100.png" alt="image-20210904095152100"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904095152100.png" alt="image-20210904095152100"></p>
 <p><strong>在 setup 中使用也是一样的：</strong></p>
 <p>mapMutations 返回的对象里面的属性值就刚好是函数，不需要再次封装，直接解构即可使用。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210904095629038.png" alt="image-20210904095629038"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210904095629038.png" alt="image-20210904095629038"></p>
 <h4 id="mutation-重要原则"><a href="#mutation-重要原则" class="headerlink" title="mutation 重要原则"></a>mutation 重要原则</h4><p>一条重要的原则就是要记住 <strong>mutation 必须是同步函数</strong></p>
 <ul>
 <li>这是因为 devtool 工具会记录 mutation 的日记；</li>
@@ -875,12 +875,12 @@ export default {
 <li>所以我们可以从其中获取到 commit 方法来提交一个 mutation，或者通过 context.state 和 context.getters 来 获取 state 和 getters；</li>
 <li>但是为什么它不是 store 对象呢？这个等到我们讲 Modules 时再具体来说；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905094951404.png" alt="image-20210905094951404"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905094951404.png" alt="image-20210905094951404"></p>
 <h4 id="actions-的分发操作"><a href="#actions-的分发操作" class="headerlink" title="actions 的分发操作"></a>actions 的分发操作</h4><p>如何使用 action 呢？进行 action 的分发：</p>
 <ul>
 <li>分发使用的是 store 上的 dispatch 函数；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905101505909.png" alt="image-20210905101505909"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905101505909.png" alt="image-20210905101505909"></p>
 <ul>
 <li>同样的，它也可以携带我们的参数：</li>
 </ul>
@@ -902,39 +902,39 @@ export default {
 <ul>
 <li>也可以以对象的形式进行分发：</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905101710585.png" alt="image-20210905101710585"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905101710585.png" alt="image-20210905101710585"></p>
 <h4 id="actions-的辅助函数-mapActions"><a href="#actions-的辅助函数-mapActions" class="headerlink" title="actions 的辅助函数 mapActions"></a>actions 的辅助函数 mapActions</h4><h5 id="methods-中使用"><a href="#methods-中使用" class="headerlink" title="methods 中使用"></a>methods 中使用</h5><p><strong>action 也有对应的辅助函数：</strong></p>
 <ul>
 <li>数组类型的写法；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905102659204.png" alt="image-20210905102659204"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905102659204.png" alt="image-20210905102659204"></p>
 <ul>
 <li>对象类型的写法</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905102937069.png" alt="image-20210905102937069"></p>
-<h5 id="在-setup-函数中使用"><a href="#在-setup-函数中使用" class="headerlink" title="在 setup 函数中使用"></a>在 setup 函数中使用</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905103228015.png" alt="image-20210905103228015"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905102937069.png" alt="image-20210905102937069"></p>
+<h5 id="在-setup-函数中使用"><a href="#在-setup-函数中使用" class="headerlink" title="在 setup 函数中使用"></a>在 setup 函数中使用</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905103228015.png" alt="image-20210905103228015"></p>
 <h4 id="actions-的异步操作"><a href="#actions-的异步操作" class="headerlink" title="actions 的异步操作"></a>actions 的异步操作</h4><p>Action 通常是异步的，那么如何知道 action 什么时候结束呢？</p>
 <ul>
 <li>我们可以通过让 action 返回 Promise，在 Promise 的 then 中来处理完成后的操作；</li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905104736067.png" alt="image-20210905104736067"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905104736067.png" alt="image-20210905104736067"></p>
 <h3 id="module"><a href="#module" class="headerlink" title="module"></a>module</h3><h4 id="module-的基本使用"><a href="#module-的基本使用" class="headerlink" title="module 的基本使用"></a>module 的基本使用</h4><p><strong>什么是 Module？</strong></p>
 <ul>
 <li>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象，当应用变得非常复杂时，store 对象就有可 能变得相当臃肿；</li>
 <li>为了解决以上问题，Vuex 允许我们将 store 分割成<strong>模块（module）；</strong></li>
 <li>每个模块拥有自己的 state、mutation、action、getter、甚至是<strong>嵌套子模块；</strong></li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905112855452.png" alt="image-20210905112855452"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905112914375.png" alt="image-20210905112914375"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905112855452.png" alt="image-20210905112855452"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905112914375.png" alt="image-20210905112914375"></p>
 <h4 id="module-的局部状态"><a href="#module-的局部状态" class="headerlink" title="module 的局部状态"></a>module 的局部状态</h4><p>对于模块内部的 mutation 和 getter，接收的第一个参数是模块的局部状态对象：</p>
 <p>在 homeModule 里面注册的 mutation，对 increment 进行提交，可以发现，全局的 rootCounter 和 homeCounter 都进行了+1.因为我们在 homeModule 和全局的 mutation 中都注册了 increment 这个 mutation 提交事件。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905114631515.png" alt="image-20210905114631515"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905114518377.png" alt="image-20210905114518377"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905114631515.png" alt="image-20210905114631515"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905114518377.png" alt="image-20210905114518377"></p>
 <p>只要 mutation 中有叫做 increment 的这个事件，对应的函数全都会被执行一次。</p>
 <p>如果我们想执行（提交）的只是 homeModule 里面的 mutation 呢？</p>
 <p><strong>我们在 module 中定义的 getters，mutations，以及 actions 都是这样的问题。</strong></p>
 <p>我们进行提交，或者获取 getters 里面的数据，以及派发 actions，都是和直接在全局的 store 里面定义都没有什么区别。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905115847241.png" alt="image-20210905115847241"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905115847241.png" alt="image-20210905115847241"></p>
 <p><strong>我们如果想进行区分，要如何做呢？</strong></p>
 <h4 id="module-的命名空间"><a href="#module-的命名空间" class="headerlink" title="module 的命名空间"></a>module 的命名空间</h4><p>默认情况下，模块内部的 action 和 mutation 仍然是<strong>注册在全局的命名空间中</strong>的：</p>
 <ul>
@@ -943,9 +943,9 @@ export default {
 </ul>
 <p>如果我们希望模块具有更高的封装度和复用性，可以添加 <strong>namespaced: true</strong> 的方式使其成为带命名空间的模块：</p>
 <p>当模块被注册后，它的所有 getter、action 及 mutation 都会自动根据模块注册的路径调整命名；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905121001586.png" alt="image-20210905121001586"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905121001586.png" alt="image-20210905121001586"></p>
 <h4 id="module-修改或派发根组件"><a href="#module-修改或派发根组件" class="headerlink" title="module 修改或派发根组件"></a>module 修改或派发根组件</h4><p>如果我们希望在 action 中修改 root 中的 state，那么有如下的方式：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905131830019.png" alt="image-20210905131830019"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905131830019.png" alt="image-20210905131830019"></p>
 <h4 id="module-的辅助函数"><a href="#module-的辅助函数" class="headerlink" title="module 的辅助函数"></a>module 的辅助函数</h4><p><strong>辅助函数有三种使用方法：</strong></p>
 <ul>
 <li>方式一：通过完整的模块空间名称来查找；</li>
@@ -1073,16 +1073,16 @@ export default {
 <p>实现上面的案例我们有三种方式：</p>
 <ul>
 <li><p>方式一：在点击按钮后立即获取到 h2 的高度（错误的做法） 。<strong>这种做法每次获取到的高度都是上次的高度。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905164631027.png" alt="image-20210905164631027"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905164631027.png" alt="image-20210905164631027"></p>
 </li>
 <li><p>方式二：在 updated 生命周期函数中获取 h2 的高度（但是其他数据更新，也会执行该操作）</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905164917043.png" alt="image-20210905164917043"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905164917043.png" alt="image-20210905164917043"></p>
 </li>
 <li><p>方式三：使用 nexttick 函数；</p>
 </li>
 </ul>
 <p>nexttick 是如何做到的呢？</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905172202592.png" alt="image-20210905172202592"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905172202592.png" alt="image-20210905172202592"></p>
 <h3 id="historyApiFallback"><a href="#historyApiFallback" class="headerlink" title="historyApiFallback"></a>historyApiFallback</h3><ul>
 <li><p>historyApiFallback 是开发中一个非常常见的属性，它主要的作用是解决 SPA 页面在路由跳转之后，进行页面刷新 时，返回 404 的错误。</p>
 </li>
@@ -1101,7 +1101,7 @@ export default {
 <li><p>可以查看<a target="_blank" rel="noopener" href="https://github.com/bripkens/connect-history-api-fallback">connect-history-api-fallback</a> 文档</p>
 </li>
 </ul>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210905172411233.png" alt="image-20210905172411233"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210905172411233.png" alt="image-20210905172411233"></p>
 
                 
             </div>

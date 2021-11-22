@@ -487,55 +487,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="微信小程序入门-一"><a href="#微信小程序入门-一" class="headerlink" title="微信小程序入门(一)"></a>微信小程序入门(一)</h1><h2 id="项目结构解读"><a href="#项目结构解读" class="headerlink" title="项目结构解读"></a>项目结构解读</h2><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210823172509428.png" alt="image-20210823172509428"></p>
+                <h1 id="微信小程序入门-一"><a href="#微信小程序入门-一" class="headerlink" title="微信小程序入门(一)"></a>微信小程序入门(一)</h1><h2 id="项目结构解读"><a href="#项目结构解读" class="headerlink" title="项目结构解读"></a>项目结构解读</h2><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210823172509428.png" alt="image-20210823172509428"></p>
 <p><strong>我们发现，页面页面一般有 4 个文件组成</strong></p>
 <h3 id="每个文件的功能"><a href="#每个文件的功能" class="headerlink" title="每个文件的功能"></a>每个文件的功能</h3><h4 id="xxx-js-index-js-文件"><a href="#xxx-js-index-js-文件" class="headerlink" title="xxx.js(index.js)文件"></a>xxx.js(index.js)文件</h4><p>该文件完成业务逻辑的书写。</p>
 <h4 id="xxx-json-index-json"><a href="#xxx-json-index-json" class="headerlink" title="xxx.json(index.json)"></a>xxx.json(index.json)</h4><p>该文件用来进行一些页面的配置。<strong>有些时候我们不需要书写样式等代码，而是在 json 文件里面进行一定的配置，就可以达到我们想要的效果。比如：我们修改一下顶部导航栏的颜色，就可以在 JSON 文件里面配置。这种配置机制在我们前端的开发中不常见。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210823173430156.png" alt="image-20210823173430156"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210823173430156.png" alt="image-20210823173430156"></p>
 <h4 id="xxx-wxml-index-wxml"><a href="#xxx-wxml-index-wxml" class="headerlink" title="xxx.wxml(index.wxml)"></a>xxx.wxml(index.wxml)</h4><p>该文件用来书写页面的骨架。类似于 html。</p>
 <h4 id="xxx-wxss-index-wxss"><a href="#xxx-wxss-index-wxss" class="headerlink" title="xxx.wxss(index.wxss)"></a>xxx.wxss(index.wxss)</h4><p>该文件用来书写页面的样式。类似于 css。</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><strong>其实，这四个文件并不都是必须都要存在的，比如我们的页面每页样式，那么 wxss 文件就不是必须的。所以说，除了页面的骨架 wxml，其他文件都不是必须的。</strong></p>
 <h4 id="文件约定"><a href="#文件约定" class="headerlink" title="文件约定"></a>文件约定</h4><p>如果我们这个页面的四个文件的<strong>名称相同（后缀不同）</strong>，都是 index.后缀的文件，那么我们文件之间的相互调用是不需要进行导入的。而是可以直接使用其他文件的内容。</p>
 <p><strong>综上所述：我们建立一个新的页面最好也采用这种约定速成的方式。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210823194921750.png" alt="image-20210823194921750"></p>
-<h2 id="文档结构解读"><a href="#文档结构解读" class="headerlink" title="文档结构解读"></a>文档结构解读</h2><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210823195321883.png" alt="image-20210823195321883"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210823194921750.png" alt="image-20210823194921750"></p>
+<h2 id="文档结构解读"><a href="#文档结构解读" class="headerlink" title="文档结构解读"></a>文档结构解读</h2><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210823195321883.png" alt="image-20210823195321883"></p>
 <p><strong>文件 app.js,app.json,app.wxss</strong>这三个文件的名称是不能修改的。作用和上面相同文件类型的作用一样。但是这三个文件可以控制整个微信小程序（也就是应用程序级别的）的样式和业务逻辑等。而上面介绍的文件只能控制所属的页面。</p>
 <p><strong>虽然这三个文件配置的样式等是全局的，但是如果配置的全局样式和局部样式有冲突，以页面的局部样式为主。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210823201416273.png" alt="image-20210823201416273"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210823201416273.png" alt="image-20210823201416273"></p>
 <p><strong>文件 project.config.json 是用来记录当前项目的配置，设置的。</strong></p>
 <p><strong>sitemap.json 是来做微信小程序搜索的。暂时不做了解。</strong></p>
 <h2 id="小程序入门"><a href="#小程序入门" class="headerlink" title="小程序入门"></a>小程序入门</h2><h3 id="删除项目结构"><a href="#删除项目结构" class="headerlink" title="删除项目结构"></a>删除项目结构</h3><p>首先我们删除项目中的其他文件，只保留 <strong>project.config.json，sitemap.json</strong>这两个文件</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824194736652.png" alt="image-20210824194736652"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824194736652.png" alt="image-20210824194736652"></p>
 <h3 id="小程序页面的搭建技巧和规则"><a href="#小程序页面的搭建技巧和规则" class="headerlink" title="小程序页面的搭建技巧和规则"></a>小程序页面的搭建技巧和规则</h3><p><strong>当我们删除项目结构，只保留这两个文件以后，发现在调试区域会报错。提醒我们没有 app.json 文件。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824194937369.png" alt="image-20210824194937369"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824194937369.png" alt="image-20210824194937369"></p>
 <p>上面我们说过，app.json 文件是在微信小程序开发项目中，必须存在的文件。</p>
 <h4 id="新建-app-json"><a href="#新建-app-json" class="headerlink" title="新建 app.json"></a>新建 app.json</h4><ol>
 <li>新建 json 文件以后，会提醒我们 json 文件不能为空</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824195055273.png" alt="image-20210824195055273"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824195055273.png" alt="image-20210824195055273"></p>
 <ol start="2">
 <li>写一个空的花括号以后，会报错提醒我们，必须有 pages 属性，且 pages 属性必须为数组。（页面肯定不止一个，注意：json 文件里面不可写注释。小程序的页面<strong>只有在 app.json 里面注册</strong>以后才能被访问。）</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824195147707.png" alt="image-20210824195147707"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824195147707.png" alt="image-20210824195147707"></p>
 <ol start="3">
 <li><p>有该属性后，一样报错。很明显，找不到页面。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824195611804.png" alt="image-20210824195611804"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824195611804.png" alt="image-20210824195611804"></p>
 </li>
 <li><p>新建页面，新建 pages 文件夹，在下面再建 index 文件夹。我们知道了每个页面都有四个文件，但是我们需要一个个新建吗？不需要的。只需要邮件单击 index 文件夹，然后点新建 page，填写文件名称即可，不需要写后缀，自动帮我们建好四个文件。且在 app.json 文件的 pages 属性里面完成了页面的注册。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824195817986.png" alt="image-20210824195817986"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824195918872.png" alt="image-20210824195918872"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824195817986.png" alt="image-20210824195817986"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824195918872.png" alt="image-20210824195918872"></p>
 </li>
 </ol>
 <p><strong>注意：页面文件只需要写 index，小程序会默认帮我们找到名称为 index 的四个文件。</strong>且小程序的默认首页就是第一个注册的页面。</p>
 <p><strong>例如，我们在新建一个 welcome 页面，并将其第一个注册，放在 index 页面前面，发现默认页面就是 welcome 了</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824200448529.png" alt="image-20210824200448529"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824200448529.png" alt="image-20210824200448529"></p>
 <h3 id="小程序必备语法"><a href="#小程序必备语法" class="headerlink" title="小程序必备语法"></a>小程序必备语法</h3><h4 id="1-如何显示一张图片"><a href="#1-如何显示一张图片" class="headerlink" title="1. 如何显示一张图片"></a>1. 如何显示一张图片</h4><p>**我们指知道，在 html 中，可以使用 img 标签来显示图片，在小程序中，我们使用的是<code>&lt;image&gt;&lt;/image&gt;</code>**标签。使用 src 属性引用图片。</p>
 <h4 id="2-文本"><a href="#2-文本" class="headerlink" title="2. 文本"></a>2. 文本</h4><p>使用<code>&lt;text&gt;&lt;/text&gt;</code>标签包裹我们想要显示的文字。</p>
 <h4 id="3-按钮"><a href="#3-按钮" class="headerlink" title="3. 按钮"></a>3. 按钮</h4><p>和 html 一样，都是使用<code>&lt;button&gt;&lt;/button&gt;</code>标签</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824205741605.png" alt="image-20210824205741605"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824205801133.png" alt="image-20210824205801133"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824205741605.png" alt="image-20210824205741605"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824205801133.png" alt="image-20210824205801133"></p>
 <p><strong>我们发现：这个头像是椭圆形的，而实际上我们的头像图片是圆形的。为什么默认情况变成的椭圆形？思考一下</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824205924061.png" alt="image-20210824205924061"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824205924061.png" alt="image-20210824205924061"></p>
 <h4 id="单位-rpx"><a href="#单位-rpx" class="headerlink" title="单位 rpx"></a>单位 rpx</h4><p>我们在微信小程序里面，设置样式的时候，推荐使用 rpx 单位，而不是 px 单位。</p>
 <p>因为：<strong>单位：rpx 会自适应屏幕的尺寸等，给我们一种很舒服的视觉体验，换了机型会自适应大小</strong>。而使用 px 为单位，就会固定死大小，即使切换了机型，分辨率发生了改变，大小也不会改变。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 1. 显示图片的标签 --&gt;</span>
@@ -550,19 +550,19 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>我是按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>当然，你也可以选择使用 px 为单位，但是我们需要在设置大小的时候，将数值设置为图片实际大小的 1/2。这是建立在以 iPhone6 机型为原型图的基础上。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824211637841.png" alt="image-20210824211637841"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824211637841.png" alt="image-20210824211637841"></p>
 <p><strong>回到开始的问题：头像在默认情况下为什么变成椭圆形或者不是我们图片默认的形状？</strong></p>
 <p>因为：image 标签（组件）有默认样式</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824212929910.png" alt="image-20210824212929910"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824212929910.png" alt="image-20210824212929910"></p>
 <p><strong>图片建议使用 png 格式！！！</strong></p>
-<h3 id="完成第一个页面布局"><a href="#完成第一个页面布局" class="headerlink" title="完成第一个页面布局"></a>完成第一个页面布局</h3><h4 id="配置小程序导航头部样式"><a href="#配置小程序导航头部样式" class="headerlink" title="配置小程序导航头部样式"></a>配置小程序导航头部样式</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824221823793.png" alt="image-20210824221823793"></p>
+<h3 id="完成第一个页面布局"><a href="#完成第一个页面布局" class="headerlink" title="完成第一个页面布局"></a>完成第一个页面布局</h3><h4 id="配置小程序导航头部样式"><a href="#配置小程序导航头部样式" class="headerlink" title="配置小程序导航头部样式"></a>配置小程序导航头部样式</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824221823793.png" alt="image-20210824221823793"></p>
 <p>我们觉得这种默认的样式很难看，可以在 app.json 文件里面配置这个头部的样式</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"window"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"navigationBarBackgroundColor"</span><span class="token operator">:</span> <span class="token string">"#b3d4db"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824221930523.png" alt="image-20210824221930523"></p>
-<h4 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210824222839536.png" alt="image-20210824222839536"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824221930523.png" alt="image-20210824221930523"></p>
+<h4 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210824222839536.png" alt="image-20210824222839536"></p>
 <h4 id="页面样式代码"><a href="#页面样式代码" class="headerlink" title="页面样式代码"></a>页面样式代码</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--pages/welcome/welcome.wxml--&gt;</span>
 
 <span class="token comment">&lt;!-- 使用view标签，作为最外层容器，包裹所有标签，view不是有具体含义的标签 --&gt;</span>
@@ -652,13 +652,13 @@
 <li><p>安装 <strong>lin-ui</strong>组件库</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install lin-ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>在微信小程序的 <strong>工具</strong>选项下选择构建 npm</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826140635548.png" alt="image-20210826140635548"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826140635548.png" alt="image-20210826140635548"></p>
 </li>
 <li><p>构建完成够，项目下就又多出一个文件夹。我们使用组件的时候都是使用这个文件夹下的。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826140736290.png" alt="image-20210826140736290"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826140736290.png" alt="image-20210826140736290"></p>
 </li>
 <li><p>在每个页面使用自定义组件的时候，我们需要在页面的 json 配置文件中，进行配置，指定我们使用的组件名称，以及组件所在的位置。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826140906964.png" alt="image-20210826140906964"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826140906964.png" alt="image-20210826140906964"></p>
 </li>
 </ol>
 <h2 id="组件库的使用"><a href="#组件库的使用" class="headerlink" title="组件库的使用"></a>组件库的使用</h2><h3 id="头像组件库"><a href="#头像组件库" class="headerlink" title="头像组件库"></a>头像组件库</h3><p><strong>这里简单使用一下头像组件库。</strong></p>
@@ -668,13 +668,13 @@
 &lt;!-- 使用placement 可以指定头像和昵称的排列位置，这里上下排列 --&gt;
 &lt;m-avatar placement="bottom" size="190" shape="circle" open-data="{{['userAvatarUrl','userNickName']}}"/&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826142528576.png" alt="image-20210826142528576"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826142528576.png" alt="image-20210826142528576"></p>
 <h2 id="pages-页面的开发"><a href="#pages-页面的开发" class="headerlink" title="pages 页面的开发"></a>pages 页面的开发</h2><h3 id="指定主页"><a href="#指定主页" class="headerlink" title="指定主页"></a>指定主页</h3><p><strong>每次开发新的页面，总是需要在注册页面的地方频繁切换第一个文件，来达到预览的效果。比较麻烦。</strong></p>
 <h4 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h4><p><strong>在现在的小程序中，增加了新的功能，可以在 app.json 中，直接指定主页。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826143250347.png" alt="image-20210826143250347"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826143741895.png" alt="image-20210826143741895"></p>
-<h4 id="方式二：指定编译模式"><a href="#方式二：指定编译模式" class="headerlink" title="方式二：指定编译模式"></a>方式二：指定编译模式</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826143942233.png" alt="image-20210826143942233"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826144021270.png" alt="image-20210826144021270"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826143250347.png" alt="image-20210826143250347"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826143741895.png" alt="image-20210826143741895"></p>
+<h4 id="方式二：指定编译模式"><a href="#方式二：指定编译模式" class="headerlink" title="方式二：指定编译模式"></a>方式二：指定编译模式</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826143942233.png" alt="image-20210826143942233"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826144021270.png" alt="image-20210826144021270"></p>
 <p><strong>将页面指定为我们当前开发的页面即可。</strong></p>
 <h3 id="制作轮播图"><a href="#制作轮播图" class="headerlink" title="制作轮播图"></a>制作轮播图</h3><h4 id="使用-swipe"><a href="#使用-swipe" class="headerlink" title="使用 swipe"></a>使用 swipe</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 使用官方提供的swiper组件 来做轮播图 --&gt;</span>
 <span class="token comment">&lt;!-- swiper 滑块视图容器，这个容器不仅仅是用来滑动图片，可以做很多事情 --&gt;</span>
@@ -702,7 +702,7 @@
   <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826153441612.png" alt="image-20210826153441612"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826153441612.png" alt="image-20210826153441612"></p>
 <p><strong>这样就完成了轮播图最开始的状态。</strong></p>
 <h4 id="轮播图的指示点和自动轮播"><a href="#轮播图的指示点和自动轮播" class="headerlink" title="轮播图的指示点和自动轮播"></a>轮播图的指示点和自动轮播</h4><p><strong>我们使用 swiper 的某些属性就可以完成这两个功能。</strong></p>
 <p>indicator-dots=”true” 显示轮播图的指示点</p>
@@ -715,12 +715,12 @@
 <p>注意：关于双花括号的使用我们在后面会在说，<strong>实际上双花括号里面的数据会被当做 js 中的变量或者表达式进行运算。</strong></p>
 <p>只写属性值也会默认表示设置这个属性值为 true。</p>
 <h5 id="布尔属性赋值建议"><a href="#布尔属性赋值建议" class="headerlink" title="布尔属性赋值建议"></a>布尔属性赋值建议</h5><p>所以，我们在给布尔类型的属性赋值的时候，不管是 true 还是 false，建议都使用双花括号进行包裹。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826162313843.png" alt="image-20210826162313843"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826162335200.png" alt="image-20210826162335200"></p>
-<h4 id="其他的-swiper-常用属性"><a href="#其他的-swiper-常用属性" class="headerlink" title="其他的 swiper 常用属性"></a>其他的 swiper 常用属性</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826163241249.png" alt="image-20210826163241249"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826162313843.png" alt="image-20210826162313843"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826162335200.png" alt="image-20210826162335200"></p>
+<h4 id="其他的-swiper-常用属性"><a href="#其他的-swiper-常用属性" class="headerlink" title="其他的 swiper 常用属性"></a>其他的 swiper 常用属性</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826163241249.png" alt="image-20210826163241249"></p>
 <p><strong>这些属性在微信小程序的官网都是有说明的。想了解更多可以去官网自行阅读。</strong></p>
 <p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html">微信小程序的 swiper 组件的使用</a></p>
-<h3 id="单篇文章的制作"><a href="#单篇文章的制作" class="headerlink" title="单篇文章的制作"></a>单篇文章的制作</h3><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826172517962.png" alt="image-20210826172517962"></p>
+<h3 id="单篇文章的制作"><a href="#单篇文章的制作" class="headerlink" title="单篇文章的制作"></a>单篇文章的制作</h3><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826172517962.png" alt="image-20210826172517962"></p>
 <p><strong>我们要完成这样的一篇文章。我们分析一下整体的结构。</strong></p>
 <ol>
 <li>上面的轮播图我们已经制作完成了，那么就剩下文章的制作</li>
@@ -1012,11 +1012,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post-like-font<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>102<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826195011599.png" alt="image-20210826195011599"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826195011599.png" alt="image-20210826195011599"></p>
 <h3 id="生成多篇文章"><a href="#生成多篇文章" class="headerlink" title="生成多篇文章"></a>生成多篇文章</h3><p>前面，我们完成了一篇文章的制作，这里我们多复制几次，假设有五篇文章，换一下内容和图片，日期头像等。（我们这里只是为了学习小程序的语法，暂时使用的都是假数据，死数据。实际上数据肯定不是这样写死在页面上的。）</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826200151890.png" alt="image-20210826200151890"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826200151890.png" alt="image-20210826200151890"></p>
 <h3 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h3><p>实际上我们页面展示的数据，都是从服务器请求过来的。那么就涉及到数据的单向数据绑定和双向数据绑定了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826200629606.png" alt="image-20210826200629606"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826200629606.png" alt="image-20210826200629606"></p>
 <h4 id="单向数据绑定"><a href="#单向数据绑定" class="headerlink" title="单向数据绑定"></a>单向数据绑定</h4><p>单向数据绑定，就是通过 js 发起请求从服务器端获取的数据，我们通过某些手段将数据展示在 view（页面，视图）上，让用户看见，而不允许修改。这也是开发中最常见的。</p>
 <h4 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h4><p>说白了，就是 js 向服务器请求的数据，在页面上展示的同时，用户也可以进行某些更改，然后同步修改了 js 里请求到的原生数据，二者可以相互影响。现在的小程序已经有（<strong>简易的</strong>）双向数据绑定的机制了。</p>
 <p>小程序的双向数据绑定和前端三大框架比起来，应该算是很简单的了。当然在 vue/react 等框架中，如果对响应式原理不是很了解的话，出现了 bug 有时候也会很难受的。</p>
@@ -1043,7 +1043,7 @@
 <p><strong>在页面上进行使用该数据。语法就是前面说过的双花括号语法</strong></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post-title<span class="token punctuation">"</span></span> <span class="token attr-name">user-select</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2021 {{titles[0]}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826202643202.png" alt="image-20210826202643202"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826202643202.png" alt="image-20210826202643202"></p>
 <h5 id="数据绑定方式二-setData"><a href="#数据绑定方式二-setData" class="headerlink" title="数据绑定方式二 setData"></a>数据绑定方式二 setData</h5><p>我们也可以通过 setData 函数，隐式的定义数据</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// onLoad函数，在小程序页面加载的时候，会自动进行回调这个函数。</span>
@@ -1057,7 +1057,7 @@
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>根据输出，可以看出最终数据是全都在 data 上定义了</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826203941487.png" alt="image-20210826203941487"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826203941487.png" alt="image-20210826203941487"></p>
 <h4 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h4><p>实现数据绑定的方式有显示和隐式两种，那么我们实际开发需要将数据都显示的定义吗？</p>
 <p>答案是 有必要的都显示定义。如果这个变量，数据会被 view 页面直接引用，那么就建议，显示的定义在 data 里面。</p>
 <p>data 里面定义的变量是有初始值的。更多的情况下，我们可以把 setData 的作用理解为更新数据，而不是纯粹的为了定义数据。都在 data 里面显示的定义，也更加方便我们的阅读。</p>
@@ -1080,7 +1080,7 @@
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onShow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826210356292.png" alt="image-20210826210356292"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826210356292.png" alt="image-20210826210356292"></p>
 <p>可以发现实际的加载顺序是： <strong>onLoad -&gt; onShow -&gt; onReady</strong></p>
 <p>onShow 是在 onReady 前面的，因为页面显示不代表数据渲染也完成了。</p>
 <p>其中 onLoad 生命周期函数是最重要的，也是用的最多的。</p>
@@ -1101,9 +1101,9 @@
 
 <p>页面的卸载我们暂时不好模拟。但是可以模拟隐藏。</p>
 <p>点击这个小圆点</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826211351236.png" alt="image-20210826211351236"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826211351236.png" alt="image-20210826211351236"></p>
 <p>就可以触发隐藏页面</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826211415177.png" alt="image-20210826211415177"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826211415177.png" alt="image-20210826211415177"></p>
 <p>再次切回小程序，又会触发 onShow 事件。</p>
 <h4 id="简单的数据绑定练习"><a href="#简单的数据绑定练习" class="headerlink" title="简单的数据绑定练习"></a>简单的数据绑定练习</h4><h5 id="模拟请求的数据"><a href="#模拟请求的数据" class="headerlink" title="模拟请求的数据"></a>模拟请求的数据</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
@@ -1146,8 +1146,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826212734101.png" alt="image-20210826212734101"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826212748246.png" alt="image-20210826212748246"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826212734101.png" alt="image-20210826212734101"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826212748246.png" alt="image-20210826212748246"></p>
 <h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>有些元素我们需要在某些条件先才进行显示或者不显示，这时候就用到了条件渲染。</p>
 <p>进行条件显示的语法：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标签名</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>条件<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
@@ -1164,7 +1164,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name"><span class="token namespace">wx:</span>elif</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{score&gt;80}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name"><span class="token namespace">wx:</span>else</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826215207794.png" alt="image-20210826215207794"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826215207794.png" alt="image-20210826215207794"></p>
 <p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/conditional.html">条件渲染的使用</a></p>
 <h3 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h3><p>这里模拟一个数组，作为文章的数据。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1236,7 +1236,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>block</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>关于 block 标签也不需要想太多。进行列表循环的时候，不管那么多直接使用就可以了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826221828245.png" alt="image-20210826221828245"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826221828245.png" alt="image-20210826221828245"></p>
 <p><strong>列表循环最重要的作用就是用来展示一组数据。</strong></p>
 <h3 id="页面的跳转"><a href="#页面的跳转" class="headerlink" title="页面的跳转"></a>页面的跳转</h3><p>我们两个页面都基本开发完毕了。接下来回到 welcome 页面，完成点击按钮实现跳转到 pages 页面的功能。</p>
 <h4 id="什么是事件"><a href="#什么是事件" class="headerlink" title="什么是事件"></a>什么是事件</h4><p>都是学过 js 的兄弟，也就不多赘述了。</p>
@@ -1268,7 +1268,7 @@
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>当我们单击了按钮以后，就会触发 tap 事件，进而执行相应的回调函数。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210826223805413.png" alt="image-20210826223805413"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210826223805413.png" alt="image-20210826223805413"></p>
 <p><strong>实际的页面跳转我们在下面说。</strong></p>
 <h4 id="事件捕获语法糖"><a href="#事件捕获语法糖" class="headerlink" title="事件捕获语法糖"></a>事件捕获语法糖</h4><p>实际上，我们事件捕获不一定非要写成 <strong>bind:事件</strong>，也可以省略中间的 <strong>:</strong>,但是，我们建议还是不要省略。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">bindtap</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>onTap<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1292,7 +1292,7 @@
   <span class="token comment">// url: '../posts/posts',</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827102022824.png" alt="image-20210827102022824"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827102022824.png" alt="image-20210827102022824"></p>
 <h4 id="redirectTo-方法"><a href="#redirectTo-方法" class="headerlink" title="redirectTo 方法"></a>redirectTo 方法</h4><p>我们这里不希望从欢迎页面跳转到 pages 页面，还可以返回。也就是说欢迎页面我们只想作为一个过渡的页面，不让其和其他页面有什么必然的联系。</p>
 <p>那么这里就可以使用 redirectTo 方法。使用方式和上面的一样。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">wx<span class="token punctuation">.</span><span class="token function">redirectTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1302,7 +1302,7 @@
   <span class="token comment">// url: '../posts/posts',</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827102417091.png" alt="image-20210827102417091"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827102417091.png" alt="image-20210827102417091"></p>
 <p>页面跳转后，并没有可以返回父页面的小箭头了。但是这里有一个小房子一样的按钮。</p>
 <p>点击这个小房子的按钮也会回到上个欢迎页面。是不是怀疑这个也能回到上个页面呢？</p>
 <p>实际上，这个功能是现在新的小程序加进来的功能。这个小房子的按钮是<strong>回到首页用的</strong>，你的首页设置的是什么，就会回到那个页面。并不是所谓的一定回到上个页面。</p>
@@ -1324,64 +1324,64 @@
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果是 redirectTo 方法，我们可以发现，会调用 onUnload 方法。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827103300060.png" alt="image-20210827103300060"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827103300060.png" alt="image-20210827103300060"></p>
 <p>而 navigateTo 方法则不会触发这个函数。说明页面被保留下来的。只是页面被隐藏了。</p>
 <h3 id="catch-和-bind-事件的区别"><a href="#catch-和-bind-事件的区别" class="headerlink" title="catch 和 bind 事件的区别"></a>catch 和 bind 事件的区别</h3><p>bind 捕获的就是实实在在在自己身上发生的事件，而 catch 可以捕获子元素发生的事件，其实就是事件的冒泡。</p>
 <p>使用 bind 来捕获事件，这个事件是可以向上冒泡的。但是一旦使用了 catch 来进行事件的捕获，这个事件捕获到以后就终止了，不会继续向外传递。</p>
 <p><strong>这里使用三层的事件绑定进行测试</strong></p>
 <p>先使用 catch-bind-bind</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105756105.png" alt="image-20210827105756105"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105756105.png" alt="image-20210827105756105"></p>
 <ol>
 <li><p>当我们点击按钮上的文字时</p>
-<p>​ <img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105316835.png" alt="image-20210827105316835"></p>
+<p>​ <img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105316835.png" alt="image-20210827105316835"></p>
 </li>
 <li><p>点击按钮（不点文字）</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105351066.png" alt="image-20210827105351066"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105351066.png" alt="image-20210827105351066"></p>
 </li>
 </ol>
 <p><strong>测试二：catch-catch-bind</strong></p>
 <ol>
 <li><p>点击按钮上的文字</p>
-<p>​ <img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105538207.png" alt="image-20210827105538207"></p>
+<p>​ <img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105538207.png" alt="image-20210827105538207"></p>
 </li>
 <li><p>点击按钮 不点文字</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105610098.png" alt="image-20210827105610098"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105610098.png" alt="image-20210827105610098"></p>
 </li>
 </ol>
 <p><strong>测试三：catch-catch-catch</strong></p>
 <ol>
 <li><p>点击按钮上的文字</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105823566.png" alt="image-20210827105823566"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105823566.png" alt="image-20210827105823566"></p>
 </li>
 <li><p>点击按钮 不点击文字</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827105851616.png" alt="image-20210827105851616"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827105851616.png" alt="image-20210827105851616"></p>
 </li>
 </ol>
 <p><strong>综上：使用 catch 和 bind 都可以捕获事件，但是 catch 会阻止冒泡，导致父元素无法进行事件的捕获。</strong></p>
 <h3 id="js-模块的导入导出"><a href="#js-模块的导入导出" class="headerlink" title="js 模块的导入导出"></a>js 模块的导入导出</h3><p>现在我们把模拟的文章请求数据从 posts.js 文件中抽离出去。这里简单模拟几篇数据，需要更多的数据可以自己随意书写。</p>
 <p>在 ES6 中，一个 js 文件我们就可以视作为一个模块。</p>
 <p><strong>导入导出的语法就不多说了。这玩意都是 js 基础。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827111737448.png" alt="image-20210827111737448"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827111819681.png"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827111737448.png" alt="image-20210827111737448"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827111819681.png"></p>
 <h3 id="文章跳转"><a href="#文章跳转" class="headerlink" title="文章跳转"></a>文章跳转</h3><h4 id="从列表文章跳转到文章详情页"><a href="#从列表文章跳转到文章详情页" class="headerlink" title="从列表文章跳转到文章详情页"></a>从列表文章跳转到文章详情页</h4><p>很明显，我们实际上也不可能知道具体有多多少文章，所以实际上的文章详情页也只会有一个。具体显示什么内容肯定是根据实际的文字内容自动填充的。而我们要做的就是做好文章详情内容模板。</p>
 <p><strong>很明显，这里肯定还是需要用到事件。我们需要监听用户的点击事件。</strong></p>
 <p>这个事件应该作用域这篇文章的所有部分，只有点击到了文章上，就进行跳转。实际上这里的跳转不应该这么简单，比如我们点击头像了，可以进行头像图片的放大，或者说跳转到用户详情页，等等。</p>
 <p>这里就不考虑那么多了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827115046363.png" alt="image-20210827115046363"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827115056149.png" alt="image-20210827115056149"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827115046363.png" alt="image-20210827115046363"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827115056149.png" alt="image-20210827115056149"></p>
 <p><strong>随意单击文章的任何地方都能够进行跳转</strong></p>
 <p>因为这里我们去往的是文章详情页，所以应该使用 navigateTo 方法。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827115153119.png" alt="image-20210827115153119"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827115153119.png" alt="image-20210827115153119"></p>
 <h3 id="关于列表渲染警告"><a href="#关于列表渲染警告" class="headerlink" title="关于列表渲染警告"></a>关于列表渲染警告</h3><p>前面我们发现，使用了列表渲染，一直提示警告。</p>
-<img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827115330917.png" alt="image-20210827115330917">
+<img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827115330917.png" alt="image-20210827115330917">
 
 <p>这里建议我们使用 wx:key 属性，可以提高列表渲染的性能。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210827115808352.png" alt="image-20210827115808352"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210827115808352.png" alt="image-20210827115808352"></p>
 <p>我这里的 postId 是在模拟的数据中添加的属性。key 绑定的值只要是唯一的就可以了。当然我们也不建议绑定文章数据在数组中的索引。那样其实也并不是合法的。</p>
 <p>然后就是新的小程序这里绑定是不需要使用双花括号语法的，也不需要 item.postId 来绑定。因为这是在循环的那层标签上。</p>
 <p>以前是可以使用双花括号语法进行绑定的，现在新版的小程序进行了修改。</p>
 <h1 id="微信小程序入门-四-完成文章详情页"><a href="#微信小程序入门-四-完成文章详情页" class="headerlink" title="微信小程序入门(四)-完成文章详情页"></a>微信小程序入门(四)-完成文章详情页</h1><h3 id="制作静态页面"><a href="#制作静态页面" class="headerlink" title="制作静态页面"></a>制作静态页面</h3><p><strong>先有死数据制作出我们想要的效果</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828102541148.png" alt="image-20210828102541148"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828102541148.png" alt="image-20210828102541148"></p>
 <p><strong>布局也比较简单，直接上代码</strong></p>
 <h4 id="页面结构-1"><a href="#页面结构-1" class="headerlink" title="页面结构"></a>页面结构</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--pages/post-detail/post-detail.wxml--&gt;</span>
 
@@ -1517,7 +1517,7 @@
 
 <h3 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h3><h4 id="传递文章数据"><a href="#传递文章数据" class="headerlink" title="传递文章数据"></a>传递文章数据</h4><p>我们页面的布局制作好了。接下来就是点击哪一篇文章，就显示哪一篇文章的详情页。这时候跳转的时候我们就需要传递数据。</p>
 <p>我们采用自定义属性来保存当前文章的文章号。</p>
-<h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828105003033.png" alt="image-20210828105003033"></p>
+<h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828105003033.png" alt="image-20210828105003033"></p>
 <h4 id="事件对象获取自定义属性"><a href="#事件对象获取自定义属性" class="headerlink" title="事件对象获取自定义属性"></a>事件对象获取自定义属性</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// event  事件</span>
   <span class="token function">onGoToDetail</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// 使用事件对象 拿到我们当前文章的文字号</span>
@@ -1556,7 +1556,7 @@
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828105721859.png" alt="image-20210828105721859"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828105721859.png" alt="image-20210828105721859"></p>
 <h4 id="渲染指定文章详情页"><a href="#渲染指定文章详情页" class="headerlink" title="渲染指定文章详情页"></a>渲染指定文章详情页</h4><p>我们拿到前面传递过来的文章号，就可以再次模拟请求数据，然后进行数据的渲染。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// pages/post-detail/post-detail.js</span>
 
@@ -1652,7 +1652,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>detail<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{detail}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828111416810.png" alt="image-20210828111416810"></p>
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828111416810.png" alt="image-20210828111416810"></p>
 <h3 id="缓存机制-异步-API"><a href="#缓存机制-异步-API" class="headerlink" title="缓存机制/异步 API"></a>缓存机制/异步 API</h3><h4 id="app-js-的作用"><a href="#app-js-的作用" class="headerlink" title="app.js 的作用"></a>app.js 的作用</h4><p>接下来，我们想完成在文章详情页的收藏和取消收藏。并记录下是否收藏的状态。实际上用户收藏以后，应该是向服务器发起请求，将数据保存在服务器端。但是这里我们没有使用数据库，那么就需要考虑保存在本地的某个地方。比如：全局变量。当然这不是最好的。</p>
 <p>而小程序的全局变量，是写在 app.js 中的。</p>
 <h5 id="小程序的生命周期-1"><a href="#小程序的生命周期-1" class="headerlink" title="小程序的生命周期"></a>小程序的生命周期</h5><p>小程序的生命周期和页面的生命周期类似。</p>
@@ -1693,7 +1693,7 @@
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828163111487.png" alt="image-20210828163111487"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828163111487.png" alt="image-20210828163111487"></p>
 <p><strong>所以我们在 app.js 中定义的全局变量，是可以在所有页面进行全局共享的。</strong></p>
 <p>但是，并不是说全局的变量的数据就是一直不变的。当小程序重启了，数据又会回到最开始的状态。所以 <strong>不能把全局变量当做一个永久数据保存的地方。</strong></p>
 <h4 id="小程序的缓存"><a href="#小程序的缓存" class="headerlink" title="小程序的缓存"></a>小程序的缓存</h4><p>很明显，用全局变量来记录用户是否收藏一篇文章并不是一个很好的方案。</p>
@@ -1722,9 +1722,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>通过小程序的调试器是可以看见和管理我们的缓存的。即使程序重启缓存也不会消失 的。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828164843681.png" alt="image-20210828164843681"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828164843681.png" alt="image-20210828164843681"></p>
 <p>通过这个按钮就可以清空缓存</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828164957922.png" alt="image-20210828164957922"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828164957922.png" alt="image-20210828164957922"></p>
 <p>你也可以自己手动在这里新建缓存。</p>
 <h5 id="异步缓存"><a href="#异步缓存" class="headerlink" title="异步缓存"></a>异步缓存</h5><p>异步设置缓存在设置缓存较多的时候，可以提升用户体验。以前我们设置或者删除缓存是通过回调函数来执行成功后的操作。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 异步设置缓存 参数是一个对象 key是键 data是数据 也就是设置的value</span>
@@ -1788,8 +1788,8 @@ wx<span class="token punctuation">.</span><span class="token function">setStorag
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="实现文章收藏功能"><a href="#实现文章收藏功能" class="headerlink" title="实现文章收藏功能"></a>实现文章收藏功能</h3><p>接下来我们要做的，就是完成文章的收藏功能。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828173659726.png" alt="image-20210828173659726"></p>
-<h4 id="第一步：点击事件"><a href="#第一步：点击事件" class="headerlink" title="第一步：点击事件"></a>第一步：点击事件</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828212838805.png" alt="image-20210828212838805"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828173659726.png" alt="image-20210828173659726"></p>
+<h4 id="第一步：点击事件"><a href="#第一步：点击事件" class="headerlink" title="第一步：点击事件"></a>第一步：点击事件</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828212838805.png" alt="image-20210828212838805"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 条件渲染：在收藏和未收藏的图标之间切换 --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span>
   <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{!collected}}<span class="token punctuation">"</span></span>
@@ -1874,12 +1874,12 @@ wx<span class="token punctuation">.</span><span class="token function">setStorag
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h5><p>通过上面的方式，我们其实就已经实现了将收藏状态进行了本地存储，即使退出去，重新加载也会记录下以前的状态。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828214652277.png" alt="image-20210828214652277"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828214704873.png" alt="image-20210828214704873"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828214652277.png" alt="image-20210828214652277"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828214704873.png" alt="image-20210828214704873"></p>
 <p><strong>但是，这里还是有一个 bug。</strong></p>
 <h5 id="缓存的-bug"><a href="#缓存的-bug" class="headerlink" title="缓存的 bug"></a>缓存的 bug</h5><p>这里这样做实际上是有一些 bug 的。</p>
 <p>因为如果是用户第一次访问，那么也就没有缓存。那么我们在加载的时候，是取不到缓存中的值的。那么系统肯定是会在控制台报错的，这个问题还是有点头疼。我也没想到让我满意的解决方法。虽然这个问题不影响我们使用。<strong>回头在想想。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828215450477.png" alt="image-20210828215450477"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828215450477.png" alt="image-20210828215450477"></p>
 <h4 id="优化用户收藏体验"><a href="#优化用户收藏体验" class="headerlink" title="优化用户收藏体验"></a>优化用户收藏体验</h4><h5 id="再次完善页面"><a href="#再次完善页面" class="headerlink" title="再次完善页面"></a>再次完善页面</h5><p>这里将字体修改一下，在全局的样式中进行更改。看起来舒服点。</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* app.wxss */</span>
 <span class="token selector">text</span> <span class="token punctuation">{</span>
@@ -1888,7 +1888,7 @@ wx<span class="token punctuation">.</span><span class="token function">setStorag
   <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"MicroSoft Yahei"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828215900962.png" alt="image-20210828215900962"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828215900962.png" alt="image-20210828215900962"></p>
 <h5 id="弹框提示是否收藏成功"><a href="#弹框提示是否收藏成功" class="headerlink" title="弹框提示是否收藏成功"></a>弹框提示是否收藏成功</h5><p>我们可以使用小程序原生提供的某些 API，组件。在用户点击收藏或者取消收藏的时候提示用户收藏成功还是取消收藏了。</p>
 <p>只需要在点击事件的执行函数中，调用小程序提供好的弹框组件即可。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 使用小程序默认的API 弹框组件来提示用户是收藏文章 还是取消收藏</span>
@@ -1900,7 +1900,7 @@ wx<span class="token punctuation">.</span><span class="token function">showToast
   <span class="token comment">// 图标属性 icon: "success"/"error"</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828220949620.png" alt="image-20210828220949620"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828220949620.png" alt="image-20210828220949620"></p>
 <p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html">没错，我就是你想要的提示框</a></p>
 <h4 id="使用模态对话框"><a href="#使用模态对话框" class="headerlink" title="使用模态对话框"></a>使用模态对话框</h4><p>上面我们使用弹框来提示用户是否收藏成功，其实这种轻提示也是非常好的。这里我的想法是使用模态对话框来进行一次练习。实际上这种方式没有上面的那种方式好，这里仅仅作为一波小练习而已。</p>
 <h5 id="模态对话框的基本使用"><a href="#模态对话框的基本使用" class="headerlink" title="模态对话框的基本使用"></a>模态对话框的基本使用</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 模态对话框 showModel</span>
@@ -1949,8 +1949,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828225352701.png" alt="image-20210828225352701"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828225404289.png" alt="image-20210828225404289"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828225352701.png" alt="image-20210828225352701"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828225404289.png" alt="image-20210828225404289"></p>
 <p><strong>实际上想要达到的效果都是一样的。但是为了用户体验，我们还是采取最开始的弹框方式。</strong></p>
 <h3 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h3><h4 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 点击触发文章分享事件 --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span>
@@ -1959,7 +1959,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/images/icon/share.png<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>image</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828225930257.png" alt="image-20210828225930257"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828225930257.png" alt="image-20210828225930257"></p>
 <h4 id="功能的完成"><a href="#功能的完成" class="headerlink" title="功能的完成"></a>功能的完成</h4><p>完成文章的分享，我们实际上还是调用微信小程序提供好的内置组件。具体的更多的使用方式可以参考官方文档。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 完成文章分享的回调函数
@@ -1978,9 +1978,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828230806200.png" alt="image-20210828230806200"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828230806200.png" alt="image-20210828230806200"></p>
 <h4 id="内置的分享"><a href="#内置的分享" class="headerlink" title="内置的分享"></a>内置的分享</h4><p>实际上，我们想要分享微信小程序，也不需要自己写功能。小程序已经内置了分享功能。<strong>点击这三个点的按钮就可以看见。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210828230931461.png" alt="image-20210828230931461"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210828230931461.png" alt="image-20210828230931461"></p>
 <p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showActionSheet.html">更多分享用法请参考</a></p>
 <h1 id="微信小程序入门-五"><a href="#微信小程序入门-五" class="headerlink" title="微信小程序入门(五)"></a>微信小程序入门(五)</h1><h3 id="音乐播放功能"><a href="#音乐播放功能" class="headerlink" title="音乐播放功能"></a>音乐播放功能</h3><h4 id="制作样式"><a href="#制作样式" class="headerlink" title="制作样式"></a>制作样式</h4><p>静态样式没啥好说的，基本上有手就行了。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>head-image-audio<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -2013,7 +2013,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token property">opacity</span><span class="token punctuation">:</span> 0.6<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829110147532.png" alt="image-20210829110147532"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829110147532.png" alt="image-20210829110147532"></p>
 <p>我们想要实现的功能就是点击以后实现音乐的播放。</p>
 <h4 id="背景音频播放"><a href="#背景音频播放" class="headerlink" title="背景音频播放"></a>背景音频播放</h4><p>这里也需要了解一下官方提供的关于背景音频播放的 API 组件。</p>
 <h5 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h5><p>老规矩，肯定还是需要在图片上绑定点击事件。</p>
@@ -2034,12 +2034,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
     mgr<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>music<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829112622826.png" alt="image-20210829112622826"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829112622826.png" alt="image-20210829112622826"></p>
 <p>咳咳，很明显，没什么大毛病。用起来也不难。</p>
-<h5 id="控制台报错"><a href="#控制台报错" class="headerlink" title="控制台报错"></a>控制台报错</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829112702351.png" alt="image-20210829112702351"></p>
+<h5 id="控制台报错"><a href="#控制台报错" class="headerlink" title="控制台报错"></a>控制台报错</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829112702351.png" alt="image-20210829112702351"></p>
 <p>虽然使用没什么问题，但是控制台给我们了报错提示。这时候，我们去这个地址看看。</p>
 <p>为了能够转后台以后可以继续播放音频。我们就在 app.json 文件中配置一下。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829112917612.png" alt="image-20210829112917612"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829112917612.png" alt="image-20210829112917612"></p>
 <p><strong>当我们在 app.json 中配置了这个属性，并且数组里面只有一个值 audio 时</strong></p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"requiredBackgroundModes"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"audio"</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -2101,9 +2101,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
    <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>说实话，这样的确达到了音乐的停止和播放之间状态的切换。但是，你会发现每次切换播放和暂停音乐以后，音乐需要重新播放、并且，如果在音乐播放的时候，我们点击下面的控制面板，可以发现，音乐暂停了，但是图标不会自动切换。问题还是很多。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829141418289.png" alt="image-20210829141418289"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829141418289.png" alt="image-20210829141418289"></p>
 <h4 id="同步音乐控制开关与图标的状态"><a href="#同步音乐控制开关与图标的状态" class="headerlink" title="同步音乐控制开关与图标的状态"></a>同步音乐控制开关与图标的状态</h4><h5 id="背景音频对象的播放-暂停事件回调"><a href="#背景音频对象的播放-暂停事件回调" class="headerlink" title="背景音频对象的播放/暂停事件回调"></a>背景音频对象的播放/暂停事件回调</h5><p>很明显，想要达到我们需要的某些状态，肯定是需要使用音频对象提供的某些回调函数。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829142040225.png" alt="image-20210829142040225"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829142040225.png" alt="image-20210829142040225"></p>
 <p>所以我们通过这两个事件，来根据音乐的播放和暂停调用不同的函数。</p>
 <h5 id="进一步优化"><a href="#进一步优化" class="headerlink" title="进一步优化"></a>进一步优化</h5><p>因为我们会在很多地方都使用到这个背景音频的对象，所以我们将其放到 data 数据源中，并且在页面加载的时候进行获取，同时在 onLoad 中监听音乐的播放和暂停两个事件。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
@@ -2242,7 +2242,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829144141275.png" alt="image-20210829144141275"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829144141275.png" alt="image-20210829144141275"></p>
 <p>这样就可以完成音乐的停止和播放之间的切换了。</p>
 <p>但是，这样做我们音乐就直接停止了，用户点击的是暂停按钮，按理说我们要做的应该是让音乐暂停，而不是直接终止。</p>
 <p>很显然，用户点击控制面板的暂停，应该就是让音乐暂停，而不是直接停止。</p>
@@ -2278,11 +2278,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这就达到了我们想要的效果。点击下面的控制面板，音乐暂停；点击上面图片按钮，音乐由播放转为停止。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829145522243.png" alt="image-20210829145522243"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829145522243.png" alt="image-20210829145522243"></p>
 <h4 id="音乐播放状态的初始化问题"><a href="#音乐播放状态的初始化问题" class="headerlink" title="音乐播放状态的初始化问题"></a>音乐播放状态的初始化问题</h4><p>当我们解决了上面的问题之后，接下来其实很有其他问题。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829150048411.png" alt="image-20210829150048411"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829150048411.png" alt="image-20210829150048411"></p>
 <p>当我们点击返回按钮，此时音乐还是处于播放状态，因为我们没有停止播放。再次进行本页面的时候，这个音乐还是播放中，但是我们的图标和下面音乐的状态对不上了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829151024017.png" alt="image-20210829151024017"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829151024017.png" alt="image-20210829151024017"></p>
 <p>原因当然很明显，是我们的状态问题，每次我们页面的加载时，状态都被重置为 false。</p>
 <p>这里我们可以采用全局变量的方式，来记录音乐的播放与否。没必要使用缓存，因为缓存是持久化的。实际上程序退出了就没必要管音乐的事情了。</p>
 <h5 id="在优化"><a href="#在优化" class="headerlink" title="在优化"></a>在优化</h5><p>这思路就很简单了。搞一个全局变量，每次在音乐状态切换的同时，我们全局的状态跟着改变。</p>
@@ -2324,7 +2324,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>其它代码都不在赘述。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829152951445.png" alt="image-20210829152951445"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829152951445.png" alt="image-20210829152951445"></p>
 <h4 id="分析其它问题"><a href="#分析其它问题" class="headerlink" title="分析其它问题"></a>分析其它问题</h4><h5 id="不是问题也是问题的问题"><a href="#不是问题也是问题的问题" class="headerlink" title="不是问题也是问题的问题"></a>不是问题也是问题的问题</h5><p>老实说，改了这么多，还是有一些小的 bug。刚解决一个又来一个。</p>
 <p>这个问题说是问题，也可以说不是问题。</p>
 <p>就是我们发现，我们当前文章的歌曲在播放，然后我们退出去进入其他页面，按理说其他页面的歌曲和我们这个是不一样的歌曲，应该是不应该让音乐按钮显示播放状态的，但是我们每次获取的状态都是全局的，所以导致只要有音乐在播放，进去其他文章也都是会显示播放状态。</p>
@@ -2380,15 +2380,15 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210829162601019.png" alt="image-20210829162601019"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210829162601019.png" alt="image-20210829162601019"></p>
 <h4 id="还未解决的-bug"><a href="#还未解决的-bug" class="headerlink" title="还未解决的 bug"></a>还未解决的 bug</h4><p><strong>解决了很多问题。但是还是存在一些问题。</strong></p>
 <h5 id="音乐播放完毕，图标不同步"><a href="#音乐播放完毕，图标不同步" class="headerlink" title="音乐播放完毕，图标不同步"></a>音乐播放完毕，图标不同步</h5><p>当我们音乐播放完毕后，上面的图标并没有同步的进行状态的切换，音乐都播放完了，按理说状态应该是未播放。</p>
 <h5 id="音乐播放时进入其他文章"><a href="#音乐播放时进入其他文章" class="headerlink" title="音乐播放时进入其他文章"></a>音乐播放时进入其他文章</h5><p>表面上，我们解决了这些问题，但是进去其他页面的时候，如果我们点击了音乐的暂停，这很 ok。如果暂停后再次点击播放，播放的音乐就变成当前文章的背景音乐了。我觉得这也不是很合理的。</p>
 <p><strong>bug 很多。头疼。</strong></p>
 <h1 id="微信小程序入门-六-自定义组件"><a href="#微信小程序入门-六-自定义组件" class="headerlink" title="微信小程序入门(六)-自定义组件"></a>微信小程序入门(六)-自定义组件</h1><h3 id="完善文章轮播图"><a href="#完善文章轮播图" class="headerlink" title="完善文章轮播图"></a>完善文章轮播图</h3><h4 id="轮播图文章跳转"><a href="#轮播图文章跳转" class="headerlink" title="轮播图文章跳转"></a>轮播图文章跳转</h4><p>前面我们的轮播图只能简单的动起来。</p>
 <p>现在打算实现点击轮播图上的图片，跳转到对应的文章详情页去。只要在图片上绑定文章的 id 号即可。用到的函数还是我们之前用来进行文章详情页跳转的函数。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830155819318.png" alt="image-20210830155819318"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830155923444.png" alt="image-20210830155923444"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830155819318.png" alt="image-20210830155819318"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830155923444.png" alt="image-20210830155923444"></p>
 <h3 id="生成-tabBar-选项卡"><a href="#生成-tabBar-选项卡" class="headerlink" title="生成 tabBar 选项卡"></a>生成 tabBar 选项卡</h3><h4 id="配置生成"><a href="#配置生成" class="headerlink" title="配置生成"></a>配置生成</h4><p>小程序提供的有 tabBar 的选项卡。我们只需要在 app.json 中配置这个选项，即可生成。</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"tabBar"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"list"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -2405,9 +2405,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830161307756.png" alt="image-20210830161307756"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830161329755.png" alt="image-20210830161329755"></p>
-<h4 id="tabBar-的其他配置"><a href="#tabBar-的其他配置" class="headerlink" title="tabBar 的其他配置"></a>tabBar 的其他配置</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830162513452.png" alt="image-20210830162513452"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830161307756.png" alt="image-20210830161307756"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830161329755.png" alt="image-20210830161329755"></p>
+<h4 id="tabBar-的其他配置"><a href="#tabBar-的其他配置" class="headerlink" title="tabBar 的其他配置"></a>tabBar 的其他配置</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830162513452.png" alt="image-20210830162513452"></p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"tabBar"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// 设置边框线的颜色为白色 这样舒服点</span>
     <span class="token property">"borderStyle"</span><span class="token operator">:</span> <span class="token string">"white"</span><span class="token punctuation">,</span>
@@ -2435,21 +2435,21 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830162740174.png" alt="image-20210830162740174"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830162740174.png" alt="image-20210830162740174"></p>
 <h4 id="页面跳转-1"><a href="#页面跳转-1" class="headerlink" title="页面跳转"></a>页面跳转</h4><p>如果想要让一个普通页面，跳转到一个带有 bar 选项卡的页面，我们之前的逻辑是不行的了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830162924013.png" alt="image-20210830162924013"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830162924013.png" alt="image-20210830162924013"></p>
 <p><strong>回顾一下，之前我们在这的跳转方式是点击按钮，进行页面的重定向，跳转到文章页面。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830163045023.png" alt="image-20210830163045023"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830163045023.png" alt="image-20210830163045023"></p>
 <p><strong>这种方式现在是不能满足我们的要求了。</strong></p>
 <h4 id="switchTab-方法的使用"><a href="#switchTab-方法的使用" class="headerlink" title="switchTab 方法的使用"></a>switchTab 方法的使用</h4><p>使用 switchTab 方法，就可以从普通页面跳转到选项卡页面。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830163310415.png" alt="image-20210830163310415"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830163310415.png" alt="image-20210830163310415"></p>
 <h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><p>要说精髓，小程序的精髓应该就是在自定义组件这里了。</p>
-<h3 id="做一个自己的自定义组件"><a href="#做一个自己的自定义组件" class="headerlink" title="做一个自己的自定义组件"></a>做一个自己的自定义组件</h3><h4 id="新建一个自定义组件"><a href="#新建一个自定义组件" class="headerlink" title="新建一个自定义组件"></a>新建一个自定义组件</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830165112837.png" alt="image-20210830165112837"></p>
+<h3 id="做一个自己的自定义组件"><a href="#做一个自己的自定义组件" class="headerlink" title="做一个自己的自定义组件"></a>做一个自己的自定义组件</h3><h4 id="新建一个自定义组件"><a href="#新建一个自定义组件" class="headerlink" title="新建一个自定义组件"></a>新建一个自定义组件</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830165112837.png" alt="image-20210830165112837"></p>
 <p>右键点击 post 文件夹，然后点新建 Component，就可以建好自定义组件的文件了。</p>
 <p>一般来说，我们习惯性的让自定义组件的文件名都是 index。</p>
 <p><strong>这里我们就先做一个文章的自定义组件，重构一下之前的那个文章页面。</strong></p>
 <h4 id="注册自定义组件"><a href="#注册自定义组件" class="headerlink" title="注册自定义组件"></a>注册自定义组件</h4><p>很明显，就跟我们前面使用第三方的自定义组件库一样，使用组件之前都是需要进行自定义的。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830165856693.png" alt="image-20210830165856693"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830165856693.png" alt="image-20210830165856693"></p>
 <h4 id="组件的自定义属性"><a href="#组件的自定义属性" class="headerlink" title="组件的自定义属性"></a>组件的自定义属性</h4><h5 id="常规写法"><a href="#常规写法" class="headerlink" title="常规写法"></a>常规写法</h5><p>在我们组件的 js 文件的 properties 属性上，我们可以<strong>进行自定义属性的注册</strong>。到时候使用组件的时候就可以给该属性赋值，就和<strong>使用 image 标签</strong>的时候，给 src 属性赋值类似的操作。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 组件的属性列表
@@ -2464,9 +2464,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830170751026.png" alt="image-20210830170751026"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830170751026.png" alt="image-20210830170751026"></p>
 <p><strong>如果不给属性赋值，那么就是我们定义好的该属性的默认值</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830170935499.png" alt="image-20210830170935499"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830170935499.png" alt="image-20210830170935499"></p>
 <h5 id="简写（语法糖）"><a href="#简写（语法糖）" class="headerlink" title="简写（语法糖）"></a>简写（语法糖）</h5><p>很多时候，我们觉得上面那种定义属性的方式比较麻烦。那么可以采取下面这种方式。在<strong>没有默认值</strong>的情况下很适用。</p>
 <p><strong>这种方式定义的属性，如果属性没有传参，那么默认值就是当前属性的类型的默认值。</strong>比如 Number 的默认值是 0。String 的默认值是空字符串</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
@@ -2478,7 +2478,7 @@ properties<span class="token operator">:</span> <span class="token punctuation">
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>以前，普通的页面只有 data 里面的变量才能做数据绑定（setData 定义的数据最后也会出现在 data 里面）</strong>，但是，在自定义组件里，组件的属性 properties 和 data 里面出现的变量，都可以进行数据绑定。</p>
-<h4 id="自定义属性可以接收一个-Object-对象"><a href="#自定义属性可以接收一个-Object-对象" class="headerlink" title="自定义属性可以接收一个 Object 对象"></a>自定义属性可以接收一个 Object 对象</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830171959559.png" alt="image-20210830171959559"></p>
+<h4 id="自定义属性可以接收一个-Object-对象"><a href="#自定义属性可以接收一个-Object-对象" class="headerlink" title="自定义属性可以接收一个 Object 对象"></a>自定义属性可以接收一个 Object 对象</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830171959559.png" alt="image-20210830171959559"></p>
 <p>前面，我们进行文章列表的遍历，来渲染整个文章页面（除去轮播图）。</p>
 <p>我们可以发现，每篇文章的结构实际上都是相同的。<strong>唯一不同的，只是数据而已。</strong></p>
 <p>所以我们可以考虑用自定义组件来代替这个文章的结构，将结构隐藏到组件中，使页面看起来更加清爽，而且还可以达到复用的效果。</p>
@@ -2638,27 +2638,27 @@ properties<span class="token operator">:</span> <span class="token punctuation">
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>post</span> <span class="token attr-name">post-data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{post}}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>post</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>block</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830174933350.png" alt="image-20210830174933350"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830174933350.png" alt="image-20210830174933350"></p>
 <p><strong>可以看见，文章被成功的渲染出来了。</strong></p>
 <h4 id="自定义组件的事件"><a href="#自定义组件的事件" class="headerlink" title="自定义组件的事件"></a>自定义组件的事件</h4><p>这里，我们简单的把当时进行点击文章，调整到对应的文章详情页的方法代码，抽离到自定义组件中。</p>
 <p>组件使用到的放到，都需要在 methods 属性里面进行定义。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830175752019.png" alt="image-20210830175752019"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830175752019.png" alt="image-20210830175752019"></p>
 <h3 id="自定义组件-movie-list"><a href="#自定义组件-movie-list" class="headerlink" title="自定义组件-movie-list"></a>自定义组件-movie-list</h3><p><strong>这里将自定义一个展示电影列表的自定义组件。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830202641102.png" alt="image-20210830202641102"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830180105559.png" alt="image-20210830180105559"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830202641102.png" alt="image-20210830202641102"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830180105559.png" alt="image-20210830180105559"></p>
 <p>组件建立好了以后就<strong>在电影页面 movies</strong>里面进行组件的注册。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830180350540.png" alt="image-20210830180350540"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830180350540.png" alt="image-20210830180350540"></p>
 <p><strong>测试</strong>：发现正常引入</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830180548725.png" alt="image-20210830180548725"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830180548725.png" alt="image-20210830180548725"></p>
 <h3 id="组件的嵌套"><a href="#组件的嵌套" class="headerlink" title="组件的嵌套"></a>组件的嵌套</h3><p>我们可以发现，<strong>每个电影实际上也是结构相同，只是数据不同而已</strong>。所以我们可以把电影也抽成一个组件。</p>
-<h4 id="电影组件-movie"><a href="#电影组件-movie" class="headerlink" title="电影组件-movie"></a>电影组件-movie</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830181255465.png" alt="image-20210830181255465"></p>
+<h4 id="电影组件-movie"><a href="#电影组件-movie" class="headerlink" title="电影组件-movie"></a>电影组件-movie</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830181255465.png" alt="image-20210830181255465"></p>
 <h4 id="组件的制作"><a href="#组件的制作" class="headerlink" title="组件的制作"></a>组件的制作</h4><p>我们前面说过，开发页面的时候，可以先用假数据模拟，然后等静态页面制作好了以后，再将假数据替换为我们实际从服务器请求的数据。</p>
 <p><strong>组件的</strong>开发也是一样，先用假数据，然后在替换为实际使用组件时，外界传递进来的数据。</p>
 <p><strong>在 movie-list 组件</strong>内部，我们会使用 <strong>movie</strong>组件，那么这就构成了组件之间的相互嵌套。</p>
 <h5 id="组件嵌套的使用"><a href="#组件嵌套的使用" class="headerlink" title="组件嵌套的使用"></a>组件嵌套的使用</h5><h6 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h6><p>在 movie-list 组件内组成 movie 组件</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830181601571.png" alt="image-20210830181601571"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830181601571.png" alt="image-20210830181601571"></p>
 <h6 id="使用-movie-组件"><a href="#使用-movie-组件" class="headerlink" title="使用 movie 组件"></a>使用 movie 组件</h6><p>在组件内部使用其他组件，也是和普通标签一样使用。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830181747226.png" alt="image-20210830181747226"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830181747226.png" alt="image-20210830181747226"></p>
 <h4 id="movie-组件的制作"><a href="#movie-组件的制作" class="headerlink" title="movie 组件的制作"></a>movie 组件的制作</h4><h5 id="静态模板的制作"><a href="#静态模板的制作" class="headerlink" title="静态模板的制作"></a>静态模板的制作</h5><p>这一步，比较简单，没什么好说的。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--components/movie/index.wxml--&gt;</span>
 <span class="token comment">&lt;!-- 电影容器 --&gt;</span>
@@ -2694,10 +2694,10 @@ properties<span class="token operator">:</span> <span class="token punctuation">
   <span class="token property">word-break</span><span class="token punctuation">:</span> break-all<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="静态模板效果"><a href="#静态模板效果" class="headerlink" title="静态模板效果"></a>静态模板效果</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830204133639.png" alt="image-20210830204133639"></p>
+<h5 id="静态模板效果"><a href="#静态模板效果" class="headerlink" title="静态模板效果"></a>静态模板效果</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830204133639.png" alt="image-20210830204133639"></p>
 <h5 id="使用-lin-ui-的评分组件"><a href="#使用-lin-ui-的评分组件" class="headerlink" title="使用 lin-ui 的评分组件"></a>使用 lin-ui 的评分组件</h5><p>这个评分的组件，我们自己制作的话是比较麻烦的，所以直接使用第三方提供好的。（<strong>如果想要自己实现其实也不是很难，只实现整数性质的平分还是比较容易的。</strong>）</p>
-<h6 id="l-rate-评分组件的注册"><a href="#l-rate-评分组件的注册" class="headerlink" title="l-rate 评分组件的注册"></a>l-rate 评分组件的注册</h6><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830204453700.png" alt="image-20210830204453700"></p>
-<h5 id="使用-l-rate-继续完成-movie-组件"><a href="#使用-l-rate-继续完成-movie-组件" class="headerlink" title="使用 l-rate 继续完成 movie 组件"></a>使用 l-rate 继续完成 movie 组件</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830210043421.png" alt="image-20210830210043421"></p>
+<h6 id="l-rate-评分组件的注册"><a href="#l-rate-评分组件的注册" class="headerlink" title="l-rate 评分组件的注册"></a>l-rate 评分组件的注册</h6><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830204453700.png" alt="image-20210830204453700"></p>
+<h5 id="使用-l-rate-继续完成-movie-组件"><a href="#使用-l-rate-继续完成-movie-组件" class="headerlink" title="使用 l-rate 继续完成 movie 组件"></a>使用 l-rate 继续完成 movie 组件</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830210043421.png" alt="image-20210830210043421"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rate-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token comment">&lt;!-- 评分 --&gt;</span>
   <span class="token comment">&lt;!-- score属性 显示点亮多少星星 可以是小数 --&gt;</span>
@@ -2767,23 +2767,23 @@ properties<span class="token operator">:</span> <span class="token punctuation">
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>静态的制作都是挺简单的，先用死数据，制作好样式，后期在替换就完事。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830212121035.png" alt="image-20210830212121035"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830212121035.png" alt="image-20210830212121035"></p>
 <h5 id="使用多个-movie-list-组件"><a href="#使用多个-movie-list-组件" class="headerlink" title="使用多个 movie-list 组件"></a>使用多个 movie-list 组件</h5><p>效果看起来也还可以。但是样式还需要进行调整。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830212302788.png" alt="image-20210830212302788"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830212302788.png" alt="image-20210830212302788"></p>
 <h5 id="设置组件的样式"><a href="#设置组件的样式" class="headerlink" title="设置组件的样式"></a>设置组件的样式</h5><p>我们在使用 movie-list 组件的时候，感觉这个样式并不完美，想要给这个组件加一些样式，但是，遇见了一些问题，就是给这个组件设置的样式都不生效。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830213440059.png" alt="image-20210830213440059"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830213440059.png" alt="image-20210830213440059"></p>
 <p>直接用组件的名称设置样式，或者给组件添加 class 类名设置样式，都不生效。</p>
 <p>这是为什么呢？</p>
 <h5 id="解决-movie-list-样式不生效"><a href="#解决-movie-list-样式不生效" class="headerlink" title="解决 movie-list 样式不生效"></a>解决 movie-list 样式不生效</h5><p>想要解决样式不生效的问题，我们这里需要使用组件的<strong>外部样式类</strong>。</p>
 <p><strong>之所以使用外部样式，是因为我们使用的组件，并不知道我们实际上会设置什么样式，所以定义好类名交给我们外部进行设置，到时候通过外部样式的入口进行传递给组件引用，完成样式的设置。</strong></p>
 <p>外部样式类的使用也比较简单。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830215344883.png" alt="image-20210830215344883"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830215344883.png" alt="image-20210830215344883"></p>
 <p>很明显，可以看见第一个设置外部样式的颜色发生了改变。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830215541605.png" alt="image-20210830215541605"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830215541605.png" alt="image-20210830215541605"></p>
 <p><strong>这种直接给自定义组件设置样式不生效的问题，是由小程序内部的机制引起的。这时候我们就需要考虑使用外部样式类了。</strong></p>
 <h4 id="movie-list-组件的优化"><a href="#movie-list-组件的优化" class="headerlink" title="movie-list 组件的优化"></a>movie-list 组件的优化</h4><h5 id="动态标题"><a href="#动态标题" class="headerlink" title="动态标题"></a>动态标题</h5><p>前面我们将所有的数据都是按照死数据来定死的。实际上这肯定是不合理的。这里进行标题的动态赋值。</p>
 <p>我们在组件的 js 文件中设置这个属性。让外界动态的传参。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830220442697.png" alt="image-20210830220442697"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830220442697.png" alt="image-20210830220442697"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 组件的属性列表
    */</span>
@@ -2791,7 +2791,7 @@ properties<span class="token operator">:</span> <span class="token punctuation">
     title<span class="token operator">:</span>String
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210830220715789.png" alt="image-20210830220715789"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210830220715789.png" alt="image-20210830220715789"></p>
 <h3 id="小程序请求服务端数据"><a href="#小程序请求服务端数据" class="headerlink" title="小程序请求服务端数据"></a>小程序请求服务端数据</h3><h4 id="发起请求-wx-request-方法"><a href="#发起请求-wx-request-方法" class="headerlink" title="发起请求 wx.request 方法"></a>发起请求 wx.request 方法</h4><p>常规用法，请求地址加上回调函数</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 请求服务器数据 获取正在热映的电影</span>
 wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -2883,15 +2883,15 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>movie-list</span> <span class="token attr-name">movies</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{top250}}<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>豆瓣Top250<span class="token punctuation">"</span></span> <span class="token attr-name">l-class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>movie-list<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="movie-list-组件数据的替换"><a href="#movie-list-组件数据的替换" class="headerlink" title="movie-list 组件数据的替换"></a>movie-list 组件数据的替换</h4><p>现在，数据已经传递进来了，我们要做的就是动态替换实际的电影列表数据，并将<strong>每个电影的数据传递给电影组件</strong>。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210831083904536.png" alt="image-20210831083904536"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210831083904536.png" alt="image-20210831083904536"></p>
 <h4 id="movie-组件的数据替换"><a href="#movie-组件的数据替换" class="headerlink" title="movie 组件的数据替换"></a>movie 组件的数据替换</h4><p>接下来将 movie 组件的死数据替换为真实数据即可。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210831084105206.png" alt="image-20210831084105206"></p>
-<h4 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210831084148756.png" alt="image-20210831084148756"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210831084105206.png" alt="image-20210831084105206"></p>
+<h4 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210831084148756.png" alt="image-20210831084148756"></p>
 <p>有些图片加载不出来，和星星显示有误很正常，毕竟不是我们自己写的服务端数据。肯定会出现数据图片等有问题的错误。</p>
-<h1 id="微信小程序入门-七-–入门篇完结"><a href="#微信小程序入门-七-–入门篇完结" class="headerlink" title="微信小程序入门(七)–入门篇完结"></a>微信小程序入门(七)–入门篇完结</h1><h3 id="实现电影页面按钮的更多功能"><a href="#实现电影页面按钮的更多功能" class="headerlink" title="实现电影页面按钮的更多功能"></a>实现电影页面按钮的更多功能</h3><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901094428669.png" alt="image-20210901094428669"></p>
+<h1 id="微信小程序入门-七-–入门篇完结"><a href="#微信小程序入门-七-–入门篇完结" class="headerlink" title="微信小程序入门(七)–入门篇完结"></a>微信小程序入门(七)–入门篇完结</h1><h3 id="实现电影页面按钮的更多功能"><a href="#实现电影页面按钮的更多功能" class="headerlink" title="实现电影页面按钮的更多功能"></a>实现电影页面按钮的更多功能</h3><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901094428669.png" alt="image-20210901094428669"></p>
 <p>点击更多按钮，进入电影的更多页面。</p>
 <p><strong>所以我们接下来就先获取到请求的数据，来构建更多电影页面。</strong></p>
-<h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901105620511.png" alt="image-20210901105620511"></p>
+<h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901105620511.png" alt="image-20210901105620511"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 页面的初始数据
    */</span>
@@ -2926,8 +2926,8 @@ wx<span class="token punctuation">.</span><span class="token function">request</
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901132458764.png" alt="image-20210901132458764"></p>
-<h4 id="more-movie-页面布局"><a href="#more-movie-页面布局" class="headerlink" title="more-movie 页面布局"></a>more-movie 页面布局</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901134323343.png" alt="image-20210901134323343"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901132458764.png" alt="image-20210901132458764"></p>
+<h4 id="more-movie-页面布局"><a href="#more-movie-页面布局" class="headerlink" title="more-movie 页面布局"></a>more-movie 页面布局</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901134323343.png" alt="image-20210901134323343"></p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* pages/more-movie/more-movie.wxss */</span>
 <span class="token comment">/* 容器 */</span>
 <span class="token selector">.container</span> <span class="token punctuation">{</span>
@@ -2947,9 +2947,9 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <p>像下面这种就不会生效。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>movie</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>movie<span class="token punctuation">"</span></span> <span class="token attr-name">movie</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{movie}}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="movies-页面更多按钮绑定事件"><a href="#movies-页面更多按钮绑定事件" class="headerlink" title="movies 页面更多按钮绑定事件"></a>movies 页面更多按钮绑定事件</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901135014871.png" alt="image-20210901135014871"></p>
+<h4 id="movies-页面更多按钮绑定事件"><a href="#movies-页面更多按钮绑定事件" class="headerlink" title="movies 页面更多按钮绑定事件"></a>movies 页面更多按钮绑定事件</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901135014871.png" alt="image-20210901135014871"></p>
 <p>在每个电影列表上都绑定好当前所属的列表类型。用自定义属性进行绑定。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901135603377.png" alt="image-20210901135603377"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901135603377.png" alt="image-20210901135603377"></p>
 <h5 id="更多按钮的事件"><a href="#更多按钮的事件" class="headerlink" title="更多按钮的事件"></a>更多按钮的事件</h5><p>通过 event 事件属性取到我们在当前元素上自定义的属性，进行页面跳转的时候，将电影类型一并传过去，方法更多电影页面发起请求。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 页面跳转
@@ -3014,15 +3014,15 @@ wx<span class="token punctuation">.</span><span class="token function">request</
   <span class="token property">height</span><span class="token punctuation">:</span> 90rpx <span class="token important">!important</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901141433978.png" alt="image-20210901141433978"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901141517765.png" alt="image-20210901141517765"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901141433978.png" alt="image-20210901141433978"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901141517765.png" alt="image-20210901141517765"></p>
 <h2 id="上滑加载更多电影数据"><a href="#上滑加载更多电影数据" class="headerlink" title="上滑加载更多电影数据"></a>上滑加载更多电影数据</h2><p>我们每次请求的数据，默认的条数都是 12 条，所以用户可能一会就滑到了最底部，其实，小程序的生命周期里面，提供的有关于滑到到页面底部的回调函数。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901142611984.png" alt="image-20210901142611984"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901142611984.png" alt="image-20210901142611984"></p>
 <p>可以看见，只要你滑动到最底部，我们在这个函数里面写的代码就会被打印。说明该函数的确是执行了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901142725171.png" alt="image-20210901142725171"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901142725171.png" alt="image-20210901142725171"></p>
 <p><strong>所以我们可以在这个函数里面书写继续发起请求电影列表的代码。</strong></p>
 <h5 id="加载更多电影数据"><a href="#加载更多电影数据" class="headerlink" title="加载更多电影数据"></a>加载更多电影数据</h5><p>将前面我们在 onLoad 方法里面拿到的 type 值，也就是电影列表的类型进行保存。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901144912320.png" alt="image-20210901144912320"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901144912320.png" alt="image-20210901144912320"></p>
 <p><strong>发起请求获取数据</strong></p>
 <p>代码逻辑都写在页面上啦触底事件的生命周期函数中。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
@@ -3053,7 +3053,7 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 
 <h3 id="提示用户数据请求中"><a href="#提示用户数据请求中" class="headerlink" title="提示用户数据请求中"></a>提示用户数据请求中</h3><p>我们在发起请求获取新的电影数据的时候，很可能出现用户多次发起请求，但是此时网络情况并不好，这时候页面的刷新就比较慢，<strong>这时候我们就需要提醒用户页面数据正在刷新。用小程序的内置组件就可以完成这种轻提示。</strong></p>
 <p>我们的目的就是，数据请求过程中，页面还没刷新完毕的时候，提示用户正在加载，一旦数据请求成功并且页面开始刷新了，就不应该还继续提示用户正在加载数据。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901150131517.png" alt="image-20210901150131517"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901150131517.png" alt="image-20210901150131517"></p>
 <p>只需要添加显示和隐藏加载动画的提示框即可。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 页面上拉触底事件的处理函数
@@ -3087,7 +3087,7 @@ wx<span class="token punctuation">.</span><span class="token function">request</
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901150318850.png" alt="image-20210901150318850"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901150318850.png" alt="image-20210901150318850"></p>
 <h2 id="下拉刷新数据"><a href="#下拉刷新数据" class="headerlink" title="下拉刷新数据"></a>下拉刷新数据</h2><h3 id="开启页面的下拉刷新"><a href="#开启页面的下拉刷新" class="headerlink" title="开启页面的下拉刷新"></a>开启页面的下拉刷新</h3><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"usingComponents"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"movie"</span><span class="token operator">:</span> <span class="token string">"/components/movie/index"</span>
@@ -3097,9 +3097,9 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果在 app.json 里面配置这个的话，那么在所有的页面都可以进行下来是刷新了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901152450885.png" alt="image-20210901152450885"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901152450885.png" alt="image-20210901152450885"></p>
 <h3 id="监听用户下拉动作"><a href="#监听用户下拉动作" class="headerlink" title="监听用户下拉动作"></a>监听用户下拉动作</h3><p>小程序默认给我们提供好的有小程序页面监听下拉动作的函数。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901153626697.png" alt="image-20210901153626697"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901153626697.png" alt="image-20210901153626697"></p>
 <h3 id="实现下拉刷新"><a href="#实现下拉刷新" class="headerlink" title="实现下拉刷新"></a>实现下拉刷新</h3><p>这个就比较简单了，直接一段代码搞定。获取数据以后，调用 wx.stopPullDownRefresh()方法，停止下拉的动作。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -3126,10 +3126,10 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"navigationBarTitleText"</span><span class="token operator">:</span> <span class="token string">"光与影"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>但是这样配置的标题是死标题，而且，还不能动态的改变，对于组件来说，这样配置无疑是没什么用的。我们应该让这个标题是动态的。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901161053852.png" alt="image-20210901161053852"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901161053852.png" alt="image-20210901161053852"></p>
 <h4 id="动态配置标题"><a href="#动态配置标题" class="headerlink" title="动态配置标题"></a>动态配置标题</h4><p>很明显，动态配置标题是不可获取的，对于这种常用的功能，小程序基本都帮我们提供好了。</p>
 <p><strong>使用小程序的 wx.setNavigationBarTitle</strong>方法就可以动态的设置我们想设置的标题了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901161503637.png" alt="image-20210901161503637"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901161503637.png" alt="image-20210901161503637"></p>
 <p>我们将这部分动态设置标题的代码写在 onReady 生命周期中，页面只有第一次加载才需要设置标题的。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 生命周期函数--监听页面初次渲染完成
@@ -3154,10 +3154,10 @@ wx<span class="token punctuation">.</span><span class="token function">request</
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="电影详情页"><a href="#电影详情页" class="headerlink" title="电影详情页"></a>电影详情页</h2><h3 id="组件的独立性"><a href="#组件的独立性" class="headerlink" title="组件的独立性"></a>组件的独立性</h3><h4 id="对-post-组件进行改进"><a href="#对-post-组件进行改进" class="headerlink" title="对 post 组件进行改进"></a>对 post 组件进行改进</h4><p>开始，我们是将点击文章，去文章详情页的点击事件的回调函数，直接写死在了组件上，这肯定是不合理的。因为不可能每个人用组件，点击之后的操作都是同样的。所以回调函数的执行应该让外界传递。提高组件的复用性，让组件与事件的具体执行操作独立开来。这就是组件的独立性。</p>
-<h5 id="发射事件"><a href="#发射事件" class="headerlink" title="发射事件"></a>发射事件</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901172629488.png" alt="image-20210901172629488"></p>
+<h5 id="发射事件"><a href="#发射事件" class="headerlink" title="发射事件"></a>发射事件</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901172629488.png" alt="image-20210901172629488"></p>
 <p>当然，携带的参数也不一定非要通过当前事件的目标对象身上的属性来获取，毕竟我们组件上其实已经有这一篇文章的全部信息了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901173604854.png" alt="image-20210901173604854"></p>
-<h5 id="接收事件"><a href="#接收事件" class="headerlink" title="接收事件"></a>接收事件</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901172743182.png" alt="image-20210901172743182"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901173604854.png" alt="image-20210901173604854"></p>
+<h5 id="接收事件"><a href="#接收事件" class="headerlink" title="接收事件"></a>接收事件</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901172743182.png" alt="image-20210901172743182"></p>
 <p>这种做功能一样还是正常实现，但是提高了组件的可复用性。</p>
 <h4 id="文章页面问题修正"><a href="#文章页面问题修正" class="headerlink" title="文章页面问题修正"></a>文章页面问题修正</h4><p>虽然我们上面那种做法，提高了组件的复用性。但是现在带来了新的问题，那就是我们点击图片是无法完成跳转了。</p>
 <h5 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h5><p>最简单的方式当然是直接在写一个方法，按照之前的逻辑就完事。简单易懂。</p>
@@ -3177,12 +3177,12 @@ wx<span class="token punctuation">.</span><span class="token function">request</
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="电影详情页的制作"><a href="#电影详情页的制作" class="headerlink" title="电影详情页的制作"></a>电影详情页的制作</h3><h4 id="给自定义组件-movie-绑定事件"><a href="#给自定义组件-movie-绑定事件" class="headerlink" title="给自定义组件 movie 绑定事件"></a>给自定义组件 movie 绑定事件</h4><p>为了开发方便，这里我是讲业务代码封装了一部分在组件上，实际上一个好的组件不应该这样，这里是因为这是我们自己写的业务组件，纯粹是为了自己方便，所以可以这样做。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901191651266.png" alt="image-20210901191651266"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901191651266.png" alt="image-20210901191651266"></p>
 <p>在点击每个电影，都可以去往电影详情页。而且携带了当前电影的 id 号。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901191749501.png" alt="image-20210901191749501"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901191749501.png" alt="image-20210901191749501"></p>
 <h4 id="根据-id-请求电影数据"><a href="#根据-id-请求电影数据" class="headerlink" title="根据 id 请求电影数据"></a>根据 id 请求电影数据</h4><p>根据 mid，向服务器发起请求，获取当前电影的详情数据。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901192622268.png" alt="image-20210901192622268"></p>
-<h4 id="绑定数据"><a href="#绑定数据" class="headerlink" title="绑定数据"></a>绑定数据</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901192823290.png" alt="image-20210901192823290"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901192622268.png" alt="image-20210901192622268"></p>
+<h4 id="绑定数据"><a href="#绑定数据" class="headerlink" title="绑定数据"></a>绑定数据</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901192823290.png" alt="image-20210901192823290"></p>
 <h4 id="详情页的制作"><a href="#详情页的制作" class="headerlink" title="详情页的制作"></a>详情页的制作</h4><h5 id="详情页头部区域"><a href="#详情页头部区域" class="headerlink" title="详情页头部区域"></a>详情页头部区域</h5><p>前面我们已经获取到每个电影详情页的电影详情数据。接下来开始电影详情的头部制作。</p>
 <p><strong>骨架</strong></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--pages/movie-detail/movie-detail.wxml--&gt;</span>
@@ -3273,10 +3273,10 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>效果</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901205540785.png" alt="image-20210901205540785"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901205540785.png" alt="image-20210901205540785"></p>
 <p>没错，是我要的。</p>
 <h5 id="头部电影海报-预览"><a href="#头部电影海报-预览" class="headerlink" title="头部电影海报(预览)"></a>头部电影海报(预览)</h5><p>做小程序的海报放大方式，也就是我们所说的预览。小程序原生给我们提供的有这种方法。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901211056877.png" alt="image-20210901211056877"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901211056877.png" alt="image-20210901211056877"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
    * 图片预览
    * @param {*} event
@@ -3291,16 +3291,16 @@ wx<span class="token punctuation">.</span><span class="token function">request</
   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>大部分功能基本上小程序都内置过了。想要做什么效果，建议第一件事是去文档查一下有没有。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901211352153.png" alt="image-20210901211352153"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901211352153.png" alt="image-20210901211352153"></p>
 <h4 id="图片的-mode-模式"><a href="#图片的-mode-模式" class="headerlink" title="图片的 mode 模式"></a>图片的 mode 模式</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/image.html">图片的 mode 模式，懂的都懂</a></p>
 <p>默认不设置的模式：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901212027581.png" alt="image-20210901212027581"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901212027581.png" alt="image-20210901212027581"></p>
 <p>设置 mode<strong>模式为 aspectFill</strong>时：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901212121039.png" alt="image-20210901212121039"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901212121039.png" alt="image-20210901212121039"></p>
 <p>很明显，可以看出图片没有被拉伸。</p>
 <p><strong>当然，mode 模式的值很多，可以去官网多看看</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901212313363.png" alt="image-20210901212313363"></p>
-<h4 id="电影详情页建议简介部分"><a href="#电影详情页建议简介部分" class="headerlink" title="电影详情页建议简介部分"></a>电影详情页建议简介部分</h4><h5 id="数据的预处理"><a href="#数据的预处理" class="headerlink" title="数据的预处理"></a>数据的预处理</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901213932843.png" alt="image-20210901213932843"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901212313363.png" alt="image-20210901212313363"></p>
+<h4 id="电影详情页建议简介部分"><a href="#电影详情页建议简介部分" class="headerlink" title="电影详情页建议简介部分"></a>电影详情页建议简介部分</h4><h5 id="数据的预处理"><a href="#数据的预处理" class="headerlink" title="数据的预处理"></a>数据的预处理</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901213932843.png" alt="image-20210901213932843"></p>
 <p>可以看见，我们获取到数据，很多都是数组，不便于页面的数据展示，所以需要对数据进行预处理。</p>
 <h5 id="封装一个工具函数"><a href="#封装一个工具函数" class="headerlink" title="封装一个工具函数"></a>封装一个工具函数</h5><p>该函数用来处理导演和演员数组，拼接元素的 name 属性。</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
@@ -3464,7 +3464,7 @@ wx<span class="token punctuation">.</span><span class="token function">request</
   <span class="token property">background-color</span><span class="token punctuation">:</span> #d9d9d9<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901223856720.png" alt="image-20210901223856720"></p>
+<h5 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901223856720.png" alt="image-20210901223856720"></p>
 <h4 id="电影剧情简介"><a href="#电影剧情简介" class="headerlink" title="电影剧情简介"></a>电影剧情简介</h4><p>没啥好说的，都简单了</p>
 <h5 id="结构-1"><a href="#结构-1" class="headerlink" title="结构"></a>结构</h5><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 剧情简介 --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>synopsis<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -3607,8 +3607,8 @@ wx<span class="token punctuation">.</span><span class="token function">request</
 <h4 id="滑动效果"><a href="#滑动效果" class="headerlink" title="滑动效果"></a>滑动效果</h4><h5 id="小程序的滑动组件"><a href="#小程序的滑动组件" class="headerlink" title="小程序的滑动组件"></a>小程序的滑动组件</h5><p>小程序提供的内置组件里面有 scroll-view 组件，可以用来替换 view 组件。</p>
 <p>提供这个标签，可以进行横向的滑动，做成可滚动的视图区域。</p>
 <p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html">你想要的 scroll-view 这都有</a></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901232227835.png" alt="image-20210901232227835"></p>
-<h5 id="效果-3"><a href="#效果-3" class="headerlink" title="效果"></a>效果</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/wei_chat/image-20210901232321718.png" alt="image-20210901232321718"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901232227835.png" alt="image-20210901232227835"></p>
+<h5 id="效果-3"><a href="#效果-3" class="headerlink" title="效果"></a>效果</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/wei_chat/image-20210901232321718.png" alt="image-20210901232321718"></p>
 <h3 id="电影详情页完整代码"><a href="#电影详情页完整代码" class="headerlink" title="电影详情页完整代码"></a>电影详情页完整代码</h3><h4 id="结构-3"><a href="#结构-3" class="headerlink" title="结构"></a>结构</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--pages/movie-detail/movie-detail.wxml--&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token comment">&lt;!-- 头部大图(做模糊效果) --&gt;</span>

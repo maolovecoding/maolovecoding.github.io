@@ -507,14 +507,14 @@
 <li>再将这些组件组合嵌套在一起，最终形成我们的应用程序；</li>
 </ol>
 <p>我们来分析一下下面代码的嵌套逻辑，假如我们将所有的代码逻辑都放到一个 App.vue 组件中：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807201258559.png" alt="image-20210807201258559"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807201258559.png" alt="image-20210807201258559"></p>
 <ol>
 <li>我们会发现，将所有的代码逻辑全部放到一个组件中，代码是非常的臃肿和难以维 护的。</li>
 <li>并且在真实开发中，我们会有更多的内容和代码逻辑，对于扩展性和可维护性来说 都是非常差的。</li>
 <li>所以，在真实的开发中，我们会对组件进行拆分，拆分成一个个功能的小组件。</li>
 </ol>
 <h3 id="组件的拆分"><a href="#组件的拆分" class="headerlink" title="组件的拆分"></a>组件的拆分</h3><p><strong>我们可以按照如下的方式进行拆分：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807201350134.png" alt="image-20210807201350134"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807201350134.png" alt="image-20210807201350134"></p>
 <p>按照如上的拆分方式后，我们开发对应的逻辑只需要去对应的组件编写就可。</p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">App.vue文件
 
@@ -611,7 +611,7 @@ export default {};
 
 &lt;style scoped&gt;&lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807202015394.png" alt="image-20210807202015394"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807202015394.png" alt="image-20210807202015394"></p>
 <h2 id="组件的通信"><a href="#组件的通信" class="headerlink" title="组件的通信"></a>组件的通信</h2><h3 id="组件的通信-1"><a href="#组件的通信-1" class="headerlink" title="组件的通信"></a>组件的通信</h3><p><strong>上面的嵌套逻辑如下，它们存在如下关系：</strong></p>
 <ol>
 <li>App 组件是 Header、Main、Footer 组件的父组件；</li>
@@ -629,7 +629,7 @@ export default {};
 <li>父组件传递给子组件：通过<strong>props</strong>属性；</li>
 <li>子组件传递给父组件：通过**$emit**触发事件；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807201629967.png" alt="image-20210807201629967"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807201629967.png" alt="image-20210807201629967"></p>
 <h3 id="父组件传递给子组件"><a href="#父组件传递给子组件" class="headerlink" title="父组件传递给子组件"></a>父组件传递给子组件</h3><p>在开发中很常见的就是父子组件之间通信，比如父组件有一些数据，需要子组件来进行展示：</p>
 <p>这个时候我们可以通过<strong>props</strong>来完成组件之间的通信；</p>
 <p><strong>什么是 Props 呢？</strong></p>
@@ -642,9 +642,9 @@ export default {};
 <li>方式一：字符串数组，数组中的字符串就是 attribute 的名称；</li>
 <li>方式二：对象类型，对象类型我们可以在指定 attribute 名称的同时，指定它需要传递的类型、是否是必须的、 默认值等等</li>
 </ol>
-<h4 id="Props-的数组用法"><a href="#Props-的数组用法" class="headerlink" title="Props 的数组用法"></a>Props 的数组用法</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807202329042.png" alt="image-20210807202329042"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807202350113.png" alt="image-20210807202350113"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807202358342.png" alt="image-20210807202358342"></p>
+<h4 id="Props-的数组用法"><a href="#Props-的数组用法" class="headerlink" title="Props 的数组用法"></a>Props 的数组用法</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807202329042.png" alt="image-20210807202329042"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807202350113.png" alt="image-20210807202350113"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807202358342.png" alt="image-20210807202358342"></p>
 <h4 id="Props-的对象用法"><a href="#Props-的对象用法" class="headerlink" title="Props 的对象用法"></a>Props 的对象用法</h4><p>数组用法中我们只能说明传入的<strong>attribute</strong>的名称，并不能对其进行任何形式的限制，接下来我们来看一下对象的 写法是如何让我们的<strong>props</strong>变得更加完善的。</p>
 <p><strong>当使用对象语法的时候，我们可以对传入的内容限制更多：</strong></p>
 <ol>
@@ -652,7 +652,7 @@ export default {};
 <li>比如指定传入的 attribute 是否是必传的；</li>
 <li>比如指定没有传入时，attribute 的默认值；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807202626613.png" alt="image-20210807202626613"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807202626613.png" alt="image-20210807202626613"></p>
 <h4 id="细节一：type-类型"><a href="#细节一：type-类型" class="headerlink" title="细节一：type 类型"></a>细节一：type 类型</h4><p><strong>那么 type 的类型都可以是哪些呢？</strong></p>
 <ol>
 <li>String</li>
@@ -664,20 +664,20 @@ export default {};
 <li>Function</li>
 <li>Symbol(ES6 新增的基本类型)</li>
 </ol>
-<h4 id="细节二：对象类型的其他写法"><a href="#细节二：对象类型的其他写法" class="headerlink" title="细节二：对象类型的其他写法"></a>细节二：对象类型的其他写法</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807204244840.png" alt="image-20210807204244840"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807204255330.png" alt="image-20210807204255330"></p>
+<h4 id="细节二：对象类型的其他写法"><a href="#细节二：对象类型的其他写法" class="headerlink" title="细节二：对象类型的其他写法"></a>细节二：对象类型的其他写法</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807204244840.png" alt="image-20210807204244840"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807204255330.png" alt="image-20210807204255330"></p>
 <h4 id="细节三：Prop-的大小写命名"><a href="#细节三：Prop-的大小写命名" class="headerlink" title="细节三：Prop 的大小写命名"></a>细节三：Prop 的大小写命名</h4><p><strong>Prop 的大小写命名(camelCase vs kebab-case)</strong></p>
 <ol>
 <li>HTML 中的 attribute 名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符；</li>
 <li>这意味着当你使用 DOM 中的模板时，camelCase (驼峰命名法) 的 prop 名需要使用其等价的 kebab-case (短 横线分隔命名) 命名</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807205803322.png" alt="image-20210807205803322"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807205803322.png" alt="image-20210807205803322"></p>
 <h4 id="非-Prop-的-Attribute"><a href="#非-Prop-的-Attribute" class="headerlink" title="非 Prop 的 Attribute"></a>非 Prop 的 Attribute</h4><p><strong>什么是非 Prop 的 Attribute 呢？</strong></p>
 <p>当我们传递给一个组件某个属性，但是该属性并没有定义对应的 props 或者 emits 时，就称之为 非 Prop 的 Attribute；</p>
 <p>常见的包括 class、style、id 属性等；</p>
 <p><strong>Attribute 继承</strong></p>
 <p>当组件有单个根节点时，非 Prop 的<strong>Attribute</strong>将自动添加到根节点的 Attribute 中：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210807210559784.png" alt="image-20210807210559784"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210807210559784.png" alt="image-20210807210559784"></p>
 <h4 id="禁用-Attribute-继承和多根节点"><a href="#禁用-Attribute-继承和多根节点" class="headerlink" title="禁用 Attribute 继承和多根节点"></a>禁用 Attribute 继承和多根节点</h4><p>如果我们不希望组件的根元素继承<strong>attribute</strong>，可以在组件中设置 <strong>inheritAttrs: false：</strong></p>
 <ol>
 <li><p>禁用 attribute 继承的常见情况是需要将 attribute 应用于根元素之外的其他元素；</p>
@@ -685,14 +685,14 @@ export default {};
 <li><p>我们可以通过 <strong>$attrs</strong>来访问所有的 非 props 的 attribute；</p>
 </li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808084721740.png" alt="image-20210808084721740"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808084819837.png" alt="image-20210808084819837"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808084721740.png" alt="image-20210808084721740"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808084819837.png" alt="image-20210808084819837"></p>
 <hr>
 <p><strong>多个根节点的 attribute</strong></p>
 <p>多个根节点的<strong>attribute</strong>如果<strong>没有显示的绑定</strong>，那么<strong>会报警告</strong>，我们必须手动的指定要绑定到哪一个属性上：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808085158545.png" alt="image-20210808085158545"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808085158545.png" alt="image-20210808085158545"></p>
 <p><strong>如果我们不继承父组件的 attribute 属性，设置了 <code>inheritAttrs:false</code>，那么则不会报警告。没有根节点会继承根元素的属性。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808085525363.png" alt="image-20210808085525363"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808085525363.png" alt="image-20210808085525363"></p>
 <h3 id="子组件传递给父组件"><a href="#子组件传递给父组件" class="headerlink" title="子组件传递给父组件"></a>子组件传递给父组件</h3><h4 id="子组件传递给父组件-1"><a href="#子组件传递给父组件-1" class="headerlink" title="子组件传递给父组件"></a>子组件传递给父组件</h4><p><strong>什么情况下子组件需要传递内容到父组件呢</strong></p>
 <ol>
 <li>当子组件有一些事件发生的时候，比如在组件中发生了点击，父组件需要切换内容；</li>
@@ -706,16 +706,16 @@ export default {};
 </ul>
 <h4 id="自定义事件的流程"><a href="#自定义事件的流程" class="headerlink" title="自定义事件的流程"></a>自定义事件的流程</h4><p>我们封装一个 CounterOperation.vue 的组件：</p>
 <p>内部其实是监听两个按钮的点击，点击之后通过 this.$emit 的方式发出去事件；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808094848820.png" alt="image-20210808094848820"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095011935.png" alt="image-20210808095011935"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095038389.png" alt="image-20210808095038389"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808094848820.png" alt="image-20210808094848820"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095011935.png" alt="image-20210808095011935"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095038389.png" alt="image-20210808095038389"></p>
 <h4 id="自定义事件的参数和验证"><a href="#自定义事件的参数和验证" class="headerlink" title="自定义事件的参数和验证"></a>自定义事件的参数和验证</h4><p>自定义事件的时候，我们也可以传递一些参数给父组件：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095143390.png" alt="image-20210808095143390"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095210856.png" alt="image-20210808095210856"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095219037.png" alt="image-20210808095219037"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095143390.png" alt="image-20210808095143390"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095210856.png" alt="image-20210808095210856"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095219037.png" alt="image-20210808095219037"></p>
 <p><strong>在 vue3 当中，我们可以对传递的参数进行验证：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095252388.png" alt="image-20210808095252388"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210808095326833.png" alt="image-20210808095326833"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095252388.png" alt="image-20210808095252388"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210808095326833.png" alt="image-20210808095326833"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">App.vue
 
 &lt;template&gt;
@@ -851,22 +851,22 @@ button {
 <li>子组件不需要知道 inject 的 property 来自哪里</li>
 </ol>
 <h4 id="Provide-和-Inject-基本使用"><a href="#Provide-和-Inject-基本使用" class="headerlink" title="Provide 和 Inject 基本使用"></a>Provide 和 Inject 基本使用</h4><p><strong>我们开发一个这样的结构：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809213806778.png" alt="image-20210809213806778"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809214129165.png" alt="image-20210809214129165"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215147771.png" alt="image-20210809215147771"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215151699.png" alt="image-20210809215151699"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215402748.png" alt="image-20210809215402748"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809213806778.png" alt="image-20210809213806778"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809214129165.png" alt="image-20210809214129165"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215147771.png" alt="image-20210809215147771"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215151699.png" alt="image-20210809215151699"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215402748.png" alt="image-20210809215402748"></p>
 <h4 id="Provide-和-Inject-函数的写法"><a href="#Provide-和-Inject-函数的写法" class="headerlink" title="Provide 和 Inject 函数的写法"></a>Provide 和 Inject 函数的写法</h4><p>如果 Provide 中提供的一些数据是来自 data，那么我们可能会想要通过 this 来获取：</p>
 <p><strong>这个时候会报错：</strong></p>
 <p>这里给大家留一个思考题，我们的 this 使用的是哪里的 this？</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215637892.png" alt="image-20210809215637892"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215733865.png" alt="image-20210809215733865"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809215653396.png" alt="image-20210809215653396"></p>
-<h5 id="对象类型的写法"><a href="#对象类型的写法" class="headerlink" title="对象类型的写法"></a>对象类型的写法</h5><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809220311862.png" alt="image-20210809220311862"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809220405128.png" alt="image-20210809220405128"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215637892.png" alt="image-20210809215637892"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215733865.png" alt="image-20210809215733865"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809215653396.png" alt="image-20210809215653396"></p>
+<h5 id="对象类型的写法"><a href="#对象类型的写法" class="headerlink" title="对象类型的写法"></a>对象类型的写法</h5><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809220311862.png" alt="image-20210809220311862"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809220405128.png" alt="image-20210809220405128"></p>
 <p><strong>我们发现往 names 里面添加元素，非子组件拿到的 names 的 length 也不会响应式的方式改变</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809220611680.png" alt="image-20210809220611680"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809220623869.png" alt="image-20210809220623869"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809220611680.png" alt="image-20210809220611680"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809220623869.png" alt="image-20210809220623869"></p>
 <h4 id="处理响应式数据"><a href="#处理响应式数据" class="headerlink" title="处理响应式数据"></a>处理响应式数据</h4><p>我们先来验证一个结果：如果我们修改了 this.names 的内容，那么使用 length 的子组件会不会是响应式的？</p>
 <p>我们会发现对应的<strong>子组件中是没有反应的：</strong></p>
 <p>这是因为当我们修改了 names 之后，之前在 provide 中引入的 <strong>this.names.length</strong> 本身并不是响应式的；</p>
@@ -877,9 +877,9 @@ button {
 </ol>
 <p><strong>注意：我们在使用 length 的时候需要获取其中的 value</strong></p>
 <p>这是因为 computed 返回的是一个 ref 对象，需要取出其中的 value 来使用；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809221124200.png" alt="image-20210809221124200"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809221148276.png" alt="image-20210809221148276"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210809221256512.png" alt="image-20210809221256512"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809221124200.png" alt="image-20210809221124200"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809221148276.png" alt="image-20210809221148276"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210809221256512.png" alt="image-20210809221256512"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">App.vue
 
 &lt;template&gt;
@@ -1015,20 +1015,20 @@ export default {
 <li>我们在 HomeContent.vue 中监听事件；</li>
 <li>我们在 Subling.vue 中发射（触发）事件；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810090811490.png" alt="image-20210810090811490"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810090846400.png" alt="image-20210810090846400"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091003293.png" alt="image-20210810091003293"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810090811490.png" alt="image-20210810090811490"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810090846400.png" alt="image-20210810090846400"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091003293.png" alt="image-20210810091003293"></p>
 <h4 id="Mitt-的事件取消"><a href="#Mitt-的事件取消" class="headerlink" title="Mitt 的事件取消"></a>Mitt 的事件取消</h4><p><strong>在某些情况下我们可能希望取消掉之前注册的函数监听：</strong></p>
 <ol>
 <li><p><strong>取消所有的监听事件</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091115213.png" alt="image-20210810091115213"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091126907.png" alt="image-20210810091126907"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091115213.png" alt="image-20210810091115213"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091126907.png" alt="image-20210810091126907"></p>
 </li>
 <li><p><strong>取消某个事件的监听</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091717819.png" alt="image-20210810091717819"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091717819.png" alt="image-20210810091717819"></p>
 </li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091746955.png" alt="image-20210810091746955"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091746955.png" alt="image-20210810091746955"></p>
 <h2 id="组件插槽-Slot"><a href="#组件插槽-Slot" class="headerlink" title="组件插槽 Slot"></a>组件插槽 Slot</h2><h3 id="认识插槽-Slot"><a href="#认识插槽-Slot" class="headerlink" title="认识插槽 Slot"></a>认识插槽 Slot</h3><p><strong>在开发中，我们会经常封装一个个可复用的组件：</strong></p>
 <ol>
 <li>前面我们会通过 props 传递给组件一些数据，让组件来进行展示；</li>
@@ -1043,7 +1043,7 @@ export default {
 <li>中间区域可能显示一个搜索框，也可能是一个列表，也可能是一个标题，等等；</li>
 <li>右边可能是一个文字，也可能是一个图标，也可能什么都不显示；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810091923684.png" alt="image-20210810091923684"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810091923684.png" alt="image-20210810091923684"></p>
 <h3 id="如何使用插槽-slot？"><a href="#如何使用插槽-slot？" class="headerlink" title="如何使用插槽 slot？"></a>如何使用插槽 slot？</h3><p><strong>这个时候我们就可以来定义插槽 slot：</strong></p>
 <ol>
 <li>插槽的使用过程其实是抽取共性、预留不同；</li>
@@ -1059,38 +1059,38 @@ export default {
 <h3 id="插槽的基本使用"><a href="#插槽的基本使用" class="headerlink" title="插槽的基本使用"></a>插槽的基本使用</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>我们一个组件 MySlotCpn.vue：该组件中有一个插槽，我们可以在插槽中放入需要显示的内容；</p>
 <p>我们在 App.vue 中使用它们：我们可以插入普通的内容、html 元素、组件元素，都可以是可以的；</p>
 <p><strong>预留的插槽我们不填充任何数据时：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810095927253.png" alt="image-20210810095927253"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810095927253.png" alt="image-20210810095927253"></p>
 <p><strong>使用组件时往插槽插入数据：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810100208843.png" alt="image-20210810100208843"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810100208843.png" alt="image-20210810100208843"></p>
 <p><strong>往组件插槽中填充自定义组件：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810100931706.png" alt="image-20210810100931706"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810100931706.png" alt="image-20210810100931706"></p>
 <h4 id="插槽的默认内容"><a href="#插槽的默认内容" class="headerlink" title="插槽的默认内容"></a>插槽的默认内容</h4><p>有时候我们希望在使用插槽时，如果没有插入对应的内容，那么我们需要显示一个<strong>默认的内容</strong>：</p>
 <p>当然这个默认的内容只会在没有提供插入的内容时，才会显示；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810101443748.png" alt="image-20210810101443748"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810101443748.png" alt="image-20210810101443748"></p>
 <h4 id="多个插槽的效果"><a href="#多个插槽的效果" class="headerlink" title="多个插槽的效果"></a>多个插槽的效果</h4><p>我们先测试一个知识点：如果一个组件中含有<strong>多个插槽</strong>，我们插入多个内容时是什么效果？</p>
 <p>我们会发现默认情况下每个插槽都会获取到我们插入的内容来显示；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810104919157.png" alt="image-20210810104919157"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810104919157.png" alt="image-20210810104919157"></p>
 <h4 id="具名插槽的使用"><a href="#具名插槽的使用" class="headerlink" title="具名插槽的使用"></a>具名插槽的使用</h4><p>事实上，我们希望达到的效果是插槽对应的显示，这个时候我们就可以使用 具名插槽：</p>
 <ol>
 <li>具名插槽顾名思义就是给插槽起一个名字，<code>&lt;slot&gt;</code> 元素有一个特殊的 <strong>attribute：name；</strong></li>
 <li>一个<strong>不带 name</strong> 的 slot，会带有隐含的名字 default；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810112506472.png" alt="image-20210810112506472"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810112506472.png" alt="image-20210810112506472"></p>
 <h4 id="动态插槽名"><a href="#动态插槽名" class="headerlink" title="动态插槽名"></a>动态插槽名</h4><p><strong>什么是动态插槽名呢？</strong></p>
 <ol>
 <li>目前我们使用的插槽名称都是固定的；</li>
 <li>比如 v-slot:left、v-slot:center 等等；</li>
 <li>我们可以通过 v-slot:[dynamicSlotName]方式动态绑定一个名称；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810113654563.png" alt="image-20210810113654563"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810113842773.png" alt="image-20210810113842773"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810113909486.png" alt="image-20210810113909486"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810113654563.png" alt="image-20210810113654563"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810113842773.png" alt="image-20210810113842773"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810113909486.png" alt="image-20210810113909486"></p>
 <h4 id="具名插槽使用的时候缩写"><a href="#具名插槽使用的时候缩写" class="headerlink" title="具名插槽使用的时候缩写"></a>具名插槽使用的时候缩写</h4><p><strong>具名插槽使用的时候缩写：</strong></p>
 <ol>
 <li>跟 <strong>v-on 和 v-bind</strong> 一样，<strong>v-slot</strong> 也有缩写；</li>
 <li>即把参数之前的所有内容 <strong>(v-slot:)</strong> 替换为字符 **#**；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810130048326.png" alt="image-20210810130048326"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810130048326.png" alt="image-20210810130048326"></p>
 <h2 id="渲染作用域"><a href="#渲染作用域" class="headerlink" title="渲染作用域"></a>渲染作用域</h2><p><strong>在 Vue 中有渲染作用域的概念：</strong></p>
 <ol>
 <li>父级模板里的所有内容都是在<strong>父级作用域</strong>中编译的；</li>
@@ -1101,8 +1101,8 @@ export default {
 <li>在我们的案例中 ChildCpn 自然是可以让问自己作用域中的 title 内容的；</li>
 <li>但是在 App 中，是访问不了 ChildCpn 中的内容的，因为它们是跨作用域的访问；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810131433831.png" alt="image-20210810131433831"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810131437971.png" alt="image-20210810131437971"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810131433831.png" alt="image-20210810131433831"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810131437971.png" alt="image-20210810131437971"></p>
 <h3 id="认识作用域插槽"><a href="#认识作用域插槽" class="headerlink" title="认识作用域插槽"></a>认识作用域插槽</h3><p><strong>但是有时候我们希望插槽可以访问到子组件中的内容是非常重要的：</strong></p>
 <ol>
 <li>当一个组件被用来渲染一个数组元素时，我们使用插槽，并且希望插槽中没有显示每项的内容；</li>
@@ -1117,23 +1117,23 @@ export default {
 <li>通过 v-slot:default 的方式获取到 slot 的 props</li>
 <li>使用 slotProps 中的 item 和 index</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810133254354.png" alt="image-20210810133254354"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810133335479.png" alt="image-20210810133335479"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810133254354.png" alt="image-20210810133254354"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810133335479.png" alt="image-20210810133335479"></p>
 <p><strong>发现我们传递的标签不同，最后的显示效果就不同，甚至我们还可以控制那些数据显示，那些不显示</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810133425113.png" alt="image-20210810133425113"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810133425113.png" alt="image-20210810133425113"></p>
 <h4 id="独占默认插槽的缩写"><a href="#独占默认插槽的缩写" class="headerlink" title="独占默认插槽的缩写"></a>独占默认插槽的缩写</h4><p>如果我们的插槽是默认插槽 default，那么在使用的时候 v-slot:default=”slotProps”可以简写为 v-slot=”slotProps”：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810134528571.png" alt="image-20210810134528571"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810134532181.png" alt="image-20210810134532181"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810134528571.png" alt="image-20210810134528571"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810134532181.png" alt="image-20210810134532181"></p>
 <p>并且如果我们的插槽只有默认插槽时，组件的标签可以被当做插槽的模板来使用，这样，我们就可以将 <strong>v-slot</strong> 直 接用在组件上：</p>
 <p><strong>这种写法是简写，可以不使用到 template 标签。但是有局限</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810134623858.png" alt="image-20210810134623858"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810134623858.png" alt="image-20210810134623858"></p>
 <h4 id="默认插槽和具名插槽混合"><a href="#默认插槽和具名插槽混合" class="headerlink" title="默认插槽和具名插槽混合"></a>默认插槽和具名插槽混合</h4><p><strong>但是，如果我们有默认插槽和具名插槽，那么按照完整的 template 来编写。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810134955626.png" alt="image-20210810134955626"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810134955626.png" alt="image-20210810134955626"></p>
 <p><strong>只要出现多个插槽，请始终为所有的插槽使用完整的基于 <code>&lt;template&gt;语法</code></strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210810135256596.png" alt="image-20210810135256596"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210810135256596.png" alt="image-20210810135256596"></p>
 <h1 id="Vue3-组件化开发-三-动态-异步组件-vue3-生命周期"><a href="#Vue3-组件化开发-三-动态-异步组件-vue3-生命周期" class="headerlink" title="Vue3 组件化开发(三)-动态/异步组件-vue3 生命周期"></a>Vue3 组件化开发(三)-动态/异步组件-vue3 生命周期</h1><h2 id="切换组件案例"><a href="#切换组件案例" class="headerlink" title="切换组件案例"></a>切换组件案例</h2><p><strong>比如我们现在想要实现了一个功能：</strong></p>
 <p>点击一个 tab-bar，切换不同的组件显示；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811211016025.png" alt="image-20210811211016025"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811211016025.png" alt="image-20210811211016025"></p>
 <p><strong>这个案例我们可以通过两种不同的实现思路来实现：</strong></p>
 <ol>
 <li>方式一：通过<strong>v-if</strong>来判断，显示不同的组件；</li>
@@ -1141,8 +1141,8 @@ export default {
 <li>方式三：<strong>路由实现</strong>（日后学到再说）</li>
 </ol>
 <h3 id="v-if-实现"><a href="#v-if-实现" class="headerlink" title="v-if 实现"></a>v-if 实现</h3><p>我们可以先通过 v-if 来判断显示不同的组件，这个可以使用我们之前讲过的知识来实现：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811211229950.png" alt="image-20210811211229950"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811211332131.png" alt="image-20210811211332131"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811211229950.png" alt="image-20210811211229950"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811211332131.png" alt="image-20210811211332131"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
   &lt;div&gt;
     &lt;button
@@ -1201,10 +1201,10 @@ button {
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>效果</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811211416362.png" alt="image-20210811211416362"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811211416362.png" alt="image-20210811211416362"></p>
 <h3 id="动态组件实现"><a href="#动态组件实现" class="headerlink" title="动态组件实现"></a>动态组件实现</h3><p>动态组件是使用 <strong>component</strong> 组件，通过一个特殊的 attribute <strong>is</strong> 来实现：</p>
 <p><strong>component：</strong> Vue 的内置组件，根据属性 is 的值，来决定那个组件被选渲染。<code>is</code> 的值是一个字符串，它既可以是 HTML 标签名称也可以是组件名称。<strong>如果你传递组件本身到 <code>is</code> 而不是其名字，则不需要注册。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811212012331.png" alt="image-20210811212012331"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811212012331.png" alt="image-20210811212012331"></p>
 <p><strong>这个 currentTab 的值需要是什么内容呢？</strong></p>
 <ol>
 <li>可以是通过 component 函数注册的组件；</li>
@@ -1215,18 +1215,18 @@ button {
 <li>也是一样的；</li>
 <li>只是我们需要将属性和监听事件放到 component 上来使用；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811214920431.png" alt="image-20210811214920431"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811214920431.png" alt="image-20210811214920431"></p>
 <h2 id="Keep-alive"><a href="#Keep-alive" class="headerlink" title="Keep-alive"></a>Keep-alive</h2><h3 id="认识-keep-alive"><a href="#认识-keep-alive" class="headerlink" title="认识 keep-alive"></a>认识 keep-alive</h3><p><strong>我们先对之前的案例中 About 组件进行改造：</strong></p>
 <p>在其中增加了一个按钮，点击可以递增的功能；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811220635353.png" alt="image-20210811220635353"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811220635353.png" alt="image-20210811220635353"></p>
 <p>比如我们将 counter 点到 10，那么在切换到 home 再切换回来 about 时，状态是否<strong>可以保持</strong>呢？</p>
 <ol>
 <li>答案是否定的；</li>
 <li>这是因为默认情况下，我们在切换组件后，about 组件会被销毁掉，再次回来时会重新创建组件；</li>
 </ol>
 <p>但是，在开发中某些情况我们希望<strong>继续保持组件的状态</strong>，而不是销毁掉，这个时候我们就可以使用一个<strong>内置组件</strong>：<strong>keep-alive。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811221617535.png" alt="image-20210811221617535"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210811221725646.png" alt="image-20210811221725646"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811221617535.png" alt="image-20210811221617535"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210811221725646.png" alt="image-20210811221725646"></p>
 <p><strong>的确记录了组件所处的状态。</strong></p>
 <h3 id="keep-alive-属性"><a href="#keep-alive-属性" class="headerlink" title="keep-alive 属性"></a>keep-alive 属性</h3><p><strong>keep-alive 有一些属性：</strong></p>
 <ol>
@@ -1239,7 +1239,7 @@ button {
 <li>二者都可以用逗号分隔字符串、正则表达式或一个数组来表示；</li>
 <li>匹配首先检查组件自身的 name 选项；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812090809195.png" alt="image-20210812090809195"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812090809195.png" alt="image-20210812090809195"></p>
 <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- 内置组件 keep-alive的使用，
     记录组件的状态，切换时不会被销毁 --&gt;
 &lt;!-- 在 keep-alive 这个组件内，
@@ -1273,27 +1273,27 @@ button {
 <li>但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件；</li>
 <li>这个时候我们可以使用 activated 和 deactivated 这两个生命周期钩子函数来监听；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812143746757.png" alt="image-20210812143746757"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812143904102.png" alt="image-20210812143904102"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812143746757.png" alt="image-20210812143746757"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812143904102.png" alt="image-20210812143904102"></p>
 <h2 id="Webpack5-打包"><a href="#Webpack5-打包" class="headerlink" title="Webpack5 打包"></a>Webpack5 打包</h2><h3 id="Webpack-的代码分包"><a href="#Webpack-的代码分包" class="headerlink" title="Webpack 的代码分包"></a>Webpack 的代码分包</h3><p><strong>默认的打包过程：</strong></p>
 <p>默认情况下，在构建整个组件树的过程中，因为<strong>组件和组件之间是通过模块化直接依赖的</strong>，那么<strong>webpack 在打包</strong>时就会将组 件模块打包到一起（比如一个<strong>app.js</strong>文件中）；</p>
 <p>这个时候随着项目的不断庞大，app.js 文件的内容过大，会造成<strong>首屏的</strong>渲染速度变慢；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812093141976.png" alt="image-20210812093141976"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812093141976.png" alt="image-20210812093141976"></p>
 <p><strong>打包时，代码的分包：</strong></p>
 <ol>
 <li>所以，对于一些不需要立即使用的组件，我们可以单独对它们进行拆分，拆分成一些小的代码块 chunk.js；</li>
 <li>这些 chunk.js 会在需要时从服务器加载下来，并且运行代码，显示对应的内容；</li>
 </ol>
 <p><strong>那么 webpack 中如何可以对代码进行分包呢？</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812093944480.png" alt="image-20210812093944480"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812093944480.png" alt="image-20210812093944480"></p>
 <h2 id="异步组件"><a href="#异步组件" class="headerlink" title="异步组件"></a>异步组件</h2><h3 id="Vue-中实现异步组件"><a href="#Vue-中实现异步组件" class="headerlink" title="Vue 中实现异步组件"></a>Vue 中实现异步组件</h3><p>如果我们的项目过大了，对于<strong>某些组件我们希望通过异步的方式来进行加载</strong>（目的是可以对其进行<strong>分包处理</strong>），那 么 Vue 中给我们提供了一个函数：<strong>defineAsyncComponent</strong>。</p>
 <p><strong>defineAsyncComponent 接受两种类型的参数：</strong></p>
 <ol>
 <li>类型一：工厂函数，该工厂函数需要返回一个 Promise 对象；</li>
 <li>类型二：接受一个对象类型，对异步函数进行配置；</li>
 </ol>
-<h4 id="工厂函数类型一的写法"><a href="#工厂函数类型一的写法" class="headerlink" title="工厂函数类型一的写法"></a>工厂函数类型一的写法</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812095742723.png" alt="image-20210812095742723"></p>
-<h4 id="异步组件对象类型写法"><a href="#异步组件对象类型写法" class="headerlink" title="异步组件对象类型写法"></a>异步组件对象类型写法</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812100721257.png" alt="image-20210812100721257"></p>
+<h4 id="工厂函数类型一的写法"><a href="#工厂函数类型一的写法" class="headerlink" title="工厂函数类型一的写法"></a>工厂函数类型一的写法</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812095742723.png" alt="image-20210812095742723"></p>
+<h4 id="异步组件对象类型写法"><a href="#异步组件对象类型写法" class="headerlink" title="异步组件对象类型写法"></a>异步组件对象类型写法</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812100721257.png" alt="image-20210812100721257"></p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// import AsyncCategory from './AsyncCategory.vue'</span>
 
 <span class="token comment">// 打包组件时也进行分包，需要使用vue3中提供好的一个函数</span>
@@ -1333,14 +1333,14 @@ button {
   components<span class="token operator">:</span> <span class="token punctuation">{</span> AsyncCategory <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="异步组件和-Suspense"><a href="#异步组件和-Suspense" class="headerlink" title="异步组件和 Suspense"></a>异步组件和 Suspense</h3><h4 id="Suspense"><a href="#Suspense" class="headerlink" title="Suspense"></a>Suspense</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812102407747.png" alt="image-20210812102407747"></p>
+<h3 id="异步组件和-Suspense"><a href="#异步组件和-Suspense" class="headerlink" title="异步组件和 Suspense"></a>异步组件和 Suspense</h3><h4 id="Suspense"><a href="#Suspense" class="headerlink" title="Suspense"></a>Suspense</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812102407747.png" alt="image-20210812102407747"></p>
 <p><strong>目前：Suspense 显示的是一个实验性的特性，API 随时可能会修改。</strong></p>
 <p><strong>Suspense 是一个内置的全局组件，该组件有两个插槽：</strong></p>
 <ol>
 <li>default：如果 default 可以显示，那么显示 default 的内容；</li>
 <li>fallback：如果 default 无法显示，那么会显示 fallback 插槽的内容；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812103328161.png" alt="image-20210812103328161"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812103328161.png" alt="image-20210812103328161"></p>
 <h2 id="引用元素和组件"><a href="#引用元素和组件" class="headerlink" title="$引用元素和组件"></a>$引用元素和组件</h2><h3 id="refs-的使用"><a href="#refs-的使用" class="headerlink" title="$refs 的使用"></a>$refs 的使用</h3><p><strong>某些情况下，我们在组件中想要直接获取到元素对象或者子组件实例：</strong></p>
 <ol>
 <li>在 Vue 开发中我们是不推荐进行 DOM 操作的；</li>
@@ -1348,21 +1348,21 @@ button {
 </ol>
 <p><strong>组件实例有一个$refs 属性：</strong></p>
 <p>它一个对象 Object，持有注册过 <strong>ref attribute</strong> 的所有 DOM 元素和组件实例</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812111727677.png" alt="image-20210812111727677"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812112214446.png" alt="image-20210812112214446"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812111727677.png" alt="image-20210812111727677"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812112214446.png" alt="image-20210812112214446"></p>
 <h3 id="parent和-root"><a href="#parent和-root" class="headerlink" title="$parent和$root"></a>$parent和$root</h3><p><strong>我们可以通过$parent 来访问父元素。</strong></p>
 <p>HelloWorld.vue 的实现：</p>
 <p>这里我们也可以<strong>通过$root</strong>来实现，因为 App 是我们的根组件；</p>
 <p>注意：在<strong>Vue3</strong>中已经<strong>移除了$children 的</strong>属性，所以不可以使用了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812112904661.png" alt="image-20210812112904661"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812112904661.png" alt="image-20210812112904661"></p>
 <h3 id="el"><a href="#el" class="headerlink" title="$el"></a>$el</h3><p><strong>可以拿到根元素，就是使用本组件的根 DOM 元素。但是不能操作</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812113751687.png" alt="image-20210812113751687"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812113837138.png" alt="image-20210812113837138"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812113751687.png" alt="image-20210812113751687"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812113837138.png" alt="image-20210812113837138"></p>
 <p><strong>实际上拿到的就是自己，组件本质上也是一个个的 html，dom 元素，根元素就是本组件的的根元素</strong></p>
 <p><strong>如果本组件出现了多个根标签，比如：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812114118598.png" alt="image-20210812114118598"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812114118598.png" alt="image-20210812114118598"></p>
 <p><strong>我们不使用 div 进行包裹，那么，获取的值$el 获取的值又会不同</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812114217105.png" alt="image-20210812114217105"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812114217105.png" alt="image-20210812114217105"></p>
 <p><strong>vue3 已经可以不使用单个根标签了。但是本质上还是被一个其他标签进行了包裹的。</strong></p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><h3 id="认识生命周期"><a href="#认识生命周期" class="headerlink" title="认识生命周期"></a>认识生命周期</h3><p><strong>什么是生命周期呢？</strong></p>
 <ol>
@@ -1377,18 +1377,18 @@ button {
 <li>那么我们就可以在该生命周期中编写<strong>属于自己的逻辑代码</strong>了；</li>
 </ol>
 <h3 id="生命周期的流程"><a href="#生命周期的流程" class="headerlink" title="生命周期的流程"></a>生命周期的流程</h3><p><a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90">生命周期图</a></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812134823543.png" alt="image-20210812134823543"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812134823543.png" alt="image-20210812134823543"></p>
 <h2 id="组件的-v-model"><a href="#组件的-v-model" class="headerlink" title="组件的 v-model"></a>组件的 v-model</h2><h3 id="组件-v-model-的实现"><a href="#组件-v-model-的实现" class="headerlink" title="组件 v-model 的实现"></a>组件 v-model 的实现</h3><p><strong>那么，为了我们的 MyInput 组件可以正常的工作，这个组件内的 <input> 必须：</strong></p>
 <ol>
 <li>将其 value attribute 绑定到一个名叫 <strong>modelValue</strong> 的 prop 上；</li>
 <li>在其 input 事件被触发时，将新的值通过自定义的 <strong>update:modelValue</strong> 事件抛出；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812145850159.png" alt="image-20210812145850159"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812145956762.png" alt="image-20210812145956762"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812145850159.png" alt="image-20210812145850159"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812145956762.png" alt="image-20210812145956762"></p>
 <p><strong>如果我们直接在组件内部使用 v-model 绑定外界传进来的属性值来进行双向绑定会怎么样呢？首先这种做法不可取，其次也不会影响到外界的值</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812150633849.png" alt="image-20210812150633849"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812150633849.png" alt="image-20210812150633849"></p>
 <h3 id="computed-实现"><a href="#computed-实现" class="headerlink" title="computed 实现"></a>computed 实现</h3><p>我们依然希望在组件内部按照双向绑定的做法去完成，应该如何操作呢？我们可以使用<strong>计算属性的 setter 和 getter 来完成。</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812151236189.png" alt="image-20210812151236189"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812151236189.png" alt="image-20210812151236189"></p>
 <h3 id="绑定多个属性"><a href="#绑定多个属性" class="headerlink" title="绑定多个属性"></a>绑定多个属性</h3><p>我们现在通过 v-model 是直接绑定了一个属性，如果我们<strong>希望绑定多个属性呢？</strong></p>
 <ol>
 <li>也就是我们希望在一个组件上使用<strong>多个 v-model 是否可以实现</strong>呢？</li>
@@ -1396,14 +1396,14 @@ button {
 <li>如果我们希望绑定更多，可以给<strong>v-model 传入一个参数</strong>，那么这个参数的名称就是<strong>我们绑定属性的名称</strong>；</li>
 </ol>
 <p><strong>注意：这里我是绑定了两个属性的</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812152740822.png" alt="image-20210812152740822"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812152740822.png" alt="image-20210812152740822"></p>
 <p><strong>v-model:age 相当于做了两件事：</strong></p>
 <ol>
 <li><strong>绑定了 age 属性；</strong></li>
 <li><strong>监听了 @update:age 的事件；</strong></li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812153016033.png" alt="image-20210812153016033"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210812153035830.png" alt="image-20210812153035830"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812153016033.png" alt="image-20210812153016033"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210812153035830.png" alt="image-20210812153035830"></p>
 <h1 id="Vue3-过渡-amp-动画实现"><a href="#Vue3-过渡-amp-动画实现" class="headerlink" title="Vue3 过渡&amp;动画实现"></a>Vue3 过渡&amp;动画实现</h1><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h3 id="认识动画"><a href="#认识动画" class="headerlink" title="认识动画"></a>认识动画</h3><p>在开发中，我们想要给一个组件的显示和消失添加某种<strong>过渡动画</strong>，可以很好的<strong>增加用户体验</strong>：</p>
 <ol>
 <li>React 框架本身并没有提供任何动画相关的 API，所以在 React 中使用过渡动画我们需要使用一个第三方库 react-transition-group；</li>
@@ -1412,7 +1412,7 @@ button {
 <p><strong>我们来看一个案例：</strong></p>
 <p>Hello World 的显示和隐藏；</p>
 <p>通过下面的代码实现，是不会有任何动画效果的；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813163332445.png" alt="image-20210813163332445"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813163332445.png" alt="image-20210813163332445"></p>
 <hr>
 <p><strong>没有动画的情况下，整个内容的显示和隐藏会非常的生硬：</strong></p>
 <p>如果我们希望给单元素或者组件实现过渡动画，可以使用 <strong>transition</strong> 内置组件来完成动画；</p>
@@ -1422,7 +1422,7 @@ button {
 <li><strong>动态组件</strong></li>
 <li><strong>组件根节点</strong></li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813164522866.png" alt="image-20210813164522866"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813164522866.png" alt="image-20210813164522866"></p>
 <h3 id="Transition-组件的原理"><a href="#Transition-组件的原理" class="headerlink" title="Transition 组件的原理"></a>Transition 组件的原理</h3><p><strong>我们会发现，Vue 自动给 h2 元素添加了动画，这是什么原因呢？</strong></p>
 <p><strong>当插入或删除包含在 transition 组件中的元素时，Vue 将会做以下处理：</strong></p>
 <ol>
@@ -1440,14 +1440,14 @@ button {
 <li> <strong>v-leave-active：</strong>定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在 过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。</li>
 <li> <strong>v-leave-to：</strong>离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave-from 被删除)，在过渡/ 动画完成之后移除。</li>
 </ol>
-<h4 id="class-添加的时机和命名规则"><a href="#class-添加的时机和命名规则" class="headerlink" title="class 添加的时机和命名规则"></a>class 添加的时机和命名规则</h4><p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813171422027.png" alt="image-20210813171422027"></p>
+<h4 id="class-添加的时机和命名规则"><a href="#class-添加的时机和命名规则" class="headerlink" title="class 添加的时机和命名规则"></a>class 添加的时机和命名规则</h4><p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813171422027.png" alt="image-20210813171422027"></p>
 <p><strong>class 的 name 命名规则如下：</strong></p>
 <ol>
 <li>如果我们使用的是一个没有 name 的 transition，那么所有的 class 是以 v- 作为默认前缀；</li>
 <li>如果我们添加了一个 name 属性，比如 ，那么所有的 class 会以 <strong>name 属性值-</strong> 开头；</li>
 </ol>
 <h4 id="过渡-css-动画"><a href="#过渡-css-动画" class="headerlink" title="过渡 css 动画"></a>过渡 css 动画</h4><p>前面我们是通过<strong>transition</strong>来实现的动画效果，另外我们也可以通过<strong>animation</strong>来实现。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813174438158.png" alt="image-20210813174438158"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813174438158.png" alt="image-20210813174438158"></p>
 <h4 id="同时设置过渡和动画"><a href="#同时设置过渡和动画" class="headerlink" title="同时设置过渡和动画"></a>同时设置过渡和动画</h4><p>Vue 为了知道过渡的完成，内部是在监听 transitionend 或 animationend，到底使用哪一个取决于元素应用的 CSS 规则：</p>
 <p>如果我们只是使用了其中的一个，那么 Vue 能自动识别类型并设置监听；</p>
 <p><strong>但是如果我们同时使用了过渡和动画呢？</strong></p>
@@ -1455,7 +1455,7 @@ button {
 <li>并且在这个情况下可能某一个动画执行结束时，另外一个动画还没有结束；</li>
 <li>在这种情况下，我们可以设置 type 属性为 animation 或者 transition 来明确的告知 Vue 监听的类型；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813211840483.png" alt="image-20210813211840483"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813211840483.png" alt="image-20210813211840483"></p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.mydiv</span> <span class="token punctuation">{</span>
   <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
   <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
@@ -1498,10 +1498,10 @@ button {
 <li>number 类型：同时设置进入和离开的过渡时间；</li>
 <li>object 类型：分别设置进入和离开的过渡时间；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813212205061.png" alt="image-20210813212205061"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813212205061.png" alt="image-20210813212205061"></p>
 <h4 id="过渡的模式-mode"><a href="#过渡的模式-mode" class="headerlink" title="过渡的模式 mode"></a>过渡的模式 mode</h4><p><strong>我们来看当前的动画在两个元素之间切换的时候存在的问题：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813212531361.png" alt="image-20210813212531361"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813212513947.png" alt="image-20210813212513947"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813212531361.png" alt="image-20210813212531361"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813212513947.png" alt="image-20210813212513947"></p>
 <p>我们会发现 <strong>两个元素的动画是同时存在的</strong>：</p>
 <ol>
 <li>这是因为默认情况下进入和离开动画是同时发生的；</li>
@@ -1512,11 +1512,11 @@ button {
 <li><strong>in-out:</strong> 新元素先进行过渡，完成之后当前元素过渡离开；</li>
 <li><strong>out-in:</strong> 当前元素先进行过渡，完成之后新元素过渡进入；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813213053898.png" alt="image-20210813213053898"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813213053898.png" alt="image-20210813213053898"></p>
 <h3 id="动态组件的切换"><a href="#动态组件的切换" class="headerlink" title="动态组件的切换"></a>动态组件的切换</h3><h4 id="动态组件的切换动画"><a href="#动态组件的切换动画" class="headerlink" title="动态组件的切换动画"></a>动态组件的切换动画</h4><p><strong>上面的示例同样适用于我们的动态组件：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813214234810.png" alt="image-20210813214234810"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813214234810.png" alt="image-20210813214234810"></p>
 <h4 id="appear-初次渲染"><a href="#appear-初次渲染" class="headerlink" title="appear 初次渲染"></a>appear 初次渲染</h4><p>默认情况下，<strong>首次渲染的时候是没有动画的</strong>，如果我们希望给他添加上去动画，那么就可以增加另外一个属性 <strong>appear</strong>：</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210813214335867.png" alt="image-20210813214335867"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210813214335867.png" alt="image-20210813214335867"></p>
 <h3 id="第三方动画库"><a href="#第三方动画库" class="headerlink" title="第三方动画库"></a>第三方动画库</h3><h4 id="认识-animate-css"><a href="#认识-animate-css" class="headerlink" title="认识 animate.css"></a>认识 animate.css</h4><p>如果我们手动一个个来编写这些动画，那么效率是比较低的，所以在开发中我们可能会<strong>引用一些第三方库的动画库， 比如 animate.css。</strong></p>
 <p><strong>什么是 animate.css 呢？</strong></p>
 <p><strong>Animate.css</strong> is a library of ready-to-use, cross-browser animations for use in your web projects. Great for emphasis, home pages, sliders, and attention-guiding hints.</p>
@@ -1527,7 +1527,7 @@ button {
 <li>第二步：导入 animate.css 库的样式；</li>
 <li>第三步：使用 animation 动画或者 animate 提供的类；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814094340607.png" alt="image-20210814094340607"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814094340607.png" alt="image-20210814094340607"></p>
 <h4 id="自定义过渡-class"><a href="#自定义过渡-class" class="headerlink" title="自定义过渡 class"></a>自定义过渡 class</h4><p><strong>我们可以通过以下 attribute 来自定义过渡类名：</strong></p>
 <ol>
 <li>enter-from-class</li>
@@ -1546,9 +1546,9 @@ button {
 
 <p><strong>接下来在使用的时候我们有两种用法：</strong></p>
 <p>用法一：直接使用 animate 库中定义的 keyframes 动画；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814095212789.png" alt="image-20210814095212789"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814095212789.png" alt="image-20210814095212789"></p>
 <p>用法二：直接使用 animate 库提供给我们的类；</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814095242072.png" alt="image-20210814095242072"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814095242072.png" alt="image-20210814095242072"></p>
 <h3 id="认识-gsap-库"><a href="#认识-gsap-库" class="headerlink" title="认识 gsap 库"></a>认识 gsap 库</h3><p>某些情况下我们希望通过 JavaScript 来实现一些动画的效果，这个时候我们可以选择使用 gsap 库来完成。</p>
 <p><strong>什么是 gsap 呢？</strong></p>
 <ol>
@@ -1565,19 +1565,19 @@ button {
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i gsap<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="JavaScript-钩子"><a href="#JavaScript-钩子" class="headerlink" title="JavaScript 钩子"></a>JavaScript 钩子</h4><p>在使用动画之前，我们先来看一下<strong>transition</strong>组件给我们提供的<strong>JavaScript 钩子，</strong>这些钩子可以帮助我们监听动画执行到 什么阶段了。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814101138774.png" alt="image-20210814101138774"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814101157536.png" alt="image-20210814101157536"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814101138774.png" alt="image-20210814101138774"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814101157536.png" alt="image-20210814101157536"></p>
 <p>当我们使用 JavaScript 来执行过渡动画时，需要<strong>进行 done 回调</strong>，否则它们将会被同步调用，过渡会立即完成。</p>
 <p>添加 <strong>:css=”false”，</strong>也会让 <strong>Vue 会跳过 CSS 的检测</strong>，除了性能略高之外，这可以<strong>避免过渡过程中 CSS 规则的影响</strong>。</p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814101301362.png" alt="image-20210814101301362"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814101301362.png" alt="image-20210814101301362"></p>
 <h4 id="gsap-库的使用"><a href="#gsap-库的使用" class="headerlink" title="gsap 库的使用"></a>gsap 库的使用</h4><p><strong>那么接下来我们就可以结合 gsap 库来完成动画效果：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814103331698.png" alt="image-20210814103331698"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814103336037.png" alt="image-20210814103336037"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814103339396.png" alt="image-20210814103339396"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814103400933.png" alt="image-20210814103400933"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814103331698.png" alt="image-20210814103331698"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814103336037.png" alt="image-20210814103336037"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814103339396.png" alt="image-20210814103339396"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814103400933.png" alt="image-20210814103400933"></p>
 <h4 id="gsap-实现数字变化动画"><a href="#gsap-实现数字变化动画" class="headerlink" title="gsap 实现数字变化动画"></a>gsap 实现数字变化动画</h4><p>在一些项目中，我们会见到<strong>数字快速变化的动画效果</strong>，这个动画可以<strong>很容易通过 gsap 来实现：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814104630294.png" alt="image-20210814104630294"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814104646356.png" alt="image-20210814104646356"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814104630294.png" alt="image-20210814104630294"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814104646356.png" alt="image-20210814104646356"></p>
 <h4 id="认识列表的过渡"><a href="#认识列表的过渡" class="headerlink" title="认识列表的过渡"></a>认识列表的过渡</h4><p>目前为止，过渡动画我们只要是<strong>针对单个元素或者组件</strong>的：</p>
 <p>要么是单个节点； 要么是同一时间渲染多个节点中的一个；</p>
 <p>那么如果希望渲染的是一个列表，并且<strong>该列表中添加删除数据也希望有动画执行</strong>呢？</p>
@@ -1592,9 +1592,9 @@ button {
 <h4 id="列表过渡的基本使用"><a href="#列表过渡的基本使用" class="headerlink" title="列表过渡的基本使用"></a>列表过渡的基本使用</h4><p><strong>我们来做一个案例：</strong></p>
 <p>案例是一列数字，可以继续添加或者删除数字；</p>
 <p><strong>在添加和删除数字的过程中，对添加的或者移除的数字添加动画；</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814111215939.png" alt="image-20210814111215939"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814111236462.png" alt="image-20210814111236462"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814111344677.png" alt="image-20210814111344677"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814111215939.png" alt="image-20210814111215939"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814111236462.png" alt="image-20210814111236462"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814111344677.png" alt="image-20210814111344677"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>addNum<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>添加数字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
@@ -1657,11 +1657,11 @@ button {
 <li>它会在元素改变位置的过程中应用；</li>
 <li>像之前的名字一样，我们可以通过 name 来自定义前缀；</li>
 </ol>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814112549656.png" alt="image-20210814112549656"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814112553932.png" alt="image-20210814112553932"></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814112658298.png" alt="image-20210814112658298"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814112549656.png" alt="image-20210814112549656"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814112553932.png" alt="image-20210814112553932"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814112658298.png" alt="image-20210814112658298"></p>
 <h4 id="列表的交错过渡案例"><a href="#列表的交错过渡案例" class="headerlink" title="列表的交错过渡案例"></a>列表的交错过渡案例</h4><p><strong>我们来通过 gsap 的延迟 delay 属性，做一个交替消失的动画：</strong></p>
-<p><img src="https://gitee.com/mao0826/picture/raw/master/images/web/vue/image-20210814115410408.png" alt="image-20210814115410408"></p>
+<p><img src="https://gitee.com/maolovecoding/picture/raw/master/images/web/vue/image-20210814115410408.png" alt="image-20210814115410408"></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>keyword<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
